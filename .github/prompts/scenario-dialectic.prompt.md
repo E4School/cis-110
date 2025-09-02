@@ -2,11 +2,11 @@
 mode: agent
 ---
 
-Do this flow:
+Do this flow for the file ${file}:
 
-* [tech-bro-dialectic.prompt.md]
+* [./tech-bro-dialectic.prompt.md]
 * Commit and push to github
-* [tech-bro-dialectic-response.prompt.md]
+* [./tech-bro-dialectic-response.prompt.md]
 * Commit and push to github
-* [tech-bro-dialectic-resolve.prompt.md]
+* [./tech-bro-dialectic-resolve.prompt.md]
 * Commit and push to github
