@@ -15,3 +15,21 @@
 **DAVID:** "**Compliance policies** training takes months to implement. Meanwhile, customer data is being processed without **data governance** controls, and **automated storage** makes tracking impossible."
 
 **LISA:** "Then implement graduated **data governance** controls instead of blanket restrictions. Help employees choose compliant **cloud applications** rather than forcing underground workarounds."
+
+### Tech Industry Criticism
+
+1. **Unrealistic Shadow IT Discovery**: What corporation with GDPR compliance requirements doesn't have DLP (Data Loss Prevention) tools or CASB (Cloud Access Security Broker) solutions already monitoring cloud app usage? This sounds like it was written by someone who's never worked in enterprise security.
+
+2. **Oversimplified GDPR Compliance**: Real GDPR compliance isn't just about "cross-border data transfers" - it involves data processing lawful basis, data subject rights, breach notification timelines, and privacy impact assessments. This scenario reads like a surface-level understanding from a compliance checklist.
+
+3. **Naive IT Security Discussion**: No IT director would say "we have no visibility" in 2025. Modern enterprises use endpoint detection, network monitoring, and cloud security posture management. The conversation lacks mention of identity providers, SSO, or conditional access policies.
+
+4. **Buzzword Overuse**: "Data classification" appears in every other sentence but they never discuss actual classification schemes (public, internal, confidential, restricted) or DLP policy enforcement mechanisms.
+
+5. **Missing Technical Implementation**: Where's the discussion of API security, OAuth scopes, data residency requirements, or technical controls like encryption at rest/in transit? Real IT-legal conversations include specific technical mitigations.
+
+6. **Unrealistic Legal Perspective**: Legal counsel wouldn't be "advising employees that cloud applications were acceptable" without involving IT security for technical risk assessment. This shows a fundamental misunderstanding of how enterprise legal-IT coordination works.
+
+7. **Vague "Automated Storage" References**: What does this even mean? Cloud sync services? Backup solutions? Data lakes? Real professionals would specify the actual technology stack and integration points.
+
+8. **Missing Business Context**: No discussion of business impact, user productivity metrics, cost of compliance tools, or timeline for remediation. Real enterprise discussions include budget allocation and resource planning.
