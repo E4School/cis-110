@@ -1,5 +1,7 @@
 # GROUP 1: Fintech Security Meeting
 
+**Vocabulary:** cryptocurrency, database, firewall, World Wide Web, information literacy
+
 **BACKSTORY:** CryptoVault is a 6-month-old startup attempting to launch their first **cryptocurrency** trading platform. Sarah joined from a major bank where a **database** breach cost $50 million in fines, making her extremely cautious about **firewall** security. Mike comes from a failed fintech where slow launches meant competitors captured the **World Wide Web** market first. The company's Series A funding depends on demonstrating user growth, but early beta testers struggled with basic wallet concepts, revealing poor **information literacy** among their target demographic. Sarah discovered that their **database** architecture has the same vulnerabilities that led to three major **cryptocurrency** exchange hacks last year, while Mike argues that perfectionist **firewall** configurations and **information literacy** programs will kill their momentum on the **World Wide Web**. The tension escalated when investors threatened to pull funding if the platform doesn't launch within two weeks, forcing this emergency meeting.
 
 **SARAH (Security Engineer):** "We can't just launch this **cryptocurrency** exchange without proper **firewall** protection. Our **database** contains millions in digital assets."

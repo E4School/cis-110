@@ -1,5 +1,8 @@
 # GROUP 11: Digital Wellness vs. Productivity Debate
 
+**Vocabulary:** relational database, filters, collaboration tools, data mining, screen time
+
+
 **BACKSTORY:** WorkFlow Inc. implemented new **collaboration tools** designed to improve productivity through advanced **data mining** capabilities and **filters** for organizing information in their **relational database** systems. Ian's HR department initially celebrated the tools' success in reducing meeting times and improving project coordination, but employee surveys revealed alarming **screen time** increases averaging 4 hours daily beyond normal work hours. Jasmine's IT team argued that the **collaboration tools** **filters** and **data mining** features were finally delivering ROI by making **relational database** queries accessible to non-technical staff. However, the wellness committee discovered that employees were becoming addicted to the constant notifications from **collaboration tools**, with **screen time** monitoring showing some workers spent 14 hours daily using **data mining** interfaces and **filters**. The situation escalated when three employees filed worker's compensation claims for eye strain and repetitive stress injuries directly attributed to excessive **collaboration tools** usage. Ian wants to implement **screen time** limits and restrict **data mining** access, while Jasmine argues that limiting **collaboration tools** and **filters** would cripple the **relational database** productivity gains that justify the platform's $2 million annual cost.
 
 **IAN (HR Director):** "Employees report excessive **screen time** from our new **collaboration tools**. The wellness committee wants **screen time** limits on all **collaboration tools**."

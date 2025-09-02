@@ -1,5 +1,8 @@
 # GROUP 5: System Analytics Dashboard Debate
 
+**Vocabulary:** dashboard, pattern recognition, hardware, ROM, copyright
+
+
 **BACKSTORY:** TechMetrics sells performance monitoring software to enterprise clients, with Jennifer's **dashboard** system as their flagship product. The **dashboard** uses proprietary **pattern recognition** algorithms to analyze **hardware** performance and **ROM** diagnostics, but Robert discovered that their **pattern recognition** technology was licensed from a competitor who's now claiming **copyright** infringement. The legal dispute began when Jennifer's **dashboard** started displaying **pattern recognition** results that closely matched patented algorithms, particularly in **hardware** analysis and **ROM** monitoring. Three major clients threatened to cancel contracts after receiving **copyright** infringement notices related to **pattern recognition** data displayed in their **dashboard** systems. Robert argues that basic **hardware** and **ROM** monitoring shouldn't have **copyright** restrictions, while Jennifer discovered that their **pattern recognition** algorithms were trained on datasets that violated multiple **copyright** agreements. The company faces potential $15 million in damages if the **dashboard** **pattern recognition** features are ruled as **copyright** violations, but removing these features would make their **hardware** and **ROM** monitoring products uncompetitive.
 
 **JENNIFER (Data Scientist):** "The **dashboard** is showing weird **pattern recognition** results from our **hardware** monitoring. The **ROM** data doesn't match our **copyright** agreements."

@@ -1,5 +1,8 @@
 # GROUP 6: Development Security Crisis
 
+**Vocabulary:** function, pivot tables, streaming, trojan, data breach
+
+
 **BACKSTORY:** StreamTech's video platform processes millions of transactions daily through Kumar's custom **function** architecture, with Elena's **pivot tables** providing real-time analytics for business decisions. Last week, their security team discovered a **trojan** embedded in a widely-used open-source library that Kumar's **streaming** **function** depends on, creating immediate **data breach** risks that could compromise the **pivot tables** feeding executive dashboards. The **trojan** was specifically designed to target **streaming** platforms, and removing it would break Kumar's core **function** that handles payment processing and user analytics. Elena's **pivot tables** drive critical business decisions about **streaming** content licensing and revenue projections, but the **data breach** risk means they might have to shut down the **function** entirely. The crisis escalated when Elena discovered that the **trojan** had already compromised data integrity in several **pivot tables**, potentially affecting millions in revenue calculations. Kumar needs weeks to rebuild the **function** without the infected dependency, but Elena's **streaming** analytics **pivot tables** are essential for a board presentation happening tomorrow. The CEO demands a solution that maintains both **streaming** service reliability and **data breach** prevention.
 
 **KUMAR (Backend Developer):** "I wrote a **function** for the **streaming** service, but security found a **trojan** in one of our dependencies. They're worried about a **data breach** affecting our **pivot tables**."

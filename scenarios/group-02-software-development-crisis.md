@@ -1,5 +1,7 @@
 # GROUP 2: Software Development Crisis
 
+**Vocabulary:** frontend, multiprocessing, bugs, archive/compression tools, NoSQL
+
 **BACKSTORY:** CloudFlow is a streaming video company that grew from 50,000 to 2 million users in six months. Alex was hired to rebuild their **frontend** architecture, but the existing **multiprocessing** system was never designed for this scale and **bugs** multiply exponentially under load. Janet joined from Netflix with expertise in **archive/compression tools** and **NoSQL** optimization, but she's frustrated that Alex's team ignored her scalability warnings during the initial **frontend** design. The **bugs** started appearing when **multiprocessing** threads began overwhelming their **NoSQL** cluster during peak viewing hours. Marketing promised enterprise clients that the platform could handle 5 million concurrent streams, but current **frontend** performance suggests they'll crash at 2.5 million. The CEO scheduled this emergency meeting after three enterprise demos failed due to **bugs**, **multiprocessing** conflicts, and **NoSQL** timeouts, threatening $40 million in potential contracts.
 
 **ALEX (Lead Developer):** "The **frontend** is crashing constantly. We tried enabling **multiprocessing** to handle the load, but every **multiprocessing** thread introduces new **bugs**."

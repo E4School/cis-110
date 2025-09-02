@@ -1,5 +1,8 @@
 # GROUP 12: Social Network Security Implementation
 
+**Vocabulary:** chatbot, encryption, social network, six degrees of separation, folders
+
+
 **KEVIN (Network Security):** "Our **chatbot** needs better **encryption** for handling personal data. The **social network** analysis reveals **six degrees of separation** patterns we're storing in **folders**."
 
 **LINDA (Privacy Officer):** "Storing relationship data violates several privacy regulations. Just because we can map social connections doesn't mean we should."
