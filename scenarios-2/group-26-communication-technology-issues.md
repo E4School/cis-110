@@ -1,0 +1,20 @@
+# GROUP 26: Communication Technology Issues
+
+**BACKSTORY:** ConnectCorp's **email** system integration with **video conferencing** platforms creates **instant messaging** delays when **social media** feeds sync with **communication** protocols, causing **email** notifications to interfere with **video conferencing** audio during **instant messaging** sessions. Nancy's **communication** engineering team discovered that **email** notification sounds interrupt **video conferencing** calls when **instant messaging** alerts trigger **social media** update processing, while Oliver's user experience team argued that disabling **email** notifications during **video conferencing** eliminates critical **communication** **instant messaging** functionality. The **communication** platform was designed to integrate **email**, **video conferencing**, **instant messaging**, and **social media** seamlessly, but **communication** protocol conflicts create cascading notification problems across all **email** **video conferencing** **instant messaging** **social media** channels. Nancy found that **social media** sync operations delay **instant messaging** delivery, causing **email** backup notifications that overwhelm **video conferencing** bandwidth during **communication** sessions. Oliver argues that users expect unified **communication** across **email** **video conferencing** **instant messaging** **social media** platforms, while Nancy insists that **communication** protocol separation would eliminate **email** **video conferencing** **instant messaging** **social media** interference problems. The company faces productivity complaints if **communication** reliability doesn't improve, but **email** **video conferencing** **instant messaging** **social media** integration complexity exceeds current **communication** infrastructure capabilities.
+
+**NANCY (Communications Engineer):** "**Email** notifications interfere with **video conferencing** audio. **Instant messaging** delays are caused by **social media** sync overwhelming our **communication** protocols."
+
+**OLIVER (UX Designer):** "Users expect unified **communication**. Separating **email** **video conferencing** **instant messaging** **social media** creates workflow disruption across **communication** channels."
+
+**NANCY:** "**Communication** protocol conflicts are inevitable when **email** **video conferencing** **instant messaging** **social media** compete for bandwidth during **communication** sessions."
+
+**OLIVER:** "That's an infrastructure problem, not a **communication** design problem. **Email** **video conferencing** **instant messaging** **social media** integration drives productivity value."
+
+**NANCY:** "**Email** **video conferencing** **instant messaging** **social media** complexity exceeds our **communication** system capabilities. Protocol separation would eliminate interference problems."
+
+**OLIVER:** "**Communication** workflow requires seamless **email** **video conferencing** **instant messaging** **social media** integration. Users won't tolerate **communication** platform fragmentation."
+
+### Critical Thinking Questions:
+- Why would email notifications interfere with video conferencing audio? Modern communication platforms use separate audio channels and notification systems. This suggests a poorly designed system that mixes audio streams inappropriately.
+- Social media sync delays affecting instant messaging indicates fundamental architecture problems. Professional platforms use microservices, message queues, and asynchronous processing to prevent one service from blocking others.
+- The choice between unified communication and protocol separation is false. Modern platforms like Microsoft Teams, Slack, and Google Workspace successfully integrate multiple communication channels without the interference described here.
