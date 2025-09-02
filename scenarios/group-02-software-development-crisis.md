@@ -15,3 +15,21 @@
 **ALEX:** "We can't optimize our way out of architectural debt. **Containerization** lets us scale individual services, and **CDN optimization** works better with distributed **microservices**."
 
 **JANET:** "**Containerization** introduces orchestration complexity. Let's fix our **frontend** monitoring and **CDN optimization** before adding **microservices** **bugs** to the equation."
+
+### Tech Industry Criticism
+
+1. **Unrealistic Timeline Pressure**: What streaming platform would commit to 5 million concurrent streams to enterprise clients without having the infrastructure tested first? This sounds like something written by someone who's never worked in enterprise sales or technical pre-sales.
+
+2. **Oversimplified Architecture Discussion**: Real architects don't talk about "microservices will solve frontend timeout bugs" - that's not how microservices work. Frontend timeouts are usually related to API gateway configuration, circuit breakers, or network latency, not monolith vs microservices architecture.
+
+3. **Buzzword Bingo**: Why are they forcing "CDN optimization" into every other sentence? Real engineers would say "CDN configuration" or "edge caching strategy" - "CDN optimization" sounds like marketing speak.
+
+4. **Missing Technical Context**: Where's the discussion of actual metrics? Real DevOps engineers would be talking about P95 latency, error rates, throughput numbers, not vague "performance issues."
+
+5. **Naive Database Discussion**: "Database connection pooling exhaustively" isn't proper technical terminology. It should be "connection pool exhaustion" and real engineers would discuss connection pool sizing, database read replicas, or query optimization.
+
+6. **Unrealistic Emergency Meeting**: A CEO calling an emergency meeting about demo failures would involve customer success, sales, and support teams - not just two engineers having an academic architecture discussion.
+
+7. **Missing Business Context**: Real conversations would include cost implications, migration timelines, risk assessment, and rollback strategies - not just abstract technical preferences.
+
+8. **Oversimplified Microservices Discussion**: Missing mention of service discovery, distributed tracing, eventual consistency, data partitioning, or any of the real complexities that make microservices migration challenging.
