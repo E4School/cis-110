@@ -1,42 +1,17 @@
 # GROUP 2: Software Development Crisis
 
-**Vocabulary:** frontend, multiprocessing, bugs, archive/compression tools, NoSQL
+**Vocabulary:** frontend, containerization, bugs, CDN optimization, microservices
 
-**BACKSTORY:** CloudFlow is a streaming video company that grew from 50,000 to 2 million users in six months. Alex was hired to rebuild their **frontend** architecture, but the existing **multiprocessing** system was never designed for this scale and **bugs** multiply exponentially under load. Janet joined from Netflix with expertise in **archive/compression tools** and **NoSQL** optimization, but she's frustrated that Alex's team ignored her scalability warnings during the initial **frontend** design. The **bugs** started appearing when **multiprocessing** threads began overwhelming their **NoSQL** cluster during peak viewing hours. Marketing promised enterprise clients that the platform could handle 5 million concurrent streams, but current **frontend** performance suggests they'll crash at 2.5 million. The CEO scheduled this emergency meeting after three enterprise demos failed due to **bugs**, **multiprocessing** conflicts, and **NoSQL** timeouts, threatening $40 million in potential contracts.
+**BACKSTORY:** CloudFlow is a streaming video platform that scaled from 500,000 to 3 million users in six months, straining their monolithic architecture. Alex, the lead developer, advocates migrating to **microservices** architecture to handle the load, but the **frontend** team is struggling with **bugs** that emerge when service calls timeout under peak traffic. Janet, the DevOps engineer, joined from Netflix with expertise in **containerization** and **CDN optimization**, but she's concerned that **microservices** migration will introduce new complexity while they're already fighting performance issues. The current monolithic system creates **bugs** when database connections pool exhaustively during peak hours, but **frontend** performance monitoring shows that **CDN optimization** could solve many issues without architectural changes. Marketing committed to enterprise clients that the platform supports 5 million concurrent streams, but **containerization** complexity could delay deployment while **microservices** debugging consumes engineering resources. The CEO called this emergency meeting after three enterprise demos failed due to **bugs** in service communication and **frontend** latency spikes.
 
-**ALEX (Lead Developer):** "The **frontend** is crashing constantly. We tried enabling **multiprocessing** to handle the load, but every **multiprocessing** thread introduces new **bugs**."
+**ALEX (Lead Developer):** "Our monolithic architecture is hitting scaling limits. **Microservices** would solve these **frontend** timeout **bugs**, but **containerization** deployment is complex."
 
-**JANET (DevOps Engineer):** "Have you tried **archive/compression tools** to reduce the payload? Maybe the **frontend** issue isn't processing power - it's data size."
+**JANET (DevOps Engineer):** "Before we rebuild everything, have you optimized our **CDN optimization** strategy? Maybe the **frontend** issue isn't architecture - it's content delivery performance."
 
-**ALEX:** "**Archive/compression tools** won't help with **NoSQL** database queries. The **bugs** appear specifically when **multiprocessing** tries to access our **NoSQL** cluster."
+**ALEX:** "**CDN optimization** won't fix database connection pooling. The **bugs** appear when our monolith can't handle concurrent user sessions, not content delivery."
 
-**JANET:** "**NoSQL** isn't a magic bullet. Sometimes those **bugs** come from over-engineering. The **frontend** might work better with traditional databases."
+**JANET:** "**Microservices** aren't magic. Service mesh complexity often creates more **bugs** than it solves. The **frontend** might perform better with database optimization first."
 
-**ALEX:** "We can't switch from **NoSQL** three weeks before launch. These **archive/compression tools** you mentioned - do they work with **multiprocessing**?"
+**ALEX:** "We can't optimize our way out of architectural debt. **Containerization** lets us scale individual services, and **CDN optimization** works better with distributed **microservices**."
 
-**JANET:** "Everything works until you add **bugs** to the equation. Let's debug the **frontend** before trying more **archive/compression tools**."
-
-### Critical Thinking Questions:
-- Any competent dev team would be using containerization and microservices, not some monolithic 'multiprocessing' architecture. This sounds like someone read about threading in a 1990s textbook and thought it was cutting-edge.
-- Why are they even debating NoSQL vs SQL? Modern developers just use whatever ORM their framework provides and let the database handle optimization. This 'cluster' talk is just database admin cargo cult nonsense.
-- Archive/compression tools for payload optimization? What is this, dial-up era? Real streaming platforms use CDNs and edge caching. Nobody optimizes file sizes manually anymore - that's what build tools are for.
-
-## Scenario Improvement Analysis
-
-**Validity of Criticisms:** The criticisms are valid. The scenario demonstrates outdated understanding of modern software architecture and deployment practices:
-
-1. **Obsolete architecture patterns** - "Multiprocessing" threads are not how modern streaming platforms scale
-2. **Artificial database debates** - The NoSQL vs SQL framing oversimplifies modern data architecture decisions
-3. **Anachronistic optimization approaches** - Manual payload optimization ignores modern CDN and build tool capabilities
-
-**Proposed Rewrite to Address Criticisms:**
-
-The scenario should focus on realistic scaling challenges:
-
-- **Setting**: Streaming platform experiencing exponential growth, moving from proof-of-concept to enterprise scale
-- **Conflict**: Lead developer Alex advocates for microservices architecture migration, while DevOps engineer Janet pushes for optimizing the existing monolithic architecture
-- **Technical terms**: Replace "multiprocessing" with "containerization/orchestration," frame database issues as "data consistency across services" rather than NoSQL vs SQL, and replace manual compression with "CDN optimization strategies"
-- **Stakes**: Real scaling concerns like database connection pooling, service mesh complexity, monitoring distributed systems, and maintaining development velocity during architectural changes
-- **Resolution path**: Include options for gradual migration strategies, feature flagging, and performance monitoring that reflect actual industry practices
-
-This maintains the core educational goals about scaling decisions while using authentic technical challenges that software engineers actually face.
+**JANET:** "**Containerization** introduces orchestration complexity. Let's fix our **frontend** monitoring and **CDN optimization** before adding **microservices** **bugs** to the equation."

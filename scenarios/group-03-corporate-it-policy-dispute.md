@@ -1,43 +1,17 @@
 # GROUP 3: Corporate IT Policy Dispute
 
-**Vocabulary:** word processors, fair use, variables, storage, multithreading
+**Vocabulary:** cloud applications, data classification, compliance policies, automated storage, data governance
 
-**BACKSTORY:** MegaCorp's legal department discovered that employees were unknowingly violating copyright laws by copying proprietary code snippets into **word processors** and claiming **fair use** protections. David's IT team found that these **variables** and code samples were scattered across the company's **storage** infrastructure, with **multithreading** applications automatically caching sensitive data in multiple locations. Lisa's legal team had been advising employees that **fair use** covered educational and commentary purposes, not realizing that developers were storing actual **variables** containing customer data in their **word processors**. The problem escalated when a departing employee's laptop contained 15GB of proprietary **variables** in **word processor** files, all stored across the company's **storage** network due to **multithreading** backup processes. A compliance audit revealed that **fair use** policies weren't being applied correctly, and **storage** systems contained thousands of potentially infringing files. IT wants to restrict **word processors** and **storage** access, while legal argues that **fair use** education and proper **multithreading** configuration would solve the **variables** problem without breaking workflows.
+**BACKSTORY:** MegaCorp's legal department discovered that employees are using unauthorized **cloud applications** for document collaboration, creating GDPR compliance risks due to unclear **data classification** and cross-border data transfers. David's IT team identified that sensitive customer information is being stored in unapproved SaaS tools without proper **compliance policies**, while **automated storage** systems are syncing this data across multiple jurisdictions. Lisa's legal team had been advising employees that standard **cloud applications** were acceptable for internal use, not realizing that **data governance** regulations require explicit controls for customer data processing. The problem escalated when a departing employee's cloud accounts contained customer PII distributed across dozens of **cloud applications**, all synchronized through **automated storage** without **data classification** controls. A GDPR audit revealed that **compliance policies** weren't being enforced consistently, and **data governance** frameworks lacked visibility into shadow IT usage. David wants to restrict unauthorized **cloud applications** and implement mandatory **data classification**, while Lisa argues that **compliance policies** education and flexible **data governance** would solve the problem without disrupting workflows.
 
-**DAVID (IT Director):** "We're running out of **storage** space because employees keep massive files on their drives. This **multithreading** application is also consuming **storage** resources."
+**DAVID (IT Director):** "We have no visibility into what **cloud applications** employees are using. Customer data is scattered across unauthorized platforms without proper **data classification**."
 
-**LISA (Legal Counsel):** "Employees need **word processors** for documentation, and they're citing **fair use** for copyrighted materials. You can't restrict **word processors** access."
+**LISA (Legal Counsel):** "Employees need productivity tools for collaboration. We can't just block **cloud applications** without providing approved alternatives that support their workflows."
 
-**DAVID:** "But they're storing **variables** and code snippets with customer data. The **multithreading** apps cache **variables** locally, eating up **storage**."
+**DAVID:** "But they're processing customer PII in unsecured **cloud applications**. Our **automated storage** policies can't enforce **data classification** on external platforms."
 
-**LISA:** "So educate them about **fair use** and **storage** limits. Don't just block **word processors** and break their workflow."
+**LISA:** "So train them on **compliance policies** and provide guidance on approved **cloud applications**. Don't just block everything and break productivity."
 
-**DAVID:** "**Fair use** education takes time. Meanwhile, these **variables** are scattered across every **storage** device, and **multithreading** makes it worse."
+**DAVID:** "**Compliance policies** training takes months to implement. Meanwhile, customer data is being processed without **data governance** controls, and **automated storage** makes tracking impossible."
 
-**LISA:** "Then fix the **multithreading** configuration instead of punishing people for using **word processors** under **fair use** guidelines."
-
-### Critical Thinking Questions:
-- What kind of amateur operation doesn't have proper version control and data loss prevention? Any real company uses Git with proper branching strategies and DLP tools. This sounds like IT horror stories from 2005.
-- Code snippets in Word documents? What developer puts code in a word processor instead of GitHub or Stack Overflow? This scenario was clearly written by someone who's never seen actual development workflows.
-- Fair use for code? Bro, everything's open source or proprietary with clear licenses. Real developers know the difference between MIT, GPL, and commercial licenses. This legal confusion only exists in academic hypotheticals.
-
-## Scenario Improvement Analysis
-
-**Validity of Criticisms:** The criticisms are entirely valid. The scenario reflects a fundamental misunderstanding of modern software development and corporate IT practices:
-
-1. **Outdated development practices** - No modern organization stores code in Word documents or relies on manual file management
-2. **Misapplied legal concepts** - Fair use doctrine doesn't apply to code licensing, which has well-established frameworks
-3. **Unrealistic technical problems** - The "multithreading backup" issue suggests confusion about how modern backup systems work
-
-**Proposed Rewrite to Address Criticisms:**
-
-The scenario should address genuine modern IT governance challenges:
-
-- **Setting**: Corporation implementing new data governance policies in response to GDPR/CCPA compliance requirements
-- **Conflict**: IT director David wants to implement automated data classification and access controls, while legal counsel Lisa is concerned about overly restrictive policies impacting productivity
-- **Technical issues**: Focus on real challenges like shadow IT (employees using unauthorized SaaS tools), data residency requirements, and balancing security with developer productivity
-- **Legal framework**: Replace "fair use" confusion with actual compliance issues like data retention policies, cross-border data transfers, and vendor risk management
-- **Stakes**: Regulatory compliance deadlines, potential fines for data mishandling, and maintaining competitive development velocity
-- **Resolution path**: Include options for graduated policy implementation, automated compliance tools, and training programs that reflect actual corporate governance practices
-
-This reframing addresses legitimate tensions between security, compliance, and productivity using realistic corporate IT challenges.
+**LISA:** "Then implement graduated **data governance** controls instead of blanket restrictions. Help employees choose compliant **cloud applications** rather than forcing underground workarounds."
