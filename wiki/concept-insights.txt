@@ -1,0 +1,30 @@
+🗺️  CONCEPT MAP INSIGHTS
+========================================
+🏆 Most Central Concepts (PageRank):
+    1. data                 (0.1344)
+    2. field                (0.1171)
+    3. information          (0.0998)
+    4. software             (0.0986)
+    5. computer             (0.0892)
+    6. internet             (0.0490)
+    7. code                 (0.0376)
+    8. programming          (0.0346)
+    9. spreadsheet          (0.0203)
+   10. hardware             (0.0195)
+
+🧩 Conceptual Communities: 6
+   Largest community: 53 terms
+   Smallest community: 13 terms
+   Average community size: 35.2
+
+📈 Network Properties:
+   Density: 0.0231
+   Average clustering: 0.5861
+   Number of strongly connected components: 174
+
+🌉 Bridge Terms (High Betweenness):
+   1. internet             (0.0553)
+   2. computer             (0.0387)
+   3. cybersecurity        (0.0338)
+   4. information          (0.0238)
+   5. field                (0.0234)

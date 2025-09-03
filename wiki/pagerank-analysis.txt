@@ -1,0 +1,53 @@
+🏆 WIKI VOCABULARY PAGERANK ANALYSIS
+==================================================
+📊 Graph Overview:
+   Nodes: 211
+   Edges: 1024
+   Density: 0.0231
+
+🥇 TOP TERMS BY PAGERANK:
+   (Most 'important' terms based on reference network)
+    1. data                      (0.1344)
+    2. field                     (0.1172)
+    3. information               (0.0998)
+    4. software                  (0.0986)
+    5. computer                  (0.0892)
+    6. internet                  (0.0490)
+    7. code                      (0.0376)
+    8. programming               (0.0346)
+    9. spreadsheet               (0.0203)
+   10. hardware                  (0.0195)
+
+📚 AUTHORITY TERMS:
+   (Most referenced by other terms)
+    1. software                  (referenced 112 times)
+    2. data                      (referenced 111 times)
+    3. information               (referenced 110 times)
+    4. computer                  (referenced 108 times)
+    5. code                      (referenced 67 times)
+    6. internet                  (referenced 55 times)
+    7. programming               (referenced 54 times)
+    8. social media              (referenced 22 times)
+    9. cybersecurity             (referenced 21 times)
+   10. privacy                   (referenced 15 times)
+
+🔗 HUB TERMS:
+   (Reference many other terms)
+    1. big data                  (references 11 terms)
+    2. api application programming interface (references 10 terms)
+    3. upload                    (references 10 terms)
+    4. url uniform resource locator (references 10 terms)
+    5. absolute path             (references 9 terms)
+    6. application software      (references 9 terms)
+    7. local application         (references 9 terms)
+    8. surveillance              (references 9 terms)
+    9. archivecompression tool   (references 8 terms)
+   10. bug                       (references 8 terms)
+
+🌐 CONNECTOR TERMS:
+   (Both reference and are referenced heavily)
+    1. field                     (in:76, out:7)
+    2. file                      (in:22, out:7)
+    3. storage                   (in:17, out:9)
+    4. hardware                  (in:18, out:6)
+    5. antivirus                 (in:4, out:13)
