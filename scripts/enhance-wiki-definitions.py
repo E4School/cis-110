@@ -16,6 +16,8 @@ import os
 import re
 import time
 import argparse
+import sys
+import subprocess
 from pathlib import Path
 from typing import Optional, Dict, Any
 
@@ -65,7 +67,7 @@ def load_api_key() -> Optional[str]:
 
 
 class WikiDefinitionEnhancer:
-    def __init__(self, prompt_override: Optional[str] = None, append_mode: bool = False, model: str = "gpt-5"):
+    def __init__(self, prompt_override: Optional[str] = None, append_mode: bool = False, model: str = "gpt-5", concept_list: Optional[str] = None):
         """
         Initialize the enhancer with OpenAI client.
         
@@ -81,17 +83,20 @@ class WikiDefinitionEnhancer:
         api_key = load_api_key()
         if not api_key:
             raise ValueError("OPENAI_API_KEY not found. Create a .env file with OPENAI_API_KEY=your-key-here")
-        
+
         self.client = OpenAI(api_key=api_key)
         self.enhancement_count = 0
         self.error_count = 0
         self.prompt_override = prompt_override
         self.append_mode = append_mode
         self.model = model
-        
+        # Large external list of concepts (optional). If provided and custom prompt contains
+        # {concept_list} it will be substituted; otherwise appended under a heading.
+        self.concept_list = concept_list
+
         print(f"🤖 Using model: {model}")
         
-    def create_enhancement_prompt(self, term: str, current_definition: str) -> str:
+    def create_enhancement_prompt(self, term: str, current_definition: str, source_file: Optional[Path] = None) -> str:
         """
         Create an enhancement prompt for ChatGPT.
         
@@ -104,9 +109,72 @@ class WikiDefinitionEnhancer:
         """
         # Use prompt override if provided
         if self.prompt_override:
-            # Replace placeholders in custom prompt
-            custom_prompt = self.prompt_override.replace("{term}", term)
+            # Start with the raw override template
+            custom_prompt = self.prompt_override
+
+            # Basic placeholders
+            custom_prompt = custom_prompt.replace("{term}", term)
             custom_prompt = custom_prompt.replace("{current_definition}", current_definition)
+
+            # File include placeholders: {FILE:relative/path.txt}
+            # We allow relative to project root (script_dir.parent) or absolute paths (discouraged)
+            file_pattern = re.compile(r"\{FILE:([^}]+)\}")
+            script_dir = Path(__file__).parent
+            project_dir = script_dir.parent
+            source_dir = source_file.parent if source_file else None  # e.g., wiki/
+            term_subdir = None
+            if source_file is not None:
+                # wiki/term.md -> wiki/term/
+                term_subdir = source_file.parent / source_file.stem
+
+            def replace_file(match):
+                rel_path = match.group(1).strip()
+                # If path starts with ./ or ../ and we have a source_dir, resolve relative to the wiki file's directory
+                base_path: Path
+                if rel_path.startswith('./') and term_subdir is not None:
+                    base_path = term_subdir / rel_path[2:]
+                elif source_dir and rel_path.startswith('../'):
+                    base_path = (term_subdir or source_dir) / rel_path  # normal parent traversal
+                elif term_subdir is not None:
+                    # Try term-specific file first if it's a simple relative name (no leading slash)
+                    if not rel_path.startswith('/') and not re.match(r'^[A-Za-z]:\\', rel_path):
+                        candidate_first = (term_subdir / rel_path).resolve()
+                        if candidate_first.exists():
+                            base_path = candidate_first
+                        else:
+                            base_path = project_dir / rel_path
+                    else:
+                        base_path = project_dir / rel_path
+                else:
+                    base_path = project_dir / rel_path
+                # Prevent directory traversal outside project (normalize and ensure within project)
+                try:
+                    candidate = base_path if isinstance(base_path, Path) else Path(base_path)
+                    candidate = candidate.resolve()
+                    if not str(candidate).startswith(str(project_dir.resolve())):
+                        raise ValueError(f"Included file path outside project: {rel_path}")
+                    if not candidate.exists():
+                        raise FileNotFoundError(f"Included file not found: {rel_path}")
+                    text = candidate.read_text(encoding='utf-8')
+                    # Limit very large files
+                    max_chars = 8000
+                    if len(text) > max_chars:
+                        text = text[:max_chars] + "\n...[TRUNCATED]"
+                    return f"\n[FILE: {rel_path}]\n{text}\n[END FILE]\n"
+                except Exception as e:
+                    # Re-raise to surface the error to caller so processing halts for this term
+                    raise
+
+            if '{FILE:' in custom_prompt:
+                custom_prompt = file_pattern.sub(replace_file, custom_prompt)
+
+            # Concept list placeholder
+            if "{concept_list}" in custom_prompt:
+                custom_prompt = custom_prompt.replace("{concept_list}", self.concept_list or "(no concept list provided)")
+                return custom_prompt
+            # If concept list provided but no placeholder, append it for convenience
+            if self.concept_list:
+                return custom_prompt + "\n\nConcept List (for reference):\n" + self.concept_list
             return custom_prompt
         
         # Use default enhancement prompt
@@ -132,7 +200,7 @@ IMPORTANT:
 
 Enhanced definition:"""
 
-    def enhance_definition(self, term: str, current_definition: str) -> Optional[str]:
+    def enhance_definition(self, term: str, current_definition: str, source_path: Optional[Path] = None) -> Optional[str]:
         """
         Send definition to ChatGPT for enhancement.
         
@@ -144,7 +212,7 @@ Enhanced definition:"""
             str: Enhanced definition or None if failed
         """
         try:
-            prompt = self.create_enhancement_prompt(term, current_definition)
+            prompt = self.create_enhancement_prompt(term, current_definition, source_path)
             
             # Use different API calls based on model
             if self.model.startswith("gpt-5"):
@@ -324,8 +392,6 @@ Enhanced definition:"""
             # Prepare content
             content = f"""# {term} - {output_filename.replace('.md', '').replace('-', ' ').title()}
 
-Generated on {timestamp}
-
 {response}
 """
             
@@ -383,7 +449,7 @@ Generated on {timestamp}
                 current_definition = content
             
             # Get response from ChatGPT
-            response = self.enhance_definition(term, current_definition)
+            response = self.enhance_definition(term, current_definition, file_path)
             if not response:
                 self.error_count += 1
                 return False
@@ -550,6 +616,18 @@ Examples:
         action="store_true",
         help="Skip confirmation prompts and proceed automatically"
     )
+
+    parser.add_argument(
+        "--concept-list-file",
+        type=str,
+        default=None,
+        help="(Optional) Path to a text file containing a list of concepts to inject via {concept_list}. If omitted and {concept_list} is present, the list is auto-generated."
+    )
+    parser.add_argument(
+        "--auto-concept-list",
+        action="store_true",
+        help="Force auto-generation of concept list from scripts/list_vocabulary_terms.py even if {concept_list} not explicitly in custom prompt."
+    )
     
     return parser.parse_args()
 
@@ -629,6 +707,40 @@ def main():
     print(f"🧠 Selected model: {selected_model}")
     print()
     
+    # Prepare concept list (file or auto-generate)
+    concept_list_text = None
+    need_concepts = False
+    if args.custom_prompt and '{concept_list}' in args.custom_prompt:
+        need_concepts = True
+    if args.auto_concept_list:
+        need_concepts = True
+
+    if args.concept_list_file:
+        try:
+            concept_path = Path(args.concept_list_file)
+            if not concept_path.is_absolute():
+                concept_path = project_dir / args.concept_list_file
+            concept_list_text = concept_path.read_text(encoding='utf-8').strip()
+            print(f"📚 Loaded concept list from {concept_path} ({len(concept_list_text)} chars)")
+        except Exception as e:
+            print(f"⚠️  Failed to load concept list file: {e}")
+            concept_list_text = None
+            need_concepts = True  # fallback to auto
+
+    if need_concepts and concept_list_text is None:
+        list_script = project_dir / 'scripts' / 'list_vocabulary_terms.py'
+        if list_script.exists():
+            try:
+                cmd = [sys.executable, str(list_script)]
+                # We want categories included (default behavior). Capture output.
+                result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+                concept_list_text = result.stdout.strip()
+                print(f"🛠️  Auto-generated concept list from list_vocabulary_terms.py ({len(concept_list_text)} chars)")
+            except subprocess.CalledProcessError as e:
+                print(f"⚠️  Failed to auto-generate concept list: {e}")
+        else:
+            print("⚠️  list_vocabulary_terms.py not found; cannot auto-generate concept list")
+
     # Prompt options (use CLI arg or prompt)
     if args.custom_prompt:
         prompt_override = args.custom_prompt
@@ -713,7 +825,8 @@ def main():
         enhancer = WikiDefinitionEnhancer(
             prompt_override=prompt_override, 
             append_mode=append_mode,
-            model=selected_model
+            model=selected_model,
+            concept_list=concept_list_text
         )
         enhancer.enhance_all_wiki_files(wiki_dir, max_files, start_from, output_filename)
         
