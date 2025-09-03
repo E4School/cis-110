@@ -39,7 +39,6 @@
 - **Discuss why blogs were considered a disruptive technology**  Lowered publishing barrier, disintermediated traditional media gatekeepers, accelerated niche and real‑time commentary.
 - **Explain how Wikipedia articles are written and edited**  Collaborative editing via MediaWiki; neutral point of view and verifiability policies; revision history + talk pages mediate disputes; consensus governs content.
 - **Discuss the pros and cons of Webmail and local mail**  Webmail: ubiquitous access, reduced client maintenance, server‑side filtering; cons: privacy dependence on provider, offline limitations. Local (client) mail: offline access, potential privacy control; cons: configuration, sync, backup overhead.
-- **Explain the difference between IMAP and POP**  IMAP synchronizes mailbox state across devices (server stores master copy); POP downloads (optionally deletes) messages to one client, limited server sync.
 - **List the elements that constitute an online identity**  Credentials (username/email), profile attributes, activity history, connections, behavioral metadata (time, device), and content artifacts.
 - **List four techniques for dealing with cyberbullies**  Document incidents, block/report offenders, adjust privacy settings, seek support (trusted adults/platform moderation), avoid escalation.
 - **Analyze the ethical implications of data collection by social media platforms**  Tensions: personalization vs surveillance, consent clarity, data minimization, algorithmic bias, secondary use without informed user control.

@@ -508,13 +508,13 @@ Enhanced definition:"""
                 if wiki_file.name == start_from:
                     start_index = i
                     break
-            
-            if start_index is not None:
-                wiki_files = wiki_files[start_index:]
-                print(f"📍 Starting from {start_from} (found at position {start_index + 1})")
-                print(f"📋 Remaining files to process: {len(wiki_files)}")
-            else:
-                print(f"⚠️  Warning: Start file '{start_from}' not found, processing all files")
+
+            if start_index is None:
+                raise FileNotFoundError(f"Start file '{start_from}' not found in wiki directory")
+
+            wiki_files = wiki_files[start_index:]
+            print(f"📍 Starting from {start_from} (found at position {start_index + 1})")
+            print(f"📋 Remaining files to process: {len(wiki_files)}")
         
         if max_files:
             wiki_files = wiki_files[:max_files]

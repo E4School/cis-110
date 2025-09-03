@@ -13,9 +13,9 @@
 - **Hardware** - The physical components of a computer system
 - **Software** - Programs and instructions that tell hardware what to do
 - **IPOS Model** - Input, Processing, Output, Storage - the four fundamental computer operations
-- **Processor (CPU)** - The "brain" of the computer that executes instructions
-- **RAM (Random Access Memory)** - Temporary, fast storage for currently running programs
-- **ROM (Read-Only Memory)** - Permanent storage for basic system instructions
+- **CPU** - The "brain" of the computer that executes instructions
+- **RAM** - Temporary, fast storage for currently running programs
+- **ROM** - Permanent storage for basic system instructions
 - **Storage** - Long-term data retention (hard drives, SSDs, cloud storage)
 - **Input Device** - Hardware that allows users to enter data (keyboard, mouse, touchscreen)
 - **Output Device** - Hardware that presents information to users (monitor, printer, speakers)
@@ -23,7 +23,7 @@
 - **Embedded System** - A computer built into another device for specific purposes
 
 ### **Operating Systems & Software**
-- **Operating System (OS)** - Software that manages computer hardware and provides services to other programs
+- **Operating System** - Software that manages computer hardware and provides services to other programs
 - **System Software** - Programs that manage computer resources (OS, drivers, utilities)
 - **Application Software** - Programs designed for end-users to accomplish specific tasks
 - **Multitasking** - Running multiple programs simultaneously
@@ -40,33 +40,31 @@
 
 ### **Internet Infrastructure**
 - **Internet** - Global network of interconnected computers
-- **World Wide Web (Web)** - System of interlinked documents accessed via the internet
 - **Web Browser** - Software for accessing and displaying web content
 - **Web Server** - Computer that stores and delivers web pages
-- **URL (Uniform Resource Locator)** - Web address that specifies the location of a resource
+- **URL** - Web address that specifies the location of a resource
 - **Domain Name** - Human-readable address for a website
-- **HTTP (HyperText Transfer Protocol)** - Standard for transferring web content
+- **HTTP** - Standard for transferring web content
 - **HTTPS** - Secure version of HTTP with encryption
 - **IP Address** - Numerical address that identifies devices on a network
 - **Bandwidth** - Amount of data that can be transmitted over a network connection
 - **WiFi** - Wireless networking technology for local area networks
 - **Router** - Device that forwards data between computer networks
-- **ISP (Internet Service Provider)** - Company that provides internet access
-- **DNS (Domain Name System)** - System that translates domain names to IP addresses
+- **ISP** - Company that provides internet access
+- **DNS** - System that translates domain names to IP addresses
 - **Search Engine** - Software system designed to search for information on the internet
 
 ### **Web Development**
-- **HTML (HyperText Markup Language)** - Code used to structure web content
-- **CSS (Cascading Style Sheets)** - Code used to style and format web pages
+- **HTML** - Code used to structure web content
+- **CSS** - Code used to style and format web pages
 - **JavaScript** - Programming language that adds interactivity to web pages
 - **Hyperlink** - Clickable connection between web pages or resources
 - **Web Cookie** - Small data file stored by websites to remember user information
 - **Caching** - Storing frequently accessed data for faster retrieval
-- **API (Application Programming Interface)** - Set of rules for different software components to communicate
+- **API** - Set of rules for different software components to communicate
 - **Responsive Design** - Web design approach that adapts to different screen sizes
 - **Frontend** - User-facing part of a web application
 - **Backend** - Server-side components that users don't directly see
-- **Database** - System for storing and organizing website data
 - **Framework** - Pre-built code structure that simplifies development
 - **Plugin** - Add-on software that extends functionality of an application
 
@@ -76,8 +74,8 @@
 
 ### **Digital Communication & Platforms**
 - **Platform** - Technology foundation that supports other applications or services
-- **User Interface (UI)** - Visual elements that allow users to interact with software
-- **User Experience (UX)** - Overall experience of using a product or service
+- **User Interface** - Visual elements that allow users to interact with software
+- **User Experience** - Overall experience of using a product or service
 - **Notification** - Alert or message sent to inform users of events
 - **Timeline/Feed** - Stream of content displayed in chronological order
 - **Hashtag** - Metadata tag used to categorize content on social media
@@ -95,27 +93,10 @@
 - **Profile** - Collection of information that represents a user on a platform
 - **Six Degrees of Separation** - Theory that everyone is connected by no more than six relationships
 - **Email** - Electronic messaging system
-- **Webmail** - Email accessed through a web browser
-- **IMAP/POP** - Protocols for retrieving email from servers
 - **Instant Messaging** - Real-time text communication between users
 - **Video Conferencing** - Technology for conducting meetings over the internet
 - **Cloud Storage** - Online storage service accessible from any internet-connected device
 - **Collaboration Tools** - Software that enables multiple people to work together remotely
-
-### **Digital Citizenship**
-- **Digital Citizenship** - Responsible and ethical use of technology
-- **Cyberbullying** - Using technology to harass, threaten, or intimidate others
-- **Online Privacy** - Control over personal information shared online
-- **Digital Footprint** - Trail of data created by online activities
-- **Netiquette** - Proper etiquette for online communication
-- **Information Literacy** - Ability to find, evaluate, and use information effectively
-- **Digital Wellness** - Healthy relationship with technology and screen time
-- **Terms of Service** - Legal agreement between user and service provider
-- **Privacy Policy** - Document explaining how a company collects and uses personal data
-- **Fake News** - False or misleading information presented as legitimate news
-- **Digital Literacy** - Ability to use technology effectively and critically
-- **Screen Time** - Amount of time spent using devices with screens
-- **Digital Detox** - Intentional reduction or elimination of technology use
 
 ---
 
@@ -123,7 +104,7 @@
 
 ### **File Systems**
 - **File** - Named collection of data stored on a computer
-- **Folder (Directory)** - Container for organizing files
+- **Folder** - Container for organizing files
 - **File Extension** - Suffix that indicates file type (.txt, .pdf, .jpg)
 - **File Path** - Location of a file in the folder hierarchy
 - **Absolute Path** - Complete file location from the root directory
@@ -148,16 +129,16 @@
 - **Filter** - Tool for displaying only data that meets specific criteria
 - **Sort** - Arranging data in a specific order
 - **Formula** - Mathematical expression used to calculate values
-- **Pivot Table** - Tool for summarizing and analyzing large datasets
 - **Data Visualization** - Graphic representation of information and data
 - **Dashboard** - Interface displaying key information and metrics at a glance
+
 ### **Databases & Structured Data**
 - **Database** - Organized collection of structured information
 - **Table** - Collection of related data organized in rows and columns
 - **Field** - Individual data element (column in a table)
 - **Record** - Complete set of data about one item (row in a table)
 - **Relational Database** - Database that organizes data into related tables
-- **SQL (Structured Query Language)** - Language for communicating with databases
+- **SQL** - Language for communicating with databases
 - **Big Data** - Extremely large datasets that require special tools to process
 - **NoSQL** - Database systems designed for flexibility and large-scale data
 - **Query** - Request for specific information from a database
@@ -169,7 +150,7 @@
 - **Office Suite** - Collection of productivity applications (word processing, spreadsheets, presentations)
 - **Word Processor** - Software for creating and editing text documents
 - **Presentation Software** - Application for creating slideshows and visual presentations
-- **PDF (Portable Document Format)** - File format that preserves document formatting across devices
+- **PDF** - File format that preserves document formatting across devices
 - **Image Editor** - Software for modifying and enhancing digital images
 - **Media Player** - Application for playing audio and video files
 - **Archive/Compression Tool** - Software for creating and extracting compressed files
@@ -191,7 +172,7 @@
 - **Restart/Reboot** - Turning a device off and on again to resolve issues
 - **Reset** - Returning settings to their original state
 - **Tech Support** - Assistance provided to help users solve technical problems
-- **FAQ (Frequently Asked Questions)** - List of common questions and answers
+- **FAQ** - List of common questions and answers
 - **Documentation** - Written materials that explain how to use software or systems
 - **Tutorial** - Step-by-step guide for learning a skill or process
 - **Help Desk** - Support service that assists users with technical issues
@@ -209,11 +190,11 @@
 
 ### **Authentication & Protection**
 - **Password** - Secret phrase used to verify identity
-- **Two-Factor Authentication (2FA)** - Security process requiring two different verification methods
+- **Two-Factor Authentication** - Security process requiring two different verification methods
 - **Encryption** - Converting data into coded form to prevent unauthorized access
 - **Decryption** - Converting encrypted data back to readable form
 - **Digital Certificate** - Electronic document that verifies identity
-- **VPN (Virtual Private Network)** - Secure connection over a public network
+- **VPN** - Secure connection over a public network
 
 ### **Threats & Attacks**
 - **Phishing** - Fraudulent attempt to obtain sensitive information
@@ -260,25 +241,17 @@
 - **Open Source** - Software with publicly available source code
 - **Proprietary Software** - Software owned by individuals or companies
 
-### **Digital Ethics**
-- **Digital Ethics** - Moral principles governing technology use
-- **Privacy** - Right to control personal information
-- **Data Mining** - Extracting patterns from large datasets
-- **Algorithmic Bias** - Unfair discrimination in automated systems
-- **Digital Divide** - Gap between those with and without technology access
-- **Surveillance** - Systematic monitoring of behavior or communications
-
 ---
 
-## Modern Technology Trends
+## Technology Trends
 
 ### **Emerging Technologies**
-- **Artificial Intelligence (AI)** - Computer systems that perform tasks typically requiring human intelligence
+- **Artificial Intelligence** - Computer systems that perform tasks typically requiring human intelligence
 - **Machine Learning** - AI systems that improve through experience
-- **Internet of Things (IoT)** - Network of connected everyday objects
+- **Internet of Things** - Network of connected everyday objects
 - **Blockchain** - Distributed ledger technology
-- **Virtual Reality (VR)** - Computer-generated simulation of a 3D environment
-- **Augmented Reality (AR)** - Overlay of digital information on the real world
+- **Virtual Reality** - Computer-generated simulation of a 3D environment
+- **Augmented Reality** - Overlay of digital information on the real world
 - **5G** - Fifth generation of wireless mobile technology
 - **Automation** - Technology that performs tasks without human intervention
 - **Smart Device** - Electronic device that can connect to other devices or networks
