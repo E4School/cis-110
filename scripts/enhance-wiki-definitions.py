@@ -6,8 +6,8 @@ This script batch processes all wiki files and enhances their definitions
 by sending them to ChatGPT with appropriate enhancement prompts.
 
 Requirements:
-- pip install openai
-- Set OPENAI_API_KEY environment variable
+- pip install openai python-dotenv
+- Create a .env file with OPENAI_API_KEY=your-key-here
 
 Usage: python enhance-wiki-definitions.py
 """
@@ -15,6 +15,7 @@ Usage: python enhance-wiki-definitions.py
 import os
 import re
 import time
+import argparse
 from pathlib import Path
 from typing import Optional, Dict, Any
 
@@ -25,24 +26,61 @@ except ImportError:
     OPENAI_AVAILABLE = False
     print("OpenAI library not available. Install with: pip install openai")
 
+try:
+    from dotenv import load_dotenv
+    DOTENV_AVAILABLE = True
+except ImportError:
+    DOTENV_AVAILABLE = False
+    print("python-dotenv library not available. Install with: pip install python-dotenv")
+
+
+def load_api_key() -> Optional[str]:
+    """
+    Load the OpenAI API key from .env file or environment variable.
+    
+    Returns:
+        str: API key if found, None otherwise
+    """
+    # Try to load from .env file first
+    if DOTENV_AVAILABLE:
+        # Look for .env file in script directory or parent directory
+        script_dir = Path(__file__).parent
+        env_paths = [
+            script_dir / '.env',
+            script_dir.parent / '.env'
+        ]
+        
+        for env_path in env_paths:
+            if env_path.exists():
+                load_dotenv(env_path)
+                print(f"📄 Loaded environment from {env_path}")
+                break
+        else:
+            # Try loading from current directory
+            load_dotenv()
+    
+    # Get API key from environment (either from .env or system env)
+    api_key = os.getenv('OPENAI_API_KEY')
+    return api_key
+
 
 class WikiDefinitionEnhancer:
-    def __init__(self, prompt_override: Optional[str] = None, append_mode: bool = False, model: str = "gpt-4o"):
+    def __init__(self, prompt_override: Optional[str] = None, append_mode: bool = False, model: str = "gpt-5"):
         """
         Initialize the enhancer with OpenAI client.
         
         Args:
             prompt_override: Custom prompt to use instead of default enhancement prompt
             append_mode: If True, append responses to files instead of replacing definitions
-            model: OpenAI model to use (default: gpt-4o)
+            model: OpenAI model to use (default: gpt-5)
         """
         if not OPENAI_AVAILABLE:
             raise ImportError("OpenAI library is required. Install with: pip install openai")
         
-        # Initialize OpenAI client
-        api_key = os.getenv('OPENAI_API_KEY')
+        # Load API key from .env file or environment
+        api_key = load_api_key()
         if not api_key:
-            raise ValueError("OPENAI_API_KEY environment variable is required")
+            raise ValueError("OPENAI_API_KEY not found. Create a .env file with OPENAI_API_KEY=your-key-here")
         
         self.client = OpenAI(api_key=api_key)
         self.enhancement_count = 0
@@ -108,21 +146,32 @@ Enhanced definition:"""
         try:
             prompt = self.create_enhancement_prompt(term, current_definition)
             
-            response = self.client.chat.completions.create(
-                model=self.model,
-                messages=[
-                    {"role": "user", "content": prompt}
-                ],
-                max_tokens=500,  # Increased for better models
-                temperature=0.7
-            )
-            
-            enhanced_definition = response.choices[0].message.content.strip()
+            # Use different API calls based on model
+            if self.model.startswith("gpt-5"):
+                # GPT-5 uses the Responses API
+                response = self.client.responses.create(
+                    model=self.model,
+                    input=prompt,
+                    reasoning={"effort": "low"}  # Optional parameter for GPT-5
+                )
+                enhanced_definition = response.output_text.strip()
+            else:
+                # Other models use Chat Completions API
+                api_params = {
+                    "model": self.model,
+                    "messages": [{"role": "user", "content": prompt}],
+                    "max_tokens": 500,
+                    "temperature": 0.7
+                }
+                response = self.client.chat.completions.create(**api_params)
+                enhanced_definition = response.choices[0].message.content.strip()
             
             # Basic validation - ensure we got a reasonable response
             if len(enhanced_definition) < 20:
-                print(f"  Warning: Enhanced definition for '{term}' seems too short")
-                return None
+                print(f"  Warning: Enhanced definition for '{term}' seems too short ({len(enhanced_definition)} chars)")
+                # For debugging purposes, let's accept short responses for now
+                if len(enhanced_definition) == 0:
+                    return None
             
             return enhanced_definition
             
@@ -141,6 +190,8 @@ Enhanced definition:"""
             str: Current definition text or None if not found
         """
         lines = content.split('\n')
+        
+        # First, try to find a formal "## Definition" section
         in_definition = False
         definition_lines = []
         
@@ -156,6 +207,17 @@ Enhanced definition:"""
         
         if definition_lines:
             return '\n'.join(definition_lines).strip()
+        
+        # If no formal definition section found, look for simple format:
+        # Title followed by definition text
+        if len(lines) >= 3:
+            # Check if we have: # Title, empty line, definition text
+            if lines[0].startswith('# ') and lines[1].strip() == '' and lines[2].strip():
+                definition_text = lines[2].strip()
+                # Make sure it's not another heading
+                if not definition_text.startswith('#'):
+                    return definition_text
+        
         return None
 
     def update_definition_in_content(self, content: str, new_definition: str) -> str:
@@ -230,12 +292,75 @@ Enhanced definition:"""
         
         return appended_content
 
-    def process_wiki_file(self, file_path: Path) -> bool:
+    def write_to_nested_file(self, base_file_path: Path, output_filename: str, term: str, response: str) -> bool:
         """
-        Process a single wiki file to enhance its definition or append custom content.
+        Write response to a nested file structure: wiki/term-name/output-filename.md
+        
+        Args:
+            base_file_path: Path to the original wiki file
+            output_filename: Name of the output file (without .md extension)
+            term: The vocabulary term
+            response: Response from ChatGPT to write
+            
+        Returns:
+            bool: True if file was written successfully
+        """
+        import datetime
+        
+        try:
+            # Create nested directory based on the base filename (without extension)
+            base_name = base_file_path.stem  # e.g., "algorithm" from "algorithm.md"
+            nested_dir = base_file_path.parent / base_name
+            nested_dir.mkdir(exist_ok=True)
+            
+            # Create the output file path
+            if not output_filename.endswith('.md'):
+                output_filename += '.md'
+            output_path = nested_dir / output_filename
+            
+            # Generate timestamp
+            timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            
+            # Prepare content
+            content = f"""# {term} - {output_filename.replace('.md', '').replace('-', ' ').title()}
+
+Generated on {timestamp}
+
+{response}
+"""
+            
+            # If file exists, append with separator
+            if output_path.exists():
+                with open(output_path, 'r', encoding='utf-8') as f:
+                    existing_content = f.read()
+                
+                content = f"""{existing_content}
+
+---
+
+## {timestamp}
+
+{response}
+"""
+            
+            # Write the file
+            with open(output_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            
+            print(f"  📁 Written to: {nested_dir.name}/{output_filename}")
+            return True
+            
+        except Exception as e:
+            print(f"  ❌ Error writing to nested file: {e}")
+            return False
+
+    def process_wiki_file(self, file_path: Path, output_filename: Optional[str] = None) -> bool:
+        """
+        Process a single wiki file to enhance its definition or create custom content.
         
         Args:
             file_path: Path to the wiki file
+            output_filename: If provided, write to nested file instead of modifying original
             
         Returns:
             bool: True if file was successfully processed
@@ -252,9 +377,9 @@ Enhanced definition:"""
             current_definition = self.extract_current_definition(content)
             if not current_definition:
                 print(f"  Warning: No definition found in {file_path.name}")
-                if not self.append_mode:
+                if not self.append_mode and not output_filename:
                     return False
-                # For append mode, use the whole content as "definition"
+                # Use the whole content as "definition" for custom prompts
                 current_definition = content
             
             # Get response from ChatGPT
@@ -263,17 +388,25 @@ Enhanced definition:"""
                 self.error_count += 1
                 return False
             
-            # Update content based on mode
-            if self.append_mode:
-                # Append response to end of file with timestamp
+            # Handle output based on mode
+            if output_filename:
+                # Write to nested file structure
+                success = self.write_to_nested_file(file_path, output_filename, term, response)
+                if success:
+                    self.enhancement_count += 1
+                else:
+                    self.error_count += 1
+                return success
+            elif self.append_mode:
+                # Original append behavior (for backward compatibility)
                 updated_content = self.append_to_wiki_file(content, response)
+                with open(file_path, 'w', encoding='utf-8') as f:
+                    f.write(updated_content)
             else:
                 # Replace definition (original behavior)
                 updated_content = self.update_definition_in_content(content, response)
-            
-            # Write back to file
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(updated_content)
+                with open(file_path, 'w', encoding='utf-8') as f:
+                    f.write(updated_content)
             
             self.enhancement_count += 1
             return True
@@ -283,7 +416,7 @@ Enhanced definition:"""
             self.error_count += 1
             return False
 
-    def enhance_all_wiki_files(self, wiki_dir: Path, max_files: Optional[int] = None, start_from: Optional[str] = None):
+    def enhance_all_wiki_files(self, wiki_dir: Path, max_files: Optional[int] = None, start_from: Optional[str] = None, output_filename: Optional[str] = None):
         """
         Enhance definitions in all wiki files.
         
@@ -291,6 +424,7 @@ Enhanced definition:"""
             wiki_dir: Path to wiki directory
             max_files: Optional limit on number of files to process
             start_from: Optional filename to start from (inclusive)
+            output_filename: If provided, write to nested files instead of modifying originals
         """
         wiki_files = list(wiki_dir.glob('*.md'))
         
@@ -320,40 +454,138 @@ Enhanced definition:"""
             wiki_files = wiki_files[:max_files]
             print(f"Processing first {max_files} files (limit applied)...")
         
-        print(f"🚀 Enhancing definitions in {len(wiki_files)} wiki files...")
+        mode_description = "nested files" if output_filename else ("appending" if self.append_mode else "enhancing definitions")
+        print(f"🚀 {mode_description.title()} in {len(wiki_files)} wiki files...")
         print("⚠️  This will use OpenAI API calls - ensure you have sufficient credits")
         print()
         
         for i, wiki_file in enumerate(wiki_files, 1):
-            print(f"[{i:3d}/{len(wiki_files)}] Enhancing {wiki_file.name}...")
+            action = f"Creating {output_filename}" if output_filename else "Enhancing"
+            print(f"[{i:3d}/{len(wiki_files)}] {action} {wiki_file.name}...")
             
-            success = self.process_wiki_file(wiki_file)
+            success = self.process_wiki_file(wiki_file, output_filename)
             
             if success and i % 10 == 0:
-                print(f"  ✅ Enhanced {self.enhancement_count} definitions so far...")
+                print(f"  ✅ Processed {self.enhancement_count} files so far...")
                 # Small delay to be respectful to API
-                time.sleep(1)
+                time.sleep(2)
             
-            # Add small delay between requests
-            time.sleep(0.5)
+            # Add longer delay between requests for GPT-5
+            if self.model.startswith("gpt-5"):
+                time.sleep(2)
+            else:
+                time.sleep(0.5)
         
-        print(f"\n🎉 Enhancement complete!")
-        print(f"  ✅ Successfully enhanced: {self.enhancement_count}")
+        print(f"\n🎉 Processing complete!")
+        print(f"  ✅ Successfully processed: {self.enhancement_count}")
         print(f"  ❌ Errors encountered: {self.error_count}")
-        print(f"  📊 Success rate: {(self.enhancement_count/(self.enhancement_count + self.error_count)*100):.1f}%")
+        
+        # Calculate success rate, avoiding division by zero
+        total_processed = self.enhancement_count + self.error_count
+        if total_processed > 0:
+            success_rate = (self.enhancement_count / total_processed) * 100
+            print(f"  📊 Success rate: {success_rate:.1f}%")
+        else:
+            print(f"  📊 Success rate: N/A (no files processed)")
+
+
+def parse_arguments():
+    """Parse command line arguments."""
+    parser = argparse.ArgumentParser(
+        description="Wiki Definition Enhancer - AI-Powered Definition Enhancement",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  python enhance-wiki-definitions.py --model gpt-4o --test
+  python enhance-wiki-definitions.py --model gpt-5 --start-from algorithm.md
+  python enhance-wiki-definitions.py --custom-prompt "Create 3 exam questions about: {current_definition}" --output-file "exam-questions"
+  python enhance-wiki-definitions.py --model gpt-3.5-turbo --max-files 10
+  python enhance-wiki-definitions.py --custom-prompt "Generate study guide for: {current_definition}" --output-file "study-guide" --test
+        """
+    )
+    
+    parser.add_argument(
+        "--model", "-m",
+        choices=["gpt-5", "gpt-4o", "gpt-4", "gpt-3.5-turbo"],
+        default=None,
+        help="Model to use (default: gpt-5)"
+    )
+    
+    parser.add_argument(
+        "--custom-prompt", "-p",
+        type=str,
+        default=None,
+        help="Custom prompt to use. Use {term} and {current_definition} as placeholders."
+    )
+    
+    parser.add_argument(
+        "--output-file", "-o",
+        type=str,
+        default=None,
+        help="Output filename for custom prompt results (required when using --custom-prompt)"
+    )
+    
+    parser.add_argument(
+        "--start-from", "-s",
+        type=str,
+        default=None,
+        help="Start processing from a specific filename (inclusive)"
+    )
+    
+    parser.add_argument(
+        "--max-files", "-n",
+        type=int,
+        default=None,
+        help="Maximum number of files to process (for testing)"
+    )
+    
+    parser.add_argument(
+        "--test", "-t",
+        action="store_true",
+        help="Run in test mode (process only 5 files)"
+    )
+    
+    parser.add_argument(
+        "--yes", "-y",
+        action="store_true",
+        help="Skip confirmation prompts and proceed automatically"
+    )
+    
+    return parser.parse_args()
 
 
 def main():
     """Main function to enhance all wiki definitions."""
     
+    # Parse command line arguments
+    args = parse_arguments()
+    
+    # Validate arguments
+    if args.custom_prompt and not args.output_file:
+        print("❌ Error: --output-file is required when using --custom-prompt")
+        print("   Example: --custom-prompt 'Create questions' --output-file 'exam-questions'")
+        return
+    
+    if args.output_file and not args.custom_prompt:
+        print("❌ Error: --output-file can only be used with --custom-prompt")
+        return
+    
     if not OPENAI_AVAILABLE:
         print("❌ OpenAI library not available. Install with: pip install openai")
         return
     
+    if not DOTENV_AVAILABLE:
+        print("⚠️  python-dotenv library not available. Install with: pip install python-dotenv")
+        print("   (Will try to use system environment variables)")
+    
     # Check for API key
-    if not os.getenv('OPENAI_API_KEY'):
-        print("❌ OPENAI_API_KEY environment variable is required")
-        print("   Set it with: $env:OPENAI_API_KEY='your-api-key-here'")
+    api_key = load_api_key()
+    if not api_key:
+        print("❌ OPENAI_API_KEY not found")
+        print("   Create a .env file in the project directory with:")
+        print("   OPENAI_API_KEY=your-api-key-here")
+        print("   Or set it as an environment variable:")
+        print("   $env:OPENAI_API_KEY='your-api-key-here'")
         return
     
     script_dir = Path(__file__).parent
@@ -372,68 +604,110 @@ def main():
     print("⚠️  WARNING: This will make API calls to OpenAI (costs money)")
     print()
     
-    # Model selection
-    print("🧠 Model Options:")
-    print("   1. gpt-4o (newest, most capable, higher cost)")
-    print("   2. gpt-4 (very capable, moderate cost)")
-    print("   3. gpt-3.5-turbo (fast, lower cost)")
-    print()
-    model_choice = input("Choose model (1, 2, or 3) [default: 1]: ").strip() or "1"
+    # Model selection (use CLI arg or prompt)
+    if args.model:
+        selected_model = args.model
+        print(f"🧠 Using model: {selected_model} (from command line)")
+    else:
+        print("🧠 Model Options:")
+        print("   1. gpt-5 (newest, most advanced, highest cost)")
+        print("   2. gpt-4o (very capable, higher cost)")
+        print("   3. gpt-4 (very capable, moderate cost)")
+        print("   4. gpt-3.5-turbo (fast, lower cost)")
+        print()
+        model_choice = input("Choose model (1, 2, 3, or 4) [default: 1]: ").strip() or "1"
+        
+        model_map = {
+            "1": "gpt-5",
+            "2": "gpt-4o",
+            "3": "gpt-4", 
+            "4": "gpt-3.5-turbo"
+        }
+        
+        selected_model = model_map.get(model_choice, "gpt-5")
     
-    model_map = {
-        "1": "gpt-4o",
-        "2": "gpt-4", 
-        "3": "gpt-3.5-turbo"
-    }
-    
-    selected_model = model_map.get(model_choice, "gpt-4o")
     print(f"🧠 Selected model: {selected_model}")
     print()
     
-    # Option for custom prompt
-    print("💬 Prompt Options:")
-    print("   1. Use default enhancement prompt")
-    print("   2. Use custom prompt (will append results to files)")
-    print()
-    prompt_choice = input("Choose prompt option (1 or 2): ").strip()
-    
-    prompt_override = None
-    append_mode = False
-    
-    if prompt_choice == "2":
-        print("\nCustom prompt mode enabled!")
-        print("Available placeholders: {term}, {current_definition}")
-        print("Example: 'For the term {term}, create 3 exam questions about: {current_definition}'")
-        print()
-        prompt_override = input("Enter your custom prompt: ").strip()
-        if not prompt_override:
-            print("❌ No prompt provided, exiting.")
-            return
-        append_mode = True
-        print(f"\n📝 Custom prompt: {prompt_override[:100]}{'...' if len(prompt_override) > 100 else ''}")
-        print("🔄 Mode: Append responses to files with timestamps")
+    # Prompt options (use CLI arg or prompt)
+    if args.custom_prompt:
+        prompt_override = args.custom_prompt
+        output_filename = args.output_file
+        append_mode = False  # We don't append anymore, we create nested files
+        print(f"📝 Custom prompt: {prompt_override[:100]}{'...' if len(prompt_override) > 100 else ''}")
+        print(f"� Output to nested files: {output_filename}.md")
     else:
-        print("📝 Using default enhancement prompt")
-        print("🔄 Mode: Replace definitions in-place")
+        output_filename = None
+        if not args.yes:  # Only ask if not in auto-yes mode
+            print("💬 Prompt Options:")
+            print("   1. Use default enhancement prompt")
+            print("   2. Use custom prompt (will create nested files)")
+            print()
+            prompt_choice = input("Choose prompt option (1 or 2): ").strip()
+            
+            if prompt_choice == "2":
+                print("\nCustom prompt mode enabled!")
+                print("Available placeholders: {term}, {current_definition}")
+                print("Example: 'For the term {term}, create 3 exam questions about: {current_definition}'")
+                print()
+                prompt_override = input("Enter your custom prompt: ").strip()
+                if not prompt_override:
+                    print("❌ No prompt provided, exiting.")
+                    return
+                
+                output_filename = input("Enter output filename (without .md): ").strip()
+                if not output_filename:
+                    print("❌ No output filename provided, exiting.")
+                    return
+                
+                append_mode = False
+                print(f"\n📝 Custom prompt: {prompt_override[:100]}{'...' if len(prompt_override) > 100 else ''}")
+                print(f"� Output to nested files: {output_filename}.md")
+            else:
+                prompt_override = None
+                append_mode = False
+                print("📝 Using default enhancement prompt")
+                print("🔄 Mode: Replace definitions in-place")
+        else:
+            prompt_override = None
+            append_mode = False
+            print("📝 Using default enhancement prompt (auto mode)")
+            print("🔄 Mode: Replace definitions in-place")
     
-    # Option to start from specific file
-    start_from_input = input("Start from specific file? (enter filename or press Enter for all): ").strip()
-    start_from = start_from_input if start_from_input else None
+    # File selection options
+    start_from = args.start_from
+    if start_from and not args.yes:
+        print(f"📍 Starting from: {start_from}")
+    elif not start_from and not args.yes:
+        start_from_input = input("Start from specific file? (enter filename or press Enter for all): ").strip()
+        start_from = start_from_input if start_from_input else None
     
-    # Option to limit files for testing
-    test_mode = input("Run in test mode? (process only 5 files) (y/N): ").strip().lower()
-    max_files = 5 if test_mode in ['y', 'yes'] else None
+    # Test mode / max files
+    if args.test:
+        max_files = 5
+        print("🧪 Test mode: processing only 5 files")
+    elif args.max_files:
+        max_files = args.max_files
+        print(f"📊 Processing maximum {max_files} files")
+    else:
+        if not args.yes:
+            test_mode = input("Run in test mode? (process only 5 files) (y/N): ").strip().lower()
+            max_files = 5 if test_mode in ['y', 'yes'] else None
+        else:
+            max_files = None
     
-    if not test_mode and not start_from:
-        response = input("Are you sure you want to enhance ALL definitions? (y/N): ").strip().lower()
-        if response not in ['y', 'yes']:
-            print("Operation cancelled.")
-            return
-    elif start_from and not test_mode:
-        response = input(f"Enhance definitions starting from {start_from}? (y/N): ").strip().lower()
-        if response not in ['y', 'yes']:
-            print("Operation cancelled.")
-            return
+    # Confirmation (unless auto-yes mode)
+    if not args.yes:
+        if not max_files and not start_from:
+            response = input("Are you sure you want to enhance ALL definitions? (y/N): ").strip().lower()
+            if response not in ['y', 'yes']:
+                print("Operation cancelled.")
+                return
+        elif start_from and not max_files:
+            response = input(f"Enhance definitions starting from {start_from}? (y/N): ").strip().lower()
+            if response not in ['y', 'yes']:
+                print("Operation cancelled.")
+                return
     
     try:
         enhancer = WikiDefinitionEnhancer(
@@ -441,7 +715,7 @@ def main():
             append_mode=append_mode,
             model=selected_model
         )
-        enhancer.enhance_all_wiki_files(wiki_dir, max_files, start_from)
+        enhancer.enhance_all_wiki_files(wiki_dir, max_files, start_from, output_filename)
         
     except ValueError as e:
         print(f"❌ Configuration error: {e}")
