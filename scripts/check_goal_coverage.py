@@ -1,12 +1,18 @@
 #!/usr/bin/env python
-"""Check coverage of learning goals in main.md.
+"""Check coverage of learning goals across the modular section files referenced by main.md.
 
-Reads learning goals from learning-goals.md, extracts every bullet goal line,
-and reports whether each appears (case-insensitive substring match) in main.md.
+Process:
+    1. Parse `learning-goals.md` for bullet goals grouped under section headings (## lines).
+    2. Parse `main.md` and collect every markdown link target or plain path containing `content/` and ending in `.md`.
+         (Supports formats like `content/01-file.md`, `[text](content/01-file.md)`, or indented paths.)
+    3. Concatenate the contents of those files (in the order they appear) into a single corpus.
+         If none are found, fall back to scanning `main.md` itself.
+    4. Perform case-insensitive, whitespace-normalized substring matching for each goal.
+    5. Output a table (default) or JSON with `--json`.
 
-Usage (from repo root or cis-110-ai-redo directory):
-  python scripts/check_goal_coverage.py            # human-readable table
-  python scripts/check_goal_coverage.py --json     # machine-readable JSON
+Usage:
+    python scripts/check_goal_coverage.py            # human-readable table
+    python scripts/check_goal_coverage.py --json     # machine-readable JSON
 
 Exit code: 0 always (non-invasive); coverage info printed to stdout.
 """
@@ -16,6 +22,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+from itertools import groupby
 from dataclasses import dataclass
 from pathlib import Path
 from typing import List
@@ -66,6 +73,37 @@ def mark_presence(goals: List[Goal], main_text: str) -> None:
         g.present = candidate in norm_main
 
 
+LINK_PATTERN = re.compile(r"content/[A-Za-z0-9_.\-]+\.md")
+
+
+def extract_content_files(main_text: str) -> List[Path]:
+    """Return list of Paths for content markdown files referenced in main.md.
+
+    Accepts both markdown link syntax and bare paths. Keeps first-seen order and de-duplicates.
+    """
+    seen = []
+    for match in LINK_PATTERN.finditer(main_text):
+        rel = match.group(0)
+        p = (BASE / rel).resolve()
+        if p.exists() and p.suffix.lower() == '.md' and p not in seen:
+            seen.append(p)
+    return seen
+
+
+def load_aggregated_content() -> tuple[str, list[Path]]:
+    text = MAIN_FILE.read_text(encoding="utf-8")
+    files = extract_content_files(text)
+    if not files:  # fallback legacy behavior
+        return text, []
+    parts = []
+    for fp in files:
+        try:
+            parts.append(fp.read_text(encoding="utf-8"))
+        except Exception as e:
+            parts.append(f"\n<!-- Error reading {fp.name}: {e} -->\n")
+    return "\n\n".join(parts), files
+
+
 def format_table(goals: List[Goal]) -> str:
     # Determine column widths
     rows = [(g.section, g.text, "YES" if g.present else "NO") for g in goals]
@@ -108,8 +146,8 @@ def main() -> None:
         raise SystemExit(f"Missing main file: {MAIN_FILE}")
 
     goals = load_learning_goals(LEARNING_GOALS_FILE)
-    main_text = MAIN_FILE.read_text(encoding="utf-8")
-    mark_presence(goals, main_text)
+    aggregated_text, files = load_aggregated_content()
+    mark_presence(goals, aggregated_text)
 
     if args.json:
         data = {
@@ -129,6 +167,12 @@ def main() -> None:
         print(json.dumps(data, indent=2))
     else:
         print(format_table(goals))
+        covered = sum(g.present for g in goals)
+        if files:
+            print(f"\nScanned {len(files)} content file(s) referenced in main.md.")
+        else:
+            print("\nNo content/ files referenced; scanned main.md body.")
+        print(f"Covered {covered}/{len(goals)} goals.")
 
 
 if __name__ == "__main__":  # pragma: no cover
