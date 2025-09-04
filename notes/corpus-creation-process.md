@@ -7,6 +7,25 @@ Goal, make scripts that automate the mass production of good pedagogical content
 3) generate exam questions - drawn from or generated from reading material
 
 
+
+### Learning Goals -> Answers
+
+
+### Answers -> Concepts (Vocabulary)
+
+
+### Concepts -> Relational Sentences / Diagrams / Stories / Mnemonics
+ 
+
+
+
+### Relational Sentences -> Mnemonic Material / Assessments / Learning Processes and Systems
+
+
+---
+
+Other ideas...
+
 ### Concept -> DSRP content
 
 Use AI to generate DSRP content for each vocabulary word.

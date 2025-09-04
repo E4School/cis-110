@@ -39,7 +39,6 @@
 - Discuss why blogs were considered a disruptive technology
 - Explain how Wikipedia articles are written and edited
 - Discuss the pros and cons of Webmail and local mail
-- Explain the difference between IMAP and POP
 - List the elements that constitute an online identity
 - List four techniques for dealing with cyberbullies
 - Analyze the ethical implications of data collection by social media platforms
@@ -95,9 +94,3 @@
 - Analyze the trade-offs between different database types for specific applications
 - Evaluate data privacy and ethical considerations in database design
 - Explain how databases integrate with web applications and business systems
-
-## Programming/Coding
-- Record a 3 minute (minimum) video of writing code in an environment of your choice
-- Externalize your thought process while coding
-- Explain fundamental programming concepts: variables, data types, control structures
-- Write pseudocode that describe solutions to simple everyday problems
