@@ -1,14 +1,19 @@
 .exam-interface {
-  padding: 2rem;
+  padding: 0;
   display: grid;
   grid-template-rows: auto 1fr auto auto;
-  min-height: calc(100vh - 140px);
+  min-height: calc(100vh - 200px);
   gap: 1.5rem;
+  width: 100%;
+  max-width: 900px;
+  min-width: 900px;
 }
 
 @media (max-width: 768px) {
   .exam-interface {
     padding: 1rem;
+    min-width: auto;
+    max-width: 100%;
   }
 }
 
@@ -67,6 +72,9 @@
   border-radius: var(--border-radius);
   padding: 2rem;
   box-shadow: var(--shadow);
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
 }
 
 .question-meta {
@@ -227,7 +235,9 @@
 
 /* Exam Results */
 .exam-results {
-  padding: 2rem;
+  padding: 0;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .exam-results h2 {
