@@ -5,6 +5,7 @@ function ExamInterface({ questions, onEndExam }) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState({});
   const [showResults, setShowResults] = useState(false);
+  const [showAnswer, setShowAnswer] = useState(false);
   const [timeSpent, setTimeSpent] = useState(0);
   const [questionStartTime, setQuestionStartTime] = useState(Date.now());
 
@@ -145,9 +146,22 @@ function ExamInterface({ questions, onEndExam }) {
         <div className="question-meta">
           <span className="chapter-tag">Chapter {currentQuestion.chapter}</span>
           <span className="question-type">{currentQuestion.type}</span>
+          <button 
+            onClick={() => setShowAnswer(!showAnswer)}
+            className={`show-answer-toggle ${showAnswer ? 'active' : ''}`}
+          >
+            {showAnswer ? 'Hide Answer' : 'Show Answer'}
+          </button>
         </div>
         
         <h2 className="question-text">{currentQuestion.question}</h2>
+
+        {showAnswer && (
+          <div className="answer-reveal">
+            <strong>Answer:</strong>
+            <p>{currentQuestion.answer}</p>
+          </div>
+        )}
 
         <div className="answer-section">
           <textarea

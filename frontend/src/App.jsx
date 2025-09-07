@@ -40,8 +40,8 @@ function App() {
   return (
     <div className="app">
       <header>
-        <h1>CIS-110 Exam System</h1>
-        <p>Computer Information Systems Fundamentals</p>
+        <h1>CIS110</h1>
+        <p>Computer Information Systems Foundations</p>
       </header>
 
       <main>
