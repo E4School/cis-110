@@ -1,25 +1,33 @@
 
-Goal, make scripts that automate the mass production of good pedagogical content related to DSRP and parameterized by the vocabulary words.  The point is to:
+Goal, make scripts that automate the mass production of good pedagogical content (related to DSRP and parameterized by the vocabulary words?).  The point is to kinda automatically:
 
 1) create reading material, 
-2) create textual relationships that can be used to enhance the wiki
+2) create textual relationships that can be used to form a wiki
   - Relationship graph analysis can, I hope, be used to generate meaningful stories: E.g. connections between topics (more reading material)
+  - Efficiently "cover" the material with the minimal set of lessons
 3) generate exam questions - drawn from or generated from reading material
+  - Kinda have these (via the learning goals), but I might want to add more.  And future courses might have fuzzier goals that aren't straightforwardly convertible to assessments
 
 
+### Learning Goals -> Exam Questions and Answers (Final Exam Delivery system)
 
-### Learning Goals -> Answers
+* TODO: Finish the exam delivery UI
 
+* DONE? Questions might need to be added after additional supporting material has been added.  And more questions might actually help...
 
-### Answers -> Concepts (Vocabulary)
+### Questions and Answers -> Concepts (Vocabulary)
 
+* DONE?  Might iterate once more, after additional content has been created.
 
 ### Concepts -> Relational Sentences / Diagrams / Stories / Mnemonics
  
+* TODO: 
+  - create wiki pages
+  - create course content pages
+  - explain it like I'm 5 answers for each question
+  -  
 
-
-
-### Relational Sentences -> Mnemonic Material / Assessments / Learning Processes and Systems
+### Relational Sentences / Diagrams / etc. -> Mnemonic Material / Wiki / Videos / Learning Processes and Systems
 
 
 ---
