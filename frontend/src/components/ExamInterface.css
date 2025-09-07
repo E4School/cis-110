@@ -1,12 +1,9 @@
 .exam-interface {
-  max-width: 1000px;
-  margin: 0 auto;
   padding: 2rem;
   display: grid;
   grid-template-rows: auto 1fr auto auto;
   min-height: calc(100vh - 140px);
   gap: 1.5rem;
-  width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -230,8 +227,6 @@
 
 /* Exam Results */
 .exam-results {
-  max-width: 1000px;
-  margin: 0 auto;
   padding: 2rem;
 }
 

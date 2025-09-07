@@ -44,17 +44,19 @@ function App() {
         <p>Computer Information Systems Fundamentals</p>
       </header>
 
-      {currentExam ? (
-        <ExamInterface 
-          questions={currentExam} 
-          onEndExam={endExam}
-        />
-      ) : (
-        <ExamDashboard 
-          questions={questions} 
-          onStartExam={startExam}
-        />
-      )}
+      <main>
+        {currentExam ? (
+          <ExamInterface 
+            questions={currentExam} 
+            onEndExam={endExam}
+          />
+        ) : (
+          <ExamDashboard 
+            questions={questions} 
+            onStartExam={startExam}
+          />
+        )}
+      </main>
     </div>
   );
 }

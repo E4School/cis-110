@@ -1,11 +1,8 @@
 .exam-dashboard {
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 2rem;
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 2rem;
-  width: 100%;
 }
 
 @media (max-width: 1024px) {
