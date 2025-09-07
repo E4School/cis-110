@@ -21,6 +21,8 @@
 - Files reside inside folders (directories) and are identified by a file extension that informs software how to interpret their logical content distinct from the physical storage model.
 - Absolute paths specify a file’s full location while relative paths depend on a current working directory, both governed by file naming conventions that enhance portability.
 - Backup and archiving policies preserve versions, enabling versioning or basic version control and allowing integrity verification with a checksum after restoration.
+
+### Exam Questions
 - **Discuss the relative strengths and weaknesses of magnetic, optical, and solid-state storage technology**  Magnetic (HDD): high capacity, low cost/GB, slower seek, mechanical wear. Optical (DVD/Blu‑ray): removable, good for archiving/distribution, slower, limited rewrite cycles, lower capacity now. Solid‑state (SSD/NVMe): very fast, shock‑resistant, lower latency, higher cost/GB (though narrowing), finite write endurance.
 - **Explain the role of file management**  Organizes storage for retrieval, version tracking, collaboration, and data integrity (naming, hierarchy, metadata usage, backups).
 - **Discuss file naming conventions and the role of the file extension**  Conventions: descriptive, version tokens, no spaces/special chars (or consistent). Extension signals format to OS/application for association and parsing.

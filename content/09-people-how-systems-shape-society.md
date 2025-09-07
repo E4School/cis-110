@@ -25,7 +25,7 @@
 - Privacy settings, plus choices like pseudonymity, govern exposure and can mitigate risks such as cyberbullying.
 - Managing screen time supports digital wellness; intentional digital detox periods counter engagement‑driven overuse.
 
-### Final Exam Questions and Answers
+### Exam Questions
 - **Explain what social media is**  Platforms enabling user‑generated content creation, sharing, and interaction at scale via network effects.
 - **List three elements of a social media profile**  Username/handle, profile image, bio (plus often links or interests).
 - **Explain how 6 degrees of separation applies to social networking**  Suggests short path lengths between any two users, facilitating rapid information diffusion and virality.

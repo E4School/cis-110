@@ -29,7 +29,7 @@
 - Tutorials and guides translate requirements and use cases into actionable learning for new contributors.
 - Revision history tracks versioning so collaborative editing can reach consensus while preserving a neutral point of view (NPOV).
 
-### Final Exam Questions and Answers
+### Exam Questions
 - **Explain the difference between system software and application software**  System software manages hardware/resources (OS, utilities); application software performs end‑user tasks.
 - **Discuss the purpose of software licensing and identify common types**  Defines legal use/redistribution; types: proprietary EULA, GPL (copyleft), MIT/Apache (permissive), shareware/trial, subscription (SaaS).
 - **Explain the difference between local apps and Web based apps**  Local: installed, offline capable, deeper hardware integration. Web: delivered via browser, easy updates, cross‑platform, relies on network.

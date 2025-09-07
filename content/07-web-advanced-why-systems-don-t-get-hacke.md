@@ -26,7 +26,7 @@
 - Multi‑tenancy shares compute resources across tenants while load balancing distributes traffic among instances to avoid single bottlenecks.
 - A disaster recovery and backup strategy underpins high availability objectives when failures exceed autoscaling resilience.
 
-### Final Exam Questions and Answers
+### Exam Questions
 
 - **Analyze the security implications of different web technologies (cookies, JavaScript, HTTPS)**  Cookies can enable CSRF / tracking if not scoped (SameSite, HttpOnly); JavaScript introduces XSS risk; HTTPS mitigates eavesdropping but not application logic flaws; improper CSP/CORS settings expand attack surface.
 - **Explain how cloud computing relates to web technologies and modern applications**  Cloud provides scalable infrastructure (compute, storage, functions, CDN) underpinning web backends; enables elasticity, global distribution, managed services (databases, auth) that web apps leverage for performance and reliability.

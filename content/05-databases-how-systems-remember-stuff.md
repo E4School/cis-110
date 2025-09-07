@@ -27,6 +27,7 @@
 - Data privacy goals can be supported through anonymization or pseudonymization guided by a data retention policy.
 - An ORM maps objects to tables, abstracting SQL while still requiring awareness of indexing and normalization impacts.
 
+### Exam Questions
 - **Define basic database terminology, such as fields, records, rows, columns, and tables**  Table: structured collection; row/record: single entity instance; column/field: attribute; schema: structural definition.
 - **Explain what a relational database is**  A structured collection organizing data into tables with defined relationships enforced via keys and set‑based query logic (relational algebra).
 - **Explain the process of normalization**  Decomposing tables to reduce redundancy and anomalies (1NF atomic values, 2NF remove partial dependencies, 3NF remove transitive dependencies) balancing with performance.

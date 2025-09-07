@@ -36,6 +36,7 @@
 - Abstraction involves distinction and categorization (taxonomy) to simplify complexity while preserving essential relationships.
 - Concept mapping reveals relationship structure and invites multiple perspectives (viewpoints) during iterative refinement cycles.
 
+### Exam Questions
 - **List the six rights that are exclusively exercised by copyright holders**  Reproduction, distribution, public performance, public display, derivative works, digital audio transmission (sound recordings).
 - **List the four factors that characterize fair use**  Purpose and character, nature of the work, amount/substantiality, effect on market value.
 - **Analyze the ethical implications of data collection by social media platforms**  Tensions: personalization vs surveillance, consent clarity, data minimization, algorithmic bias, secondary use without informed user control.

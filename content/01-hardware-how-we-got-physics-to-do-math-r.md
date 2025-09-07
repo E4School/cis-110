@@ -43,6 +43,7 @@
 - Efficiency gains require trade‑off analysis to ensure improvements do not degrade maintainability or cost disproportionately.
 - Optimization guided by metrics avoids premature optimization, which wastes effort without measurable bottleneck relief.
 
+### Exam Questions
 - **Explain the IPOS model of activities characteristics of computers**  Input (data entry), Processing (CPU executes instructions transforming data), Output (results presented to user/devices), Storage (persistent retention). It frames every program as a pipeline where correctness, performance, and usability hinge on clean inputs, efficient processing, appropriate output formatting, and reliable storage.
 - **Describe the stored program concept and why it distinguishes computers from other simpler devices**  Instructions are stored in memory alongside data, allowing a general‑purpose machine to change behavior simply by loading different code (flexibility, reprogrammability). Simpler devices (e.g., hard‑wired calculators) have fixed logic; changing behavior requires hardware redesign.
 - **Explain how a processor works**  The CPU repeatedly performs the fetch‑decode‑execute cycle: fetch instruction from memory (via program counter), decode (control unit interprets opcode, sets control signals), execute (ALU / other units perform operation), write back results, update PC. Modern CPUs add pipelining, caches, out‑of‑order execution, and branch prediction to increase throughput.

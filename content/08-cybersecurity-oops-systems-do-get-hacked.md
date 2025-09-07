@@ -29,6 +29,7 @@
 - Firewalls and least privilege policies reduce attack surface and mitigate spoofing or social engineering attempts like phishing, pretexting, baiting, and tailgating.
 - Risk assessment catalogs assets, threats, vulnerabilities, and controls to balance the security vs usability trade‑off in defensive posture.
 
+### Exam Questions
 - **Explain what encryption is**  Transforming plaintext into ciphertext using an algorithm + key to ensure confidentiality (reversible only with key).
 - **Explain what two-factor authentication is**  Combining two independent credential factors (something you know, have, are) to reduce compromise risk.
 - **Discuss issues with creating a strong password**  Balancing memorability vs entropy; risks: reuse, predictable patterns, social engineering exposure; mitigations: passphrases, managers.

@@ -18,6 +18,8 @@
 - Memory management allocates and protects each process’s address space while enforcing permissions and access control models.
 - System calls expose an API boundary where user processes request OS services, often triggered or influenced by configuration and environment variables.
 - Hardware devices raise interrupts that invoke interrupt handlers so the OS can preempt processes and maintain responsive multitasking.
+
+### Exam Questions
 - **Explain what a device driver is**  Low‑level software that provides a standardized interface between OS subsystems and specific hardware, translating generic OS calls into device‑specific commands and handling interrupts/events.
 - **Explain the role of the operating system**  Abstracts hardware, schedules processes/threads, manages memory, filesystems, I/O, security (auth, permissions), networking, and provides APIs.
 - **Explain the difference between multitasking, multiprocessing, and multithreading**  Multitasking: OS interleaves processes (logical concurrency). Multiprocessing: multiple physical cores/CPUs execute tasks truly in parallel. Multithreading: multiple threads within a process sharing memory space for finer concurrency.

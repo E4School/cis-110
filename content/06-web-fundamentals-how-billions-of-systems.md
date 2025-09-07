@@ -29,6 +29,8 @@
 - Cookies persist session identifiers or tracking data; browser and server caching plus a Content Delivery Network (CDN) reduce latency by reusing cached content.
 - Cloud computing offers scalability and elasticity so web applications can adapt responsive design layouts while preserving accessibility (a11y) with ARIA roles.
 - Security measures like CSP and CORS restrict resource origins, mitigating Cross‑Site Scripting (XSS) injection vectors.
+
+### Exam Questions
 - **Explain how the Web works**  Clients (browsers) send HTTP(S) requests to servers using URLs; servers process (often via application logic + databases) and return responses (HTML, JSON, media). Hyperlinks interconnect documents forming a navigable graph.
 - **Discuss the integration of three technologies that are foundational for the Web**  HTML structures content; CSS controls presentation; JavaScript enables dynamic behavior and client‑side logic. Together they separate concerns—structure, style, interactivity—allowing iterative and maintainable development.
 - **Explain what the four parts of a URL are**  Scheme (protocol, e.g., https), host (domain), path (resource location), and optional query (key=value parameters) + fragment (in‑page anchor). (Some models treat port or fragment as additional components.)
