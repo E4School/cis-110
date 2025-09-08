@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
+import ExamQuestions from './ExamQuestions';
 import './TextbookPage.css';
 
 // Custom link component for internal textbook links
@@ -61,6 +62,80 @@ function TextbookLink({ href, children, currentPath, ...props }) {
       {children}
     </a>
   );
+}
+
+// Function to render content with custom components
+function renderContentWithComponents(content, textbookPath) {
+  console.log('renderContentWithComponents called with content:', content.substring(0, 200) + '...');
+  console.log('textbookPath:', textbookPath);
+  
+  // Look for exam questions marker: {{ExamQuestions:filename.yml}}
+  const examQuestionsRegex = /\{\{ExamQuestions:([\w\-\.]+)\}\}/g;
+  
+  const parts = [];
+  let lastIndex = 0;
+  let match;
+  
+  while ((match = examQuestionsRegex.exec(content)) !== null) {
+    console.log('Found ExamQuestions marker:', match[0], 'File:', match[1]);
+    // Add markdown content before the component
+    if (match.index > lastIndex) {
+      const markdownContent = content.slice(lastIndex, match.index);
+      parts.push(
+        <ReactMarkdown 
+          key={`md-${parts.length}`}
+          rehypePlugins={[rehypeRaw]}
+          components={{
+            a: (props) => <TextbookLink {...props} currentPath={textbookPath} />
+          }}
+        >
+          {markdownContent}
+        </ReactMarkdown>
+      );
+    }
+    
+    // Add the ExamQuestions component
+    const yamlFile = match[1];
+    parts.push(
+      <ExamQuestions 
+        key={`eq-${parts.length}`}
+        yamlPath={yamlFile} 
+        currentPath={textbookPath} 
+      />
+    );
+    
+    lastIndex = match.index + match[0].length;
+  }
+  
+  // Add remaining markdown content
+  if (lastIndex < content.length) {
+    const remainingContent = content.slice(lastIndex);
+    parts.push(
+      <ReactMarkdown 
+        key={`md-${parts.length}`}
+        rehypePlugins={[rehypeRaw]}
+        components={{
+          a: (props) => <TextbookLink {...props} currentPath={textbookPath} />
+        }}
+      >
+        {remainingContent}
+      </ReactMarkdown>
+    );
+  }
+  
+  console.log('renderContentWithComponents: parts.length =', parts.length);
+  
+  return parts.length > 0 ? parts : [
+    <ReactMarkdown 
+      key="default"
+      rehypePlugins={[rehypeRaw]}
+      components={{
+        a: (props) => <TextbookLink {...props} currentPath={textbookPath} />
+      }}
+    >
+      {content}
+    </ReactMarkdown>
+  ];
 }
 
 function TextbookPage() {
@@ -169,14 +244,7 @@ function TextbookPage() {
       </div>
       
       <div className="textbook-content">
-        <ReactMarkdown 
-          rehypePlugins={[rehypeRaw]}
-          components={{
-            a: (props) => <TextbookLink {...props} currentPath={textbookPath} />
-          }}
-        >
-          {content}
-        </ReactMarkdown>
+        {renderContentWithComponents(content, textbookPath)}
       </div>
     </div>
   );

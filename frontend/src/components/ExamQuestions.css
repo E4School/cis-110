@@ -1,0 +1,46 @@
+/* Exam Questions Component Styling */
+.exam-questions {
+  margin: 2rem 0;
+}
+
+.question-item {
+  background: var(--surface-color, #f8f9fa);
+  border: 1px solid var(--border-color, #e1e5e9);
+  border-radius: var(--border-radius, 8px);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.question-item h3 {
+  color: var(--primary-color, #007bff);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  border-bottom: 2px solid var(--primary-color, #007bff);
+  padding-bottom: 0.5rem;
+}
+
+.question-item p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.question-item .answer {
+  background: var(--background-color, #ffffff);
+  border-left: 4px solid var(--primary-color, #007bff);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0 var(--border-radius, 4px) var(--border-radius, 4px) 0;
+}
+
+.question-item .topics {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary, #6c757d);
+  font-style: italic;
+}
+
+.question-item .topics strong {
+  color: var(--text-primary, #333);
+  font-style: normal;
+}

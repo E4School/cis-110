@@ -1,0 +1,45 @@
+questions:
+  - id: 1
+    question: "Explain the IPOS model of activities characteristic of computers"
+    answer: "Input (data entry), Processing (CPU executes instructions transforming data), Output (results presented to user/devices), Storage (persistent retention). It frames every program as a pipeline where correctness, performance, and usability hinge on clean inputs, efficient processing, appropriate output formatting, and reliable storage."
+    topics: ["IPOS", "computer fundamentals", "system architecture"]
+    
+  - id: 2
+    question: "Describe the stored program concept and why it distinguishes computers from other simpler devices"
+    answer: "Instructions are stored in memory alongside data, allowing a general‑purpose machine to change behavior simply by loading different code (flexibility, reprogrammability). Simpler devices (e.g., hard‑wired calculators) have fixed logic; changing behavior requires hardware redesign."
+    topics: ["stored program concept", "computer architecture", "flexibility"]
+    
+  - id: 3
+    question: "Explain how a processor works"
+    answer: "The CPU repeatedly performs the fetch‑decode‑execute cycle: fetch instruction from memory (via program counter), decode (control unit interprets opcode, sets control signals), execute (ALU / other units perform operation), write back results, update PC. Modern CPUs add pipelining, caches, out‑of‑order execution, and branch prediction to increase throughput."
+    topics: ["CPU", "fetch-decode-execute", "processor operation"]
+    
+  - id: 4
+    question: "Explain the difference between RAM and ROM and why most computers have both"
+    answer: "RAM is volatile, fast read/write working memory; contents lost on power off. ROM (or flash/firmware) is non‑volatile, primarily read (or infrequently written) and holds bootstrap / firmware code needed before RAM and storage subsystems initialize. Together they enable reliable startup plus flexible runtime execution."
+    topics: ["RAM", "ROM", "memory types", "volatile memory"]
+    
+  - id: 5
+    question: "Explain what I/O devices are and why they are important to computing"
+    answer: "Peripherals that allow interaction with the external world (input: keyboard, sensors; output: displays, printers). They convert between human/physical signals and digital data, enabling practical usefulness of computation."
+    topics: ["I/O devices", "peripherals", "input", "output"]
+    
+  - id: 6
+    question: "Analyze how the components of a computer system work together to execute a simple program"
+    answer: "User initiates program (stored on persistent storage) → OS loader copies executable segments into RAM → CPU fetches instructions using addresses resolved via MMU/cache hierarchy → instructions request data (caches / RAM / storage via I/O bus) → results buffered and eventually output via drivers to devices; OS schedules CPU time and manages resources throughout."
+    topics: ["system integration", "program execution", "OS", "hardware coordination"]
+    
+  - id: 7
+    question: "Compare and contrast different computer architectures (desktop, mobile, embedded systems)"
+    answer: "Desktop: high performance, modular, higher power draw. Mobile: energy efficiency, integrated system‑on‑chip, thermal constraints, wireless focus. Embedded: purpose‑specific, minimal UI, real‑time constraints, long lifecycle, often hardened. Trade‑offs revolve around performance vs power vs specialization."
+    topics: ["computer architectures", "desktop", "mobile", "embedded systems", "trade-offs"]
+    
+  - id: 8
+    question: "Trace the flow of data through a computer system from input to output"
+    answer: "Input device generates signals → driver interprets and places data into OS buffers → user process reads data (system call) → CPU processes, manipulating in registers and RAM (caches accelerate) → results passed to output subsystem (system call) → driver formats & sends to device → device renders (screen, printer, network packet)."
+    topics: ["data flow", "I/O", "system calls", "data processing"]
+    
+  - id: 9
+    question: "Evaluate the trade-offs between performance, cost, and energy efficiency in computer design"
+    answer: "Increasing cores/clocks boosts performance but raises power/thermal design and cost. Energy efficiency improves battery life / operating cost but may reduce peak performance. Optimal design selects sufficient performance headroom while minimizing total cost of ownership (purchase + energy + cooling) for target workload."
+    topics: ["performance", "cost", "energy efficiency", "design trade-offs", "optimization"]
