@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './ExamInterface.css';
 
-function ExamInterface({ questions, onEndExam }) {
+function ExamInterface({ questions, settings, onEndExam }) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState({});
   const [showResults, setShowResults] = useState(false);
@@ -146,17 +146,19 @@ function ExamInterface({ questions, onEndExam }) {
         <div className="question-meta">
           <span className="chapter-tag">Chapter {currentQuestion.chapter}</span>
           <span className="question-type">{currentQuestion.type}</span>
-          <button 
-            onClick={() => setShowAnswer(!showAnswer)}
-            className={`show-answer-toggle ${showAnswer ? 'active' : ''}`}
-          >
-            {showAnswer ? 'Hide Answer' : 'Show Answer'}
-          </button>
+          {settings?.showAnswerToggle && (
+            <button 
+              onClick={() => setShowAnswer(!showAnswer)}
+              className={`show-answer-toggle ${showAnswer ? 'active' : ''}`}
+            >
+              {showAnswer ? 'Hide Answer' : 'Show Answer'}
+            </button>
+          )}
         </div>
         
         <h2 className="question-text">{currentQuestion.question}</h2>
 
-        {showAnswer && (
+        {settings?.showAnswerToggle && showAnswer && (
           <div className="answer-reveal">
             <strong>Answer:</strong>
             <p>{currentQuestion.answer}</p>

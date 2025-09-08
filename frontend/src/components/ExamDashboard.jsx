@@ -4,6 +4,7 @@ import './ExamDashboard.css';
 function ExamDashboard({ questions, onStartExam }) {
   const [percentage, setPercentage] = useState(50);
   const [sortQuestions, setSortQuestions] = useState(false);
+  const [showAnswerToggle, setShowAnswerToggle] = useState(true);
   
   // Get unique chapters from questions
   const chapters = [...new Set(questions.map(q => q.chapter))].sort((a, b) => a - b);
@@ -28,7 +29,12 @@ function ExamDashboard({ questions, onStartExam }) {
       ? examQuestions.sort((a, b) => a.chapter - b.chapter || a.id.localeCompare(b.id))
       : examQuestions.sort(() => Math.random() - 0.5);
     
-    onStartExam(finalExam);
+    onStartExam({
+      questions: finalExam,
+      settings: {
+        showAnswerToggle
+      }
+    });
   };
 
   const getQuestionCountByChapter = (chapter) => {
@@ -77,6 +83,21 @@ function ExamDashboard({ questions, onStartExam }) {
               <span className="toggle-text">
                 {sortQuestions ? 'Sorted by Chapter' : 'Random Order'}
               </span>
+              <div className="switch"></div>
+            </label>
+          </div>
+
+          <div className="control-group">
+            <label className="toggle-container">
+              <input
+                type="checkbox"
+                checked={showAnswerToggle}
+                onChange={(e) => setShowAnswerToggle(e.target.checked)}
+              />
+              <span className="toggle-text">
+                Show Answer Button
+              </span>
+              <div className="switch"></div>
             </label>
           </div>
         </div>
