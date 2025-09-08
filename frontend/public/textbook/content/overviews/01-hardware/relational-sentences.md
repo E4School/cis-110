@@ -1,35 +1,11 @@
-# Hardware Relational Sentences
-
-These sentences show how hardware concepts connect and relate to each other.
-
-## System Organization
-A computer system coordinates hardware and software across the hardware/software boundary following the IPOS model where input devices feed data, processing transforms it, output devices present results, and storage keeps persistent data.
-
-## Program Execution
-The stored program concept lets instructions (opcodes) flow through the machine cycle (fetch–decode–execute) governed by the program counter (PC), control unit, and ALU along the data path (data flow).
-
-## Memory Hierarchy
-Registers, cache, and main memory (RAM) form a performance hierarchy distinct from ROM and firmware, balancing throughput, latency, energy efficiency, and thermal constraints.
-
-## System Startup
-During boot a bootstrap loader initializes firmware, loads the OS via the loader, and activates each device driver that uses address, data, and control lines on the bus.
-
-## Architecture Variants
-A System on a Chip (SoC) integrates control unit, ALU, cache, and peripherals for embedded systems and mobile architecture variants, whereas desktop architecture may externalize more components.
-
-## Design Trade-offs
-Designers analyze trade‑offs between performance, power consumption, and Total Cost of Ownership (TCO) when choosing storage technologies and architecture configurations.
-
-## Performance Metrics
-Throughput measures total work over time while latency measures per‑operation delay, and a bottleneck limits both.
-
-## Scalability
-Scalability can be vertical (bigger node) or horizontal (more nodes) and is evaluated with benchmarks and metrics.
-
-## Optimization Principles
-Efficiency gains require trade‑off analysis to ensure improvements do not degrade maintainability or cost disproportionately.
-
-## Performance Engineering
-Optimization guided by metrics avoids premature optimization, which wastes effort without measurable bottleneck relief.
-
-[← Back to Chapter](index)
+# Relational Sentences
+- A computer system coordinates hardware and software across the hardware/software boundary following the IPOS model where input devices feed data, processing transforms it, output devices present results, and storage keeps persistent data.
+- The stored program concept lets instructions (opcodes) flow through the machine cycle (fetch–decode–execute) governed by the program counter (PC), control unit, and ALU along the data path (data flow).
+- Registers, cache, and main memory (RAM) form a performance hierarchy distinct from ROM and firmware, balancing throughput, latency, energy efficiency, and thermal constraints.
+- During boot a bootstrap loader initializes firmware, loads the OS via the loader, and activates each device driver that uses address, data, and control lines on the bus.
+- A System on a Chip (SoC) integrates control unit, ALU, cache, and peripherals for embedded systems and mobile architecture variants, whereas desktop architecture may externalize more components.
+- Designers analyze trade‑offs between performance, power consumption, and Total Cost of Ownership (TCO) when choosing storage technologies and architecture configurations.
+- Throughput measures total work over time while latency measures per‑operation delay, and a bottleneck limits both.
+- Scalability can be vertical (bigger node) or horizontal (more nodes) and is evaluated with benchmarks and metrics.
+- Efficiency gains require trade‑off analysis to ensure improvements do not degrade maintainability or cost disproportionately.
+- Optimization guided by metrics avoids premature optimization, which wastes effort without measurable bottleneck relief.

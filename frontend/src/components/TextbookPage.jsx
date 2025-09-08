@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 import './TextbookPage.css';
 
 // Custom link component for internal textbook links
@@ -135,9 +136,6 @@ function TextbookPage() {
     return (
       <div className="textbook-page loading">
         <div className="textbook-header">
-          {textbookPath !== 'index' && (
-            <Link to="/textbook" className="textbook-home-link">← Textbook Home</Link>
-          )}
           <h1>Loading...</h1>
         </div>
       </div>
@@ -148,9 +146,6 @@ function TextbookPage() {
     return (
       <div className="textbook-page error">
         <div className="textbook-header">
-          {textbookPath !== 'index' && (
-            <Link to="/textbook" className="textbook-home-link">← Textbook Home</Link>
-          )}
           <h1>Page Not Found</h1>
         </div>
         <div className="textbook-content">
@@ -165,9 +160,6 @@ function TextbookPage() {
   return (
     <div className="textbook-page">
       <div className="textbook-header">
-        {textbookPath !== 'index' && (
-          <Link to="/textbook" className="textbook-home-link">← Textbook Home</Link>
-        )}
         <div className="textbook-breadcrumb">
           <span>Textbook</span>
           {textbookPath !== 'index' && (
@@ -178,6 +170,7 @@ function TextbookPage() {
       
       <div className="textbook-content">
         <ReactMarkdown 
+          rehypePlugins={[rehypeRaw]}
           components={{
             a: (props) => <TextbookLink {...props} currentPath={textbookPath} />
           }}
