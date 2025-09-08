@@ -2,9 +2,11 @@
 
 This chapter covers the fundamental concepts of computer hardware and how physical components work together to perform computation.
 
+[Video coming soon]
+
 ## Chapter Contents
 
-- [**Vocabulary**](vocabulary) - Key terms and definitions
+- [**Vocabulary**](/textbook/content/overviews/01-hardware/vocabulary) - Key terms and definitions
 - [**Relational Sentences**](relational-sentences) - How concepts connect and relate
 - [**Exam Questions**](exam-questions) - Practice questions and detailed answers
 
