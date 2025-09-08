@@ -1,4 +1,0 @@
-# Blockchain
-
-Distributed ledger technology
-

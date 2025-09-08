@@ -110,7 +110,9 @@ function TextbookPage() {
     return (
       <div className="textbook-page loading">
         <div className="textbook-header">
-          <Link to="/textbook" className="textbook-home-link">← Textbook Home</Link>
+          {textbookPath !== 'index' && (
+            <Link to="/textbook" className="textbook-home-link">← Textbook Home</Link>
+          )}
           <h1>Loading...</h1>
         </div>
       </div>
@@ -121,7 +123,9 @@ function TextbookPage() {
     return (
       <div className="textbook-page error">
         <div className="textbook-header">
-          <Link to="/textbook" className="textbook-home-link">← Textbook Home</Link>
+          {textbookPath !== 'index' && (
+            <Link to="/textbook" className="textbook-home-link">← Textbook Home</Link>
+          )}
           <h1>Page Not Found</h1>
         </div>
         <div className="textbook-content">
@@ -136,7 +140,9 @@ function TextbookPage() {
   return (
     <div className="textbook-page">
       <div className="textbook-header">
-        <Link to="/textbook" className="textbook-home-link">← Textbook Home</Link>
+        {textbookPath !== 'index' && (
+          <Link to="/textbook" className="textbook-home-link">← Textbook Home</Link>
+        )}
         <div className="textbook-breadcrumb">
           <span>Textbook</span>
           {textbookPath !== 'index' && (
