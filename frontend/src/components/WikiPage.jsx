@@ -51,35 +51,47 @@ function WikiPage() {
       
       try {
         let response;
-        let attemptedUrl;
+        let attemptedUrls = [];
         
         // For 'index' path, try /wiki/index.md directly
         if (wikiPath === 'index') {
-          attemptedUrl = `/wiki/index.md`;
-          response = await fetch(attemptedUrl);
+          const url = `/wiki/index.md`;
+          attemptedUrls.push(url);
+          response = await fetch(url);
         } else {
-          // For other paths, try directory/index.md first
-          attemptedUrl = `/wiki/${wikiPath}/index.md`;
-          response = await fetch(attemptedUrl);
+          // Strategy: Try multiple URL patterns to handle both folder and direct file links
+          // Try direct file first (more common), then folder with index.md
+          const urlsToTry = [
+            `/wiki/${wikiPath}.md`,         // For direct file links like /wiki/content/overviews/01-hardware-how-we-got-physics-to-do-math-r
+            `/wiki/${wikiPath}/index.md`   // For folder-style links like /wiki/hardware
+          ];
           
-          // If directory/index.md fails, try the exact path as .md file
-          if (!response.ok) {
-            attemptedUrl = `/wiki/${wikiPath}.md`;
-            response = await fetch(attemptedUrl);
+          // Try each URL until we find one that works
+          for (const url of urlsToTry) {
+            attemptedUrls.push(url);
+            console.log(`Trying to fetch: ${url}`);
+            response = await fetch(url);
+            console.log(`Response for ${url}:`, response.status, response.ok);
+            
+            if (response.ok) {
+              // Check if we got HTML instead of markdown (happens when file doesn't exist)
+              const text = await response.text();
+              if (text.trim().startsWith('<!doctype html>') || text.trim().startsWith('<html')) {
+                console.log(`Got HTML response for ${url}, trying next URL...`);
+                continue; // Try the next URL
+              }
+              console.log(`Successfully found content at: ${url}`);
+              response.text = () => Promise.resolve(text); // Cache the text we already read
+              break;
+            }
           }
         }
 
-        if (!response.ok) {
-          throw new Error(`Wiki page not found. Tried: ${attemptedUrl}`);
+        if (!response || !response.ok) {
+          throw new Error(`Wiki page not found. Tried: ${attemptedUrls.join(', ')}`);
         }
 
         const text = await response.text();
-        
-        // Check if we got HTML instead of markdown (happens when file doesn't exist)
-        if (text.trim().startsWith('<!doctype html>') || text.trim().startsWith('<html')) {
-          throw new Error(`Wiki page not found - got HTML response for: ${attemptedUrl}`);
-        }
-        
         setContent(text);
       } catch (err) {
         setError(err.message);
