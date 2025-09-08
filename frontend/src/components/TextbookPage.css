@@ -1,0 +1,179 @@
+.textbook-page {
+  width: 100%;
+  max-width: 900px;
+  min-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: calc(100vh - 200px);
+}
+
+@media (max-width: 768px) {
+  .textbook-page {
+    min-width: auto;
+    max-width: 100%;
+    padding: 1rem;
+  }
+}
+
+.textbook-page.loading,
+.textbook-page.error {
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+/* Textbook Header */
+.textbook-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.textbook-home-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.textbook-home-link:hover {
+  color: var(--text-primary);
+}
+
+.textbook-breadcrumb {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-transform: capitalize;
+}
+
+/* Textbook Content */
+.textbook-content {
+  line-height: 1.7;
+  color: var(--text-primary);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure consistent width for all content elements */
+.textbook-content > * {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.textbook-content h1 {
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.textbook-content h2 {
+  color: var(--text-primary);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.textbook-content h3 {
+  color: var(--text-primary);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.textbook-content p {
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.textbook-content ul,
+.textbook-content ol {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+.textbook-content li {
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.textbook-content a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.textbook-content a:hover {
+  text-decoration: underline;
+}
+
+.textbook-content code {
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.9em;
+  color: var(--text-primary);
+}
+
+.textbook-content pre {
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.textbook-content pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.textbook-content blockquote {
+  border-left: 4px solid var(--primary-color);
+  background: var(--surface-color);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.textbook-content table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  table-layout: fixed;
+}
+
+.textbook-content th,
+.textbook-content td {
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.textbook-content th {
+  background: var(--surface-color);
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .textbook-page {
+    padding: 1rem;
+  }
+  
+  .textbook-content ul,
+  .textbook-content ol {
+    padding-left: 1.5rem;
+  }
+}

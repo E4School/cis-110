@@ -1,0 +1,38 @@
+📊 IMPROVED SENTENCE ASSESSMENT REPORT
+File: optimal-coverage-sentences.txt
+============================================================
+
+📝 Basic Statistics:
+   Sentences analyzed: 108
+   Total words: 1067
+   Average sentence length: 9.9 words
+   Length range: 7-19 words
+
+🎯 Vocabulary Coverage:
+   ✅ Covered: 211/211 terms (100.0%)
+   ❌ Missing: 0 terms
+
+🔍 Sample Term Matches:
+   • 'antivirus software' → found as 'software' in sentence 1
+   • 'application software' → found as 'software' in sentence 1
+   • 'augmented reality ar' → found as 'ar' in sentence 1
+   • 'computer' → found as 'computer' in sentence 1
+   • 'embedded system' → found as 'system' in sentence 1
+   • 'hardware' → found as 'hardware' in sentence 1
+   • 'operating system os' → found as 'operating' in sentence 1
+   • 'presentation software' → found as 'software' in sentence 1
+   • 'proprietary software' → found as 'software' in sentence 1
+   • 'software license' → found as 'software' in sentence 1
+
+🗣️  Language Quality:
+   Articles (the/a/an): 1.9%
+   Conjunctions: 24.1%
+   Prepositions: 75.0%
+   Proper endings: 108/108 (100.0%)
+
+🏆 Overall Assessment:
+   Coverage Score: 100.0/100 (40% weight)
+   Naturalness Score: 33.6/100 (25% weight)
+   Variety Score: 11.1/100 (20% weight)
+   Efficiency Score: 97.7/100 (15% weight)
+   📊 OVERALL SCORE: 65.3/100

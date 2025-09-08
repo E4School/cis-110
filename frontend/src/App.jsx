@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, useLocation, Navigate } from 'react-router-dom';
 import './App.css';
 import ExamDashboard from './components/ExamDashboard';
 import ExamInterface from './components/ExamInterface';
-import WikiPage from './components/WikiPage';
+import TextbookPage from './components/TextbookPage';
 
 function AppContent() {
   const location = useLocation();
@@ -32,8 +32,8 @@ function AppContent() {
     setCurrentExam(null);
   };
 
-  const isWikiPage = location.pathname.startsWith('/wiki');
-  const isExamPage = currentExam || (!isWikiPage && location.pathname === '/');
+  const isTextbookPage = location.pathname.startsWith('/textbook');
+  const isExamPage = currentExam || (!isTextbookPage && location.pathname === '/');
 
   if (loading) {
     return (
@@ -59,10 +59,10 @@ function AppContent() {
               Exams
             </Link>
             <Link 
-              to="/wiki" 
-              className={`nav-link ${isWikiPage ? 'active' : ''}`}
+              to="/textbook" 
+              className={`nav-link ${isTextbookPage ? 'active' : ''}`}
             >
-              Wiki
+              Textbook
             </Link>
           </nav>
         </div>
@@ -84,7 +84,9 @@ function AppContent() {
               />
             )
           } />
-          <Route path="/wiki/*" element={<WikiPage />} />
+          <Route path="/textbook/*" element={<TextbookPage />} />
+          {/* Redirect old wiki routes to textbook routes */}
+          <Route path="/wiki/*" element={<Navigate to={location.pathname.replace('/wiki', '/textbook')} replace />} />
         </Routes>
       </main>
     </div>

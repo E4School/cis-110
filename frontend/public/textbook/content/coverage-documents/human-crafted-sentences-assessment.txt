@@ -1,0 +1,101 @@
+📊 COMPREHENSIVE SENTENCE ASSESSMENT REPORT
+File: human-crafted-sentences.txt
+============================================================
+
+📝 Basic Statistics:
+   Sentences analyzed: 40
+   Total words: 728
+   Average sentence length: 18.2 words
+   Length range: 14-23 words
+
+🎯 Vocabulary Coverage:
+   ✅ Covered: 23/211 terms (10.9%)
+   ❌ Missing: 188 terms
+
+📋 Missing Terms:
+   • 5g | absolute path | abstraction
+   • algorithmic bias | antivirus | api application programming interface
+   • application software | archivecompression tool | augmented reality ar
+   • automation | big data | biometrics
+   • blockchain | blog | bug
+   • caching | chartgraph | chatbot
+   • cloud computing | cloud storage | collaboration tools
+   • computational thinking | conditional | content creator
+   • copyright | crash | creative commons
+   • cryptocurrency | css cascading style sheets | dashboard
+   • data mining | data type | data visualization
+   • database | debugging | decomposition
+   • decryption | digital certificate | digital citizenship
+   • digital detox | digital ethics | digital footprint
+   • digital identity | digital literacy | digital wellness
+   • dns domain name system | documentation | domain name
+   • download | email | embedded system
+   • encryption | error message | fair use
+   • fake news | faq frequently asked questions | field
+   • file | file extension | file format
+   • file management | filter | firewall
+   • folder directory | formula | freezehang
+   • frontend | function | hardware
+   • hashtag | help desk | html hypertext markup language
+   • https | hyperlink | imappop
+   • influencer | information | information literacy
+   • input device | installation | instant messaging
+   • internet | internet of things iot | intrusion
+   • ip address | ipos model | isp internet service provider
+   • iteration | javascript | local application
+   • logical reasoning | loop | machine learning
+   • malware | media player | metadata
+   • multitasking | multithreading | netiquette
+   • nosql | notification | office suite
+   • online privacy | open source | operating system os
+   • output device | password | pattern recognition
+   • pdf portable document format | phishing | pivot table
+   • plagiarism | plugin | podcast
+   • presentation software | primary key | privacy
+   • privacy policy | processor cpu | profile
+   • programming | proprietary software | pseudocode
+   • qr code | query | ram random access memory
+   • ransomware | record | relational database
+   • relationship | relative path | remote access
+   • reset | responsive design | restartreboot
+   • rom read only memory | rootkit | router
+   • screen time | search engine | six degrees of separation
+   • smart device | social engineering | social media
+   • social network | software | software license
+   • software update | sort | spoofing
+   • spreadsheet | sql structured query language | storage
+   • streaming | surveillance | sync
+   • system software | table | tech support
+   • terms of service | timelinefeed | trojan
+   • troubleshooting | tutorial | two factor authentication 2fa
+   • uninstall | upload | url uniform resource locator
+   • user experience ux | user interface ui | variable
+   • version control | video conferencing | viral
+   • virtual reality vr | virus | vpn virtual private network
+   • wearable technology | web application | web browser
+   • web cookie | web server | webmail
+   • wifi | word processor | world wide web web
+   • zero day exploit | zip file
+
+🗣️  Language Quality:
+   Articles (the/a/an): 15.0%
+   Conjunctions: 97.5%
+   Prepositions: 52.5%
+   Proper endings: 40/40 (100.0%)
+
+🎨 Sentence Variety:
+   Unique sentence starters: 28
+   ⚠️  Repetitive starters:
+      'digital': 5 times
+
+🏆 Overall Assessment:
+   Coverage Score: 10.9/100 (40% weight)
+   Naturalness Score: 55.0/100 (25% weight)
+   Variety Score: 70.0/100 (20% weight)
+   Efficiency Score: 28.8/100 (15% weight)
+   📊 OVERALL SCORE: 36.4/100
+
+💡 Recommendations:
+   • Improve vocabulary coverage (currently 10.9%)
+   • Use more natural language patterns (articles, conjunctions)
+   • Try to include more terms per sentence where natural
