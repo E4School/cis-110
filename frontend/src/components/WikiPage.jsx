@@ -62,7 +62,7 @@ function WikiPage() {
           attemptedUrl = `/wiki/${wikiPath}/index.md`;
           response = await fetch(attemptedUrl);
           
-          // If that fails, try the exact path as .md file
+          // If directory/index.md fails, try the exact path as .md file
           if (!response.ok) {
             attemptedUrl = `/wiki/${wikiPath}.md`;
             response = await fetch(attemptedUrl);
