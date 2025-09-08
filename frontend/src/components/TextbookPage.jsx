@@ -4,23 +4,48 @@ import ReactMarkdown from 'react-markdown';
 import './TextbookPage.css';
 
 // Custom link component for internal textbook links
-function TextbookLink({ href, children, ...props }) {
+function TextbookLink({ href, children, currentPath, ...props }) {
   const navigate = useNavigate();
   
-  // Check if this is an internal textbook link (or old wiki link)
-  const isInternalTextbookLink = href && (href.startsWith('/textbook') || href.startsWith('/wiki'));
+  if (!href) {
+    return <a {...props}>{children}</a>;
+  }
   
-  if (isInternalTextbookLink) {
-    // Convert old wiki links to textbook links
-    const updatedHref = href.startsWith('/wiki') ? href.replace('/wiki', '/textbook') : href;
+  // Handle external links (http, https, mailto, etc.)
+  if (href.startsWith('http') || href.startsWith('mailto') || href.startsWith('#')) {
+    return (
+      <a href={href} {...props} target="_blank" rel="noopener noreferrer">
+        {children}
+      </a>
+    );
+  }
+  
+  // Check if this is an internal textbook link (absolute) or old wiki link
+  const isAbsoluteInternalLink = href.startsWith('/textbook') || href.startsWith('/wiki');
+  
+  // Check if this is a relative link (doesn't start with / or protocol)
+  const isRelativeLink = !href.startsWith('/') && !href.includes('://');
+  
+  if (isAbsoluteInternalLink || isRelativeLink) {
+    let finalHref;
+    
+    if (isAbsoluteInternalLink) {
+      // Convert old wiki links to textbook links
+      finalHref = href.startsWith('/wiki') ? href.replace('/wiki', '/textbook') : href;
+    } else if (isRelativeLink) {
+      // Resolve relative link based on current path
+      const currentDir = currentPath === 'index' ? '' : currentPath;
+      const basePath = currentDir ? `/textbook/${currentDir}` : '/textbook';
+      finalHref = `${basePath}/${href}`;
+    }
     
     return (
       <a
         {...props}
-        href={updatedHref}
+        href={finalHref}
         onClick={(e) => {
           e.preventDefault();
-          navigate(updatedHref);
+          navigate(finalHref);
         }}
         style={{ cursor: 'pointer' }}
       >
@@ -154,7 +179,7 @@ function TextbookPage() {
       <div className="textbook-content">
         <ReactMarkdown 
           components={{
-            a: TextbookLink
+            a: (props) => <TextbookLink {...props} currentPath={textbookPath} />
           }}
         >
           {content}

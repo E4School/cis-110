@@ -6,7 +6,7 @@ This chapter covers the fundamental concepts of computer hardware and how physic
 
 ## Chapter Contents
 
-- [**Vocabulary**](/textbook/content/overviews/01-hardware/vocabulary) - Key terms and definitions
+- [**Vocabulary**](vocabulary) - Key terms and definitions
 - [**Relational Sentences**](relational-sentences) - How concepts connect and relate
 - [**Exam Questions**](exam-questions) - Practice questions and detailed answers
 
