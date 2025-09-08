@@ -1,35 +1,15 @@
 # CIS 110 Learning Goals
 
-This repository contains a comprehensive compilation of learning goals from the CIS 110 (Introduction to Computing) course.
-
-## Overview
-
-The learning goals are organized by topic areas covering fundamental computing concepts:
-
-- **Computer Fundamentals** - Hardware, processors, memory, storage
-- **Web Technologies** - How the web works, HTML, CSS, JavaScript
-- **Social Media and Digital Communication** - Online platforms, copyright, email
-- **Software and File Management** - Operating systems, applications, file organization
-- **Cybersecurity** - Encryption, malware, firewalls, social engineering
-- **Databases** - Database concepts, SQL, big data
-- **Programming/Coding** - Practical coding skills and demonstration
-
-## File Structure
-
-- `learning-goals.md` - Complete list of all 52 learning goals organized by topic
-
-## Course Information
-
-These learning goals were extracted from the ai-grader.yaml configuration files used in the CIS 110 course for automated assessment of student video submissions.
-
-## Usage
-
-This compilation can be used for:
-- Course planning and curriculum development
-- Student study guides
-- Assessment preparation
-- Learning objective mapping
-
----
-
-*Last updated: September 2, 2025*
+TODO: 
+- Refactor Chapter 1:
+  * Exam Questions -> Vocab -> Sentences -> Explanations -> Resources -> Etc.
+  * Factor out vocab.
+  * Structure the data
+  * Nice textbook with wiki-style linkages between resources
+- Repeat for other chapters
+- Pull exam questions from YML files instead of old JSON
+- Ensure that:
+  * Learning goals are the source of truth
+  * Everything "flows" from them, via a pipeline that is as automated as possible
+    (My videos can be the non-automated part, as can some of my more informal content creation processes)
+  * The whole thing is documented such that it can be done for other courses, learning goals can be changed over time, etc.
