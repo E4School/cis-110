@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import ExamQuestions from './ExamQuestions';
+import VocabList from './VocabList';
 import './TextbookPage.css';
 
 // Custom link component for internal textbook links
@@ -69,15 +70,18 @@ function renderContentWithComponents(content, textbookPath) {
   console.log('renderContentWithComponents called with content:', content.substring(0, 200) + '...');
   console.log('textbookPath:', textbookPath);
   
-  // Look for exam questions marker: {{ExamQuestions:filename.yml}}
-  const examQuestionsRegex = /\{\{ExamQuestions:([\w\-\.]+)\}\}/g;
+  // Look for component markers
+  const combinedRegex = /\{\{(ExamQuestions|VocabList):([\w\-\.]+)\}\}/g;
   
   const parts = [];
   let lastIndex = 0;
   let match;
   
-  while ((match = examQuestionsRegex.exec(content)) !== null) {
-    console.log('Found ExamQuestions marker:', match[0], 'File:', match[1]);
+  while ((match = combinedRegex.exec(content)) !== null) {
+    const componentType = match[1];
+    const fileName = match[2];
+    console.log(`Found ${componentType} marker:`, match[0], 'File:', fileName);
+    
     // Add markdown content before the component
     if (match.index > lastIndex) {
       const markdownContent = content.slice(lastIndex, match.index);
@@ -94,15 +98,24 @@ function renderContentWithComponents(content, textbookPath) {
       );
     }
     
-    // Add the ExamQuestions component
-    const yamlFile = match[1];
-    parts.push(
-      <ExamQuestions 
-        key={`eq-${parts.length}`}
-        yamlPath={yamlFile} 
-        currentPath={textbookPath} 
-      />
-    );
+    // Add the appropriate component
+    if (componentType === 'ExamQuestions') {
+      parts.push(
+        <ExamQuestions 
+          key={`eq-${parts.length}`}
+          yamlPath={fileName} 
+          currentPath={textbookPath} 
+        />
+      );
+    } else if (componentType === 'VocabList') {
+      parts.push(
+        <VocabList 
+          key={`vl-${parts.length}`}
+          yamlPath={fileName} 
+          currentPath={textbookPath} 
+        />
+      );
+    }
     
     lastIndex = match.index + match[0].length;
   }

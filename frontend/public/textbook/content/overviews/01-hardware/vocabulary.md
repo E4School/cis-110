@@ -1,30 +1,3 @@
 # Vocab
-- Computer system (system)
-- Hardware / Software boundary
-- IPOS model (Input, Processing, Output, Storage)
-- Input device / Output device
-- Storage (persistent storage)
-- Stored program concept
-- Instruction / Opcode / Machine cycle (fetch–decode–execute)
-- Program counter (PC)
-- Control unit / ALU
-- Register / Cache / Main memory (RAM)
-- RAM (volatile) vs ROM / Firmware (non‑volatile)
-- Boot / Bootstrap / Loader
-- Device driver
-- Bus (data / address / control)
-- System on a Chip (SoC)
-- Embedded system
-- Architecture (desktop, mobile, embedded)
-- Performance (throughput, latency)
-- Energy efficiency / Power consumption / Thermal constraints
-- Trade‑off
-- Total Cost of Ownership (TCO)
-- Data path / Data flow
-- Throughput vs Latency
-- Scalability (vertical, horizontal)
-- Efficiency
-- Bottleneck
-- Trade‑off analysis
-- Benchmark / Metric
-- Optimization vs Premature optimization (principle)
+
+{{VocabList:exam-questions.yml}}

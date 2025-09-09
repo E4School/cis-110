@@ -1,7 +1,23 @@
 id: 2
 question: "Describe the stored program concept and why it distinguishes computers from other simpler devices"
 answer: "Instructions are stored in memory alongside data, allowing a general‑purpose machine to change behavior simply by loading different code (flexibility, reprogrammability). Simpler devices (e.g., hard‑wired calculators) have fixed logic; changing behavior requires hardware redesign."
-vocab_answer: ["stored program concept", "instructions", "memory", "data", "general-purpose machine", "reprogrammability", "hard-wired", "fixed logic"]
+vocab_answer: 
+  - word: "stored program concept"
+    definition: "The fundamental principle where instructions and data are both stored in memory, allowing machines to change behavior by loading different code"
+  - word: "instructions"
+    definition: "Commands or code that tell the computer what operations to perform"
+  - word: "memory"
+    definition: "Storage space where both program instructions and data are kept for processing"
+  - word: "data"
+    definition: "Information that the computer processes according to the stored instructions"
+  - word: "general-purpose machine"
+    definition: "A computer that can perform many different tasks by changing its software rather than its hardware"
+  - word: "reprogrammability"
+    definition: "The ability to change a computer's behavior and functionality by loading different software"
+  - word: "hard-wired"
+    definition: "Devices with fixed logic built directly into their circuits that cannot be changed through software"
+  - word: "fixed logic"
+    definition: "Unchangeable operational behavior that is permanently built into a device's hardware"
 answer_kindergarten: "A computer is super special because it can learn to do lots of different things! It's like having a toy robot that you can teach new tricks just by giving it different instruction cards. You can teach it to play games, draw pictures, or play music - all with the same robot! But some toys, like a simple calculator, can only do one thing (like adding numbers) because that's all they were built to do. The computer is like a magical toy that can become any toy you want just by changing its instructions!"
 vocab_kindergarten: ["computer", "instructions", "robot", "calculator", "games", "music", "pictures"]
 answer_3rd_grade: "What makes computers amazing is that they can store their instructions in memory, just like how you might write down the rules for different games on index cards. The same computer can play music, edit photos, browse the internet, or run games just by loading different sets of instructions (called programs or software). This is different from simple devices like calculators or digital clocks - those can only do one job because their instructions are built right into their circuits and can't be changed. A computer is like having one machine that can transform into many different tools just by changing its software!"

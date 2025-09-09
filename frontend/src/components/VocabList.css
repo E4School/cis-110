@@ -1,0 +1,192 @@
+.vocab-list {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.vocab-list h2 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 10px;
+}
+
+.vocab-count {
+  color: #7f8c8d;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.vocab-list.loading {
+  text-align: center;
+  padding: 40px;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+.vocab-list.error {
+  text-align: center;
+  padding: 40px;
+  color: #e74c3c;
+  background-color: #fdf2f2;
+  border: 1px solid #f5b7b1;
+  border-radius: 5px;
+}
+
+.vocab-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.vocab-item {
+  border: 1px solid #e1e8ed;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+.vocab-item:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.vocab-header {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.vocab-header:hover {
+  background-color: #f8f9fa;
+}
+
+.vocab-header[aria-expanded="true"] {
+  background-color: #e3f2fd;
+}
+
+.vocab-word {
+  font-weight: 600;
+  color: #2c3e50;
+  text-align: left;
+}
+
+.definition-count {
+  font-size: 0.85em;
+  color: #7f8c8d;
+  margin-left: 10px;
+}
+
+.vocab-icon {
+  color: #7f8c8d;
+  font-size: 12px;
+  transition: transform 0.2s ease;
+  margin-left: auto;
+}
+
+.vocab-icon.expanded {
+  transform: rotate(180deg);
+}
+
+.vocab-content {
+  border-top: 1px solid #e1e8ed;
+  padding: 0;
+}
+
+.vocab-definition {
+  padding: 15px 20px;
+  border-bottom: 1px solid #f1f3f4;
+}
+
+.vocab-definition:last-child {
+  border-bottom: none;
+}
+
+.definition-text {
+  color: #34495e;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.definition-meta {
+  display: flex;
+  gap: 15px;
+  font-size: 0.85em;
+  color: #7f8c8d;
+}
+
+.definition-level {
+  background-color: #ecf0f1;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.definition-question {
+  font-style: italic;
+}
+
+/* Level-specific styling */
+.vocab-definition:has(.definition-level:contains("Kindergarten")) .definition-level {
+  background-color: #ffeaa7;
+  color: #6c5ce7;
+}
+
+.vocab-definition:has(.definition-level:contains("3rd Grade")) .definition-level {
+  background-color: #fab1a0;
+  color: #e17055;
+}
+
+.vocab-definition:has(.definition-level:contains("7th Grade")) .definition-level {
+  background-color: #81ecec;
+  color: #00b894;
+}
+
+.vocab-definition:has(.definition-level:contains("High School")) .definition-level {
+  background-color: #a29bfe;
+  color: #6c5ce7;
+}
+
+.vocab-definition:has(.definition-level:contains("Undergraduate")) .definition-level {
+  background-color: #fd79a8;
+  color: #e84393;
+}
+
+.vocab-definition:has(.definition-level:contains("General")) .definition-level {
+  background-color: #74b9ff;
+  color: #0984e3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .vocab-list {
+    padding: 15px;
+  }
+  
+  .vocab-header {
+    padding: 12px 15px;
+    font-size: 15px;
+  }
+  
+  .vocab-content {
+    padding: 0;
+  }
+  
+  .vocab-definition {
+    padding: 12px 15px;
+  }
+  
+  .definition-meta {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
