@@ -44,10 +44,33 @@ function ExamQuestions({ yamlPath, currentPath }) {
         }
         
         const yamlText = await response.text();
-        const data = yaml.load(yamlText);
-        const questions = data?.questions || [];
+        const indexData = yaml.load(yamlText);
         
-        setQuestions(questions);
+        // Check if this is the new format with file references
+        if (indexData?.questions && indexData.questions[0]?.file) {
+          // New format: load individual question files
+          const questionPromises = indexData.questions.map(async (questionRef) => {
+            const questionPath = directoryPath ? 
+              `/textbook/${directoryPath}/${questionRef.file}` : 
+              `/textbook/${questionRef.file}`;
+              
+            const questionResponse = await fetch(questionPath);
+            if (!questionResponse.ok) {
+              throw new Error(`Failed to fetch question file: ${questionRef.file}`);
+            }
+            
+            const questionYaml = await questionResponse.text();
+            const questionData = yaml.load(questionYaml);
+            return questionData;
+          });
+          
+          const questions = await Promise.all(questionPromises);
+          setQuestions(questions);
+        } else {
+          // Legacy format: questions are directly in the main file
+          const questions = indexData?.questions || [];
+          setQuestions(questions);
+        }
       } catch (err) {
         setError(err.message);
       } finally {
