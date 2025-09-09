@@ -6,10 +6,17 @@ import './ExamQuestions.css';
 // Additional answer levels with their display names (reversed order - kindergarten first)
 const ADDITIONAL_ANSWER_LEVELS = [
   { key: 'answer_kindergarten', label: 'Kindergarten Level' },
-  { key: 'answer_3rd_grade', label: '3rd Grade Level' },
-  { key: 'answer_7th_grade', label: '7th Grade Level' },
-  { key: 'answer_high_school', label: 'High School Level' },
-  { key: 'answer_undergraduate', label: 'Undergraduate Level' }
+
+    // Note that the display labels are different from the keys.
+    // For example, 'answer_3rd_grade' is displayed as '7th Grade Level'.
+    // That's by design.  Let's keep it that way, as they keys represent
+    // what I asked AI ("Give a 7th Grade Level explanation") vs what I think
+    // an actual 7th Grade Level explanation should be. 
+    // ~Stephen
+  { key: 'answer_3rd_grade', label: '7th Grade Level' },
+  { key: 'answer_7th_grade', label: 'High School Level' },
+  { key: 'answer_high_school', label: 'Undergraduate Level' },
+  { key: 'answer_undergraduate', label: 'Postgraduate Level' }
 ];
 
 function ExamQuestions({ yamlPath, currentPath }) {
