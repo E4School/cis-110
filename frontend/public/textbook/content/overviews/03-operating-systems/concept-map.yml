@@ -1,0 +1,95 @@
+concept_map:
+  - category: "System Architecture"
+    concepts:
+      - name: "Operating System"
+        exam_questions:
+          - "questions/q02.yml"
+      - name: "Kernel"
+        exam_questions:
+          - "questions/q02.yml"
+      - name: "System Calls"
+        exam_questions:
+          - "questions/q02.yml"
+          - "questions/q04.yml"
+      - name: "Device Drivers"
+        exam_questions:
+          - "questions/q01.yml"
+          - "questions/q04.yml"
+      - name: "Hardware Abstraction Layer"
+        exam_questions:
+          - "questions/q04.yml"
+  
+  - category: "Process Management"
+    concepts:
+      - name: "Multitasking"
+        exam_questions:
+          - "questions/q03.yml"
+      - name: "Multiprocessing"
+        exam_questions:
+          - "questions/q03.yml"
+      - name: "Multithreading"
+        exam_questions:
+          - "questions/q03.yml"
+      - name: "Process Scheduling"
+        exam_questions:
+          - "questions/q02.yml"
+          - "questions/q03.yml"
+      - name: "Context Switching"
+        exam_questions:
+          - "questions/q03.yml"
+      - name: "Process Isolation"
+        exam_questions:
+          - "questions/q04.yml"
+  
+  - category: "Memory Management"
+    concepts:
+      - name: "Virtual Memory"
+        exam_questions:
+          - "questions/q04.yml"
+      - name: "Memory Management Unit"
+        exam_questions:
+          - "questions/q04.yml"
+      - name: "Memory Protection"
+        exam_questions:
+          - "questions/q04.yml"
+      - name: "Address Space"
+        exam_questions:
+          - "questions/q04.yml"
+  
+  - category: "Concurrency & Synchronization"
+    concepts:
+      - name: "Concurrent Execution"
+        exam_questions:
+          - "questions/q03.yml"
+      - name: "Parallel Processing"
+        exam_questions:
+          - "questions/q03.yml"
+      - name: "Synchronization Primitives"
+        exam_questions:
+          - "questions/q03.yml"
+      - name: "Race Conditions"
+        exam_questions:
+          - "questions/q03.yml"
+      - name: "Deadlock"
+        exam_questions:
+          - "questions/q03.yml"
+  
+  - category: "System Integration"
+    concepts:
+      - name: "Hardware-Software Interface"
+        exam_questions:
+          - "questions/q04.yml"
+      - name: "System Integration"
+        exam_questions:
+          - "questions/q04.yml"
+      - name: "Program Execution"
+        exam_questions:
+          - "questions/q04.yml"
+      - name: "Resource Management"
+        exam_questions:
+          - "questions/q02.yml"
+          - "questions/q04.yml"
+      - name: "Interrupt Handling"
+        exam_questions:
+          - "questions/q01.yml"
+          - "questions/q04.yml"
