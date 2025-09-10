@@ -1,20 +1,13 @@
 # Hardware: How Physics Does Math 
 
-
-[TODO: Insert concept mappings?
-
-https://chatgpt.com/g/g-p-68a489c36f348191b441a701e2337662-textbooks/c/68c0a412-689c-8328-9fc0-aa7f81b77171
-]
-
 [Video coming soon]
 
 
 ## Chapter Contents
 
 - [**Big Picture Concepts**](concepts) - Start here
-- [**Relational Sentences**](relational-sentences) - How concepts connect and relate
 - [**Exam Questions**](exam-questions) - Practice questions and detailed answers
-- [**Vocabulary**](vocabulary) - Big list of terms and definitions (only use this for reference)
+- [**Vocabulary**](vocabulary) - Giant list of related terms and definitions (use this only for reference)
 
 ## Recommended Videos
 
