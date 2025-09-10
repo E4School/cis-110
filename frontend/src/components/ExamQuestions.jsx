@@ -19,6 +19,78 @@ const ADDITIONAL_ANSWER_LEVELS = [
   { key: 'answer_undergraduate', label: 'Postgraduate Level' }
 ];
 
+// Function to process text and highlight vocabulary words with tooltips
+const processAnswerText = (text, vocabList) => {
+  if (!text || !vocabList || vocabList.length === 0) {
+    return text;
+  }
+
+  // Create a map of vocabulary words to their definitions
+  const vocabItems = vocabList.map(item => ({
+    word: item.word,
+    definition: item.definition,
+    regex: new RegExp(`\\b${item.word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'gi')
+  }));
+
+  // Sort by word length (longest first) to handle multi-word terms properly
+  vocabItems.sort((a, b) => b.word.length - a.word.length);
+
+  let processedText = text;
+  const replacements = [];
+  let replacementIndex = 0;
+
+  // Find all vocabulary word matches
+  vocabItems.forEach(({ word, definition, regex }) => {
+    let match;
+    while ((match = regex.exec(processedText)) !== null) {
+      const placeholder = `__VOCAB_${replacementIndex}__`;
+      replacements.push({
+        placeholder,
+        word: match[0], // Use the actual matched text (preserves original case)
+        definition,
+        index: replacementIndex
+      });
+      
+      // Replace the matched text with placeholder
+      processedText = processedText.substring(0, match.index) + 
+        placeholder + 
+        processedText.substring(match.index + match[0].length);
+      
+      // Reset regex lastIndex to continue searching from the beginning
+      regex.lastIndex = 0;
+      replacementIndex++;
+      
+      // Re-search from beginning since we modified the string
+      break;
+    }
+    // Reset regex for next iteration
+    regex.lastIndex = 0;
+  });
+
+  // Split text by placeholders and replace with React elements
+  if (replacements.length === 0) {
+    return text;
+  }
+
+  const parts = processedText.split(/(__VOCAB_\d+__)/);
+  
+  return parts.map((part, index) => {
+    const replacement = replacements.find(r => r.placeholder === part);
+    if (replacement) {
+      return (
+        <span
+          key={`vocab-${replacement.index}-${index}`}
+          className="vocab-word"
+          title={replacement.definition}
+        >
+          {replacement.word}
+        </span>
+      );
+    }
+    return part;
+  });
+};
+
 function ExamQuestions({ yamlPath, currentPath }) {
   const [questions, setQuestions] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -110,7 +182,7 @@ function ExamQuestions({ yamlPath, currentPath }) {
           {/* Main answer - always shown (no accordion) */}
           {q.answer && (
             <div className="answer main-answer">
-              <p>{q.answer}</p>
+              <p>{processAnswerText(q.answer, q.vocab_answer)}</p>
             </div>
           )}
           
@@ -122,6 +194,10 @@ function ExamQuestions({ yamlPath, currentPath }) {
               const questionId = q.id || index;
               const expandKey = `${questionId}-${key}`;
               const isExpanded = expandedAnswers[expandKey] || false;
+              
+              // Get the corresponding vocabulary list for this answer level
+              const vocabKey = key.replace('answer_', 'vocab_');
+              const vocabList = q[vocabKey] || [];
               
               return (
                 <div key={key} className="answer-accordion">
@@ -139,7 +215,7 @@ function ExamQuestions({ yamlPath, currentPath }) {
                   {isExpanded && (
                     <div className="accordion-content">
                       <div className="answer">
-                        <p>{q[key]}</p>
+                        <p>{processAnswerText(q[key], vocabList)}</p>
                       </div>
                     </div>
                   )}
