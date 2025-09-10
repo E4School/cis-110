@@ -2,7 +2,13 @@
 
 ## How to pass the final
 
-[Video coming soon]
+[Video coming soon
+
+* course overview
+* final exam
+* testing, making it stick, forgetting, testing to failure, etc.
+]
+
 
 ## Chapters
 

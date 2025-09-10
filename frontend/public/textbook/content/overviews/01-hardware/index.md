@@ -1,6 +1,10 @@
-# Hardware: How We Got Physics To Do Math REALLY Fast
+# Hardware: How Physics Does Math 
 
-This chapter covers the fundamental concepts of computer hardware and how physical components work together to perform computation.
+
+[TODO: Insert concept mappings?
+
+https://chatgpt.com/g/g-p-68a489c36f348191b441a701e2337662-textbooks/c/68c0a412-689c-8328-9fc0-aa7f81b77171
+]
 
 [Video coming soon]
 
@@ -22,13 +26,40 @@ By the end of this chapter, you should understand:
 
 ## Other Resources
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DBRNE3A5Wvw?si=T581yRzXaPev2-hZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SbqXqQ-2ixs?si=nRVsIZnBsgwbxRFT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TQCr9RV7twk?si=3M_ZRcKIR32GZ83X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1dZ55MjjZY0?si=072Rs5vodSStDWMp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KN8YgJnShPM?si=KKj-GuKZ7mA3b5b-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HjneAhCy2N4?si=HEbo1Rk3v3CKf93M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KN8YgJnShPM?si=KKj-GuKZ7mA3b5b-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AkFi90lZmXA?si=DIsD6Mb9Ri5KautB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/p3q5zWCw8J4?si=xVdMJnOXr6-7qr4l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CBf-jIn44X0?si=J8Um3quXON9RMKep" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FU_YFpfDqqA?si=6ha9ALIIWIghenJE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-https://www.youtube.com/watch?v=CBf-jIn44X0
+<iframe width="560" height="315" src="https://www.youtube.com/embed/I0-izyq6q5s?si=FE7D4Dru0BJ0rRvL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-https://www.youtube.com/watch?v=a10a11oxjrA
 
-https://www.youtube.com/watch?v=DBRNE3A5Wvw
 
-https://www.youtube.com/watch?v=3e0aN_pPhME
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oI_X2cMHNe0?si=BXNyQeTtEQAz9vOr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+### Electricity
+
+Low-level physics stuff that I find cool, but it's out of scope for this class.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bHIhgxav9LY?si=g9BGO46f-wGtT5Lu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iph500cPK28?si=6ThaCAWBsR3zlDTY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oI_X2cMHNe0?si=BXNyQeTtEQAz9vOr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
