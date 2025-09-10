@@ -1,11 +1,7 @@
 concept_map:
-  - category: "Fundamental Models"
+  - category: "Fundamental Conceptual Models"
     concepts:
       - name: "IPO Model"
-        exam_questions:
-          - "questions/q01.yml"
-          - "questions/q08.yml"
-      - name: "Data vs. Information"
         exam_questions:
           - "questions/q01.yml"
           - "questions/q08.yml"
@@ -20,42 +16,30 @@ concept_map:
         exam_questions:
           - "questions/q03.yml"
           - "questions/q06.yml"
-          - "questions/q08.yml"
       - name: "Memory (RAM/ROM)"
         exam_questions:
           - "questions/q04.yml"
           - "questions/q06.yml"
       - name: "Storage Technologies"
         exam_questions:
-          - "questions/q09.yml"
+          - "questions/q10.yml"
       - name: "I/O Devices"
         exam_questions:
           - "questions/q05.yml"
           - "questions/q08.yml"
-          - "questions/q06.yml"
-      - name: "Device Drivers"
-        exam_questions:
-          - "questions/q06.yml"
   
-  - category: "System Integration"
+  - category: "Systems Concepts"
     concepts:
       - name: "System Integration"
         exam_questions:
           - "questions/q06.yml"
-          - "questions/q08.yml"
       - name: "Data Flow Through a Computer System"
         exam_questions:
           - "questions/q08.yml"
-          - "questions/q01.yml"
           - "questions/q06.yml"
-  
-  - category: "Architectures & Trade-offs"
-    concepts:
       - name: "Computer Architectures"
         exam_questions:
           - "questions/q07.yml"
-          - "questions/q09.yml"
       - name: "Design Trade-offs"
         exam_questions:
-          - "questions/q09.yml"
-          - "questions/q07.yml"  
+          - "questions/q09.yml"  
