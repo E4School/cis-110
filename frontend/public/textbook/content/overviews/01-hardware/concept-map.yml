@@ -9,6 +9,9 @@ concept_map:
         exam_questions:
           - "questions/q02.yml"
           - "questions/q06.yml"
+      - name: "Data vs Information"
+        exam_questions:
+          - "questions/q11.yml"
   
   - category: "Hardware Components"
     concepts:
@@ -42,4 +45,7 @@ concept_map:
           - "questions/q07.yml"
       - name: "Design Trade-offs"
         exam_questions:
-          - "questions/q09.yml"  
+          - "questions/q09.yml"
+      - name: "Hardware-Software Interface"
+        exam_questions:
+          - "questions/q12.yml"  
