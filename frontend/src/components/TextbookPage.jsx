@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import ExamQuestions from './ExamQuestions';
 import VocabList from './VocabList';
+import ConceptMap from './ConceptMap';
 import './TextbookPage.css';
 
 // Custom link component for internal textbook links
@@ -71,7 +72,7 @@ function renderContentWithComponents(content, textbookPath) {
   console.log('textbookPath:', textbookPath);
   
   // Look for component markers
-  const combinedRegex = /\{\{(ExamQuestions|VocabList):([\w\-\.]+)\}\}/g;
+  const combinedRegex = /\{\{(ExamQuestions|VocabList|ConceptMap):([\w\-\.]+)\}\}/g;
   
   const parts = [];
   let lastIndex = 0;
@@ -111,6 +112,14 @@ function renderContentWithComponents(content, textbookPath) {
       parts.push(
         <VocabList 
           key={`vl-${parts.length}`}
+          yamlPath={fileName} 
+          currentPath={textbookPath} 
+        />
+      );
+    } else if (componentType === 'ConceptMap') {
+      parts.push(
+        <ConceptMap 
+          key={`cm-${parts.length}`}
           yamlPath={fileName} 
           currentPath={textbookPath} 
         />

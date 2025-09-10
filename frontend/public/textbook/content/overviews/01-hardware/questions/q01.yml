@@ -1,5 +1,5 @@
 id: 1
-question: "Explain the IPO model of activities characteristic of computers"
+question: "Explain the IPO model and its significance"
 answer: "Input (data entry from users/sensors/networks), Processing (CPU executes instructions to transform and manipulate data), Output (results presented to users or other systems via displays, printers, networks, etc.). This model frames every program as a transformation pipeline where data flows in, gets processed according to algorithms, and meaningful results flow out."
 vocab_answer: 
   - word: "IPO model"

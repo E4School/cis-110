@@ -11,20 +11,12 @@ https://chatgpt.com/g/g-p-68a489c36f348191b441a701e2337662-textbooks/c/68c0a412-
 
 ## Chapter Contents
 
-- [**Vocabulary**](vocabulary) - Key terms and definitions
+- [**Big Picture Concepts**](concepts) - Start here
 - [**Relational Sentences**](relational-sentences) - How concepts connect and relate
 - [**Exam Questions**](exam-questions) - Practice questions and detailed answers
+- [**Vocabulary**](vocabulary) - Big list of terms and definitions (only use this for reference)
 
-## Learning Objectives
-
-By the end of this chapter, you should understand:
-- The IPOS model and how computers process information
-- The stored program concept and machine execution cycle
-- Memory hierarchy and different types of storage
-- How hardware components coordinate to execute programs
-- Trade-offs in computer architecture design
-
-## Other Resources
+## Recommended Videos
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DBRNE3A5Wvw?si=T581yRzXaPev2-hZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
