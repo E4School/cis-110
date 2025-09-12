@@ -1,18 +1,13 @@
 concept_map:
-  - category: "Physical Layer"
+  - category: ""
     concepts:
-      - name: "Storage Technology Comparison"
+      - name: "Physical"
         exam_questions:
           - "questions/q01.yml"
-  
-  - category: "Logical Layer"
-    concepts:
-      - name: "File Systems"
+      - name: "Logical"
         exam_questions:
           - "questions/q02.yml"
-          - "questions/q06.yml"
-          - "questions/q05.yml"
-      - name: "File paths"
-        exam_questions:
           - "questions/q03.yml"
           - "questions/q04.yml"
+          - "questions/q05.yml"
+          - "questions/q06.yml"

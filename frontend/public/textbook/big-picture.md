@@ -26,9 +26,6 @@
 ### Society
 {{ConceptMap:content/overviews/09-people/concept-map.yml}}
 
-### You
-{{ConceptMap:content/overviews/10-you/concept-map.yml}}
-
 
 ---
 

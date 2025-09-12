@@ -12,5 +12,4 @@ questions:
   - file: questions/q08.yml
   - file: questions/q09.yml
   - file: questions/q10.yml
-  - file: questions/q11.yml
   - file: questions/q12.yml

@@ -1,7 +1,7 @@
 concept_map:
-  - category: "Database Structures and Design"
+  - category: ""
     concepts:
-      - name: "Structures"
+      - name: "Structuring Tools"
         exam_questions:
           - "questions/q01.yml"
           - "questions/q02.yml"

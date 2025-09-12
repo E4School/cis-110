@@ -1,18 +1,16 @@
 concept_map:
-  - category: "People and Technology"
+  - category: ""
     concepts:
-      - name: "Social Media and Networks"
+      - name: "Social Platforms"
         exam_questions:
           - "questions/q01.yml"
           - "questions/q02.yml"
-          - "questions/q06.yml"
-      - name: "Digital Rights and Ethics"
+          - "questions/q05.yml"
+          - "questions/q08.yml"
+      - name: "Laws/Ethics"
         exam_questions:
           - "questions/q03.yml"
           - "questions/q04.yml"
-          - "questions/q05.yml"
+          - "questions/q06.yml"
           - "questions/q07.yml"
-      - name: "Information and Media"
-        exam_questions:
-          - "questions/q08.yml"
           - "questions/q09.yml"

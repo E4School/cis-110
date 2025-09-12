@@ -1,9 +1,9 @@
 concept_map:
-  - category: "Web Advanced Concepts"
+  - category: ""
     concepts:
-      - name: "Web Security Implications"
+      - name: "Web Apps"
         exam_questions:
           - "questions/q01.yml"
-      - name: "Cloud Computing and Web Technologies"
+      - name: "Cloud Computing"
         exam_questions:
           - "questions/q02.yml"

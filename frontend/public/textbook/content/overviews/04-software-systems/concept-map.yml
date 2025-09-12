@@ -1,12 +1,11 @@
 concept_map:
-  - category: "Software Types and Processes"
+  - category: ""
     concepts:
       - name: "Types of Software"
         exam_questions:
           - "questions/q01.yml"
-          - "questions/q02.yml"
           - "questions/q03.yml"
-      - name: "Processes"
+      - name: "Delivery of Software"
         exam_questions:
+          - "questions/q02.yml"
           - "questions/q04.yml"
-          - "questions/q05.yml"

@@ -1,51 +1,19 @@
 concept_map:
-  - category: "Fundamental Conceptual Models"
+  - category: ""
     concepts:
-      - name: "IPO Model"
+      - name: "Conceptual Models"
         exam_questions:
           - "questions/q01.yml"
-          - "questions/q08.yml"
-      - name: "Stored Program Concept"
-        exam_questions:
           - "questions/q02.yml"
-          - "questions/q06.yml"
-      - name: "Data vs Information"
-        exam_questions:
-          - "questions/q11.yml"
-  
-  - category: "Hardware Components"
-    concepts:
-      - name: "Processor / CPU"
+          - "questions/q07.yml"
+          - "questions/q09.yml"
+          - "questions/q12.yml"  
+      - name: "Material Components"
         exam_questions:
           - "questions/q03.yml"
-          - "questions/q06.yml"
-      - name: "Memory (RAM/ROM)"
-        exam_questions:
           - "questions/q04.yml"
-          - "questions/q06.yml"
-      - name: "Storage Technologies"
-        exam_questions:
-          - "questions/q10.yml"
-      - name: "I/O Devices"
-        exam_questions:
           - "questions/q05.yml"
+          - "questions/q06.yml"
           - "questions/q08.yml"
+          - "questions/q10.yml"
   
-  - category: "Systems Concepts"
-    concepts:
-      - name: "System Integration"
-        exam_questions:
-          - "questions/q06.yml"
-      - name: "Data Flow Through a Computer System"
-        exam_questions:
-          - "questions/q08.yml"
-          - "questions/q06.yml"
-      - name: "Computer Architectures"
-        exam_questions:
-          - "questions/q07.yml"
-      - name: "Design Trade-offs"
-        exam_questions:
-          - "questions/q09.yml"
-      - name: "Hardware-Software Interface"
-        exam_questions:
-          - "questions/q12.yml"  
