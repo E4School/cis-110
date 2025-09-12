@@ -1,0 +1,108 @@
+concept_map:
+  - category: "Cybersecurity Fundamentals"
+    concepts:
+      - name: "Information Security"
+        exam_questions:
+          - "questions/q01.yml"
+      - name: "Confidentiality, Integrity, Availability (CIA)"
+        exam_questions:
+          - "questions/q01.yml"
+      - name: "Risk Assessment"
+        exam_questions:
+          - "questions/q01.yml"
+      - name: "Threat Modeling"
+        exam_questions:
+          - "questions/q01.yml"
+      - name: "Vulnerability Assessment"
+        exam_questions:
+          - "questions/q01.yml"
+      - name: "Security Policies"
+        exam_questions:
+          - "questions/q01.yml"
+      - name: "Security Frameworks"
+        exam_questions:
+          - "questions/q01.yml"
+      - name: "Compliance Standards"
+        exam_questions:
+          - "questions/q01.yml"
+
+  - category: "Threats and Attack Vectors"
+    concepts:
+      - name: "Malware"
+        exam_questions:
+          - "questions/q02.yml"
+      - name: "Social Engineering"
+        exam_questions:
+          - "questions/q02.yml"
+      - name: "Phishing Attacks"
+        exam_questions:
+          - "questions/q02.yml"
+      - name: "Denial of Service (DoS)"
+        exam_questions:
+          - "questions/q02.yml"
+      - name: "SQL Injection"
+        exam_questions:
+          - "questions/q02.yml"
+      - name: "Cross-Site Scripting (XSS)"
+        exam_questions:
+          - "questions/q02.yml"
+      - name: "Man-in-the-Middle Attacks"
+        exam_questions:
+          - "questions/q02.yml"
+      - name: "Advanced Persistent Threats (APT)"
+        exam_questions:
+          - "questions/q02.yml"
+
+  - category: "Cryptography and Secure Communications"
+    concepts:
+      - name: "Encryption Algorithms"
+        exam_questions:
+          - "questions/q03.yml"
+      - name: "Public Key Infrastructure (PKI)"
+        exam_questions:
+          - "questions/q03.yml"
+      - name: "Digital Signatures"
+        exam_questions:
+          - "questions/q03.yml"
+      - name: "Secure Sockets Layer (SSL/TLS)"
+        exam_questions:
+          - "questions/q03.yml"
+      - name: "Hashing Functions"
+        exam_questions:
+          - "questions/q03.yml"
+      - name: "Key Management"
+        exam_questions:
+          - "questions/q03.yml"
+      - name: "Certificate Authorities"
+        exam_questions:
+          - "questions/q03.yml"
+      - name: "Secure Communication Protocols"
+        exam_questions:
+          - "questions/q03.yml"
+
+  - category: "Security Controls and Incident Response"
+    concepts:
+      - name: "Firewalls and Network Security"
+        exam_questions:
+          - "questions/q04.yml"
+      - name: "Access Control Systems"
+        exam_questions:
+          - "questions/q04.yml"
+      - name: "Intrusion Detection Systems (IDS)"
+        exam_questions:
+          - "questions/q04.yml"
+      - name: "Security Information and Event Management (SIEM)"
+        exam_questions:
+          - "questions/q04.yml"
+      - name: "Incident Response Planning"
+        exam_questions:
+          - "questions/q04.yml"
+      - name: "Digital Forensics"
+        exam_questions:
+          - "questions/q04.yml"
+      - name: "Backup and Recovery"
+        exam_questions:
+          - "questions/q04.yml"
+      - name: "Business Continuity Planning"
+        exam_questions:
+          - "questions/q04.yml"

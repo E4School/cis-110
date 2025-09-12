@@ -1,0 +1,108 @@
+concept_map:
+  - category: "Personal Technology Management"
+    concepts:
+      - name: "Digital Literacy"
+        exam_questions:
+          - "questions/q01.yml"
+      - name: "Technology Tool Selection"
+        exam_questions:
+          - "questions/q01.yml"
+      - name: "Personal Productivity Systems"
+        exam_questions:
+          - "questions/q01.yml"
+      - name: "Digital Organization"
+        exam_questions:
+          - "questions/q01.yml"
+      - name: "File Management"
+        exam_questions:
+          - "questions/q01.yml"
+      - name: "Backup and Synchronization"
+        exam_questions:
+          - "questions/q01.yml"
+      - name: "Device Management"
+        exam_questions:
+          - "questions/q01.yml"
+      - name: "Digital Minimalism"
+        exam_questions:
+          - "questions/q01.yml"
+
+  - category: "Personal Security and Privacy"
+    concepts:
+      - name: "Password Management"
+        exam_questions:
+          - "questions/q02.yml"
+      - name: "Two-Factor Authentication"
+        exam_questions:
+          - "questions/q02.yml"
+      - name: "Personal Data Protection"
+        exam_questions:
+          - "questions/q02.yml"
+      - name: "Social Media Privacy"
+        exam_questions:
+          - "questions/q02.yml"
+      - name: "Identity Theft Prevention"
+        exam_questions:
+          - "questions/q02.yml"
+      - name: "Secure Browsing Habits"
+        exam_questions:
+          - "questions/q02.yml"
+      - name: "Phishing Recognition"
+        exam_questions:
+          - "questions/q02.yml"
+      - name: "Digital Footprint Management"
+        exam_questions:
+          - "questions/q02.yml"
+
+  - category: "Lifelong Learning and Skill Development"
+    concepts:
+      - name: "Continuous Learning Strategies"
+        exam_questions:
+          - "questions/q03.yml"
+      - name: "Online Learning Platforms"
+        exam_questions:
+          - "questions/q03.yml"
+      - name: "Skill Assessment and Goal Setting"
+        exam_questions:
+          - "questions/q03.yml"
+      - name: "Professional Development"
+        exam_questions:
+          - "questions/q03.yml"
+      - name: "Technology Trend Awareness"
+        exam_questions:
+          - "questions/q03.yml"
+      - name: "Learning Community Participation"
+        exam_questions:
+          - "questions/q03.yml"
+      - name: "Knowledge Management"
+        exam_questions:
+          - "questions/q03.yml"
+      - name: "Mentorship and Networking"
+        exam_questions:
+          - "questions/q03.yml"
+
+  - category: "Future Technology and Career Planning"
+    concepts:
+      - name: "Emerging Technology Awareness"
+        exam_questions:
+          - "questions/q04.yml"
+      - name: "Career Path Planning"
+        exam_questions:
+          - "questions/q04.yml"
+      - name: "Skill Transferability"
+        exam_questions:
+          - "questions/q04.yml"
+      - name: "Technology Impact Assessment"
+        exam_questions:
+          - "questions/q04.yml"
+      - name: "Innovation and Creativity"
+        exam_questions:
+          - "questions/q04.yml"
+      - name: "Personal Brand Development"
+        exam_questions:
+          - "questions/q04.yml"
+      - name: "Technology Ethics in Personal Practice"
+        exam_questions:
+          - "questions/q04.yml"
+      - name: "Future-Ready Skills"
+        exam_questions:
+          - "questions/q04.yml"

@@ -1,0 +1,108 @@
+concept_map:
+  - category: "Human-Computer Interaction"
+    concepts:
+      - name: "User Experience Design"
+        exam_questions:
+          - "questions/q01.yml"
+      - name: "User Interface Design"
+        exam_questions:
+          - "questions/q01.yml"
+      - name: "Usability Principles"
+        exam_questions:
+          - "questions/q01.yml"
+      - name: "Accessibility Design"
+        exam_questions:
+          - "questions/q01.yml"
+      - name: "Human Factors"
+        exam_questions:
+          - "questions/q01.yml"
+      - name: "Cognitive Psychology"
+        exam_questions:
+          - "questions/q01.yml"
+      - name: "Design Thinking"
+        exam_questions:
+          - "questions/q01.yml"
+      - name: "User Research Methods"
+        exam_questions:
+          - "questions/q01.yml"
+
+  - category: "Digital Communication and Collaboration"
+    concepts:
+      - name: "Digital Communication Tools"
+        exam_questions:
+          - "questions/q02.yml"
+      - name: "Social Media Platforms"
+        exam_questions:
+          - "questions/q02.yml"
+      - name: "Online Collaboration"
+        exam_questions:
+          - "questions/q02.yml"
+      - name: "Virtual Teams"
+        exam_questions:
+          - "questions/q02.yml"
+      - name: "Digital Citizenship"
+        exam_questions:
+          - "questions/q02.yml"
+      - name: "Online Communities"
+        exam_questions:
+          - "questions/q02.yml"
+      - name: "Digital Etiquette"
+        exam_questions:
+          - "questions/q02.yml"
+      - name: "Remote Work Technologies"
+        exam_questions:
+          - "questions/q02.yml"
+
+  - category: "Technology Ethics and Society"
+    concepts:
+      - name: "Digital Privacy"
+        exam_questions:
+          - "questions/q03.yml"
+      - name: "Data Ethics"
+        exam_questions:
+          - "questions/q03.yml"
+      - name: "Artificial Intelligence Ethics"
+        exam_questions:
+          - "questions/q03.yml"
+      - name: "Digital Divide"
+        exam_questions:
+          - "questions/q03.yml"
+      - name: "Technology Impact on Society"
+        exam_questions:
+          - "questions/q03.yml"
+      - name: "Digital Rights"
+        exam_questions:
+          - "questions/q03.yml"
+      - name: "Algorithmic Bias"
+        exam_questions:
+          - "questions/q03.yml"
+      - name: "Technology Governance"
+        exam_questions:
+          - "questions/q03.yml"
+
+  - category: "Technology Workforce and Careers"
+    concepts:
+      - name: "Software Development Careers"
+        exam_questions:
+          - "questions/q04.yml"
+      - name: "Technology Industry Roles"
+        exam_questions:
+          - "questions/q04.yml"
+      - name: "Technical Skills Development"
+        exam_questions:
+          - "questions/q04.yml"
+      - name: "Professional Communication"
+        exam_questions:
+          - "questions/q04.yml"
+      - name: "Project Management"
+        exam_questions:
+          - "questions/q04.yml"
+      - name: "Teamwork and Leadership"
+        exam_questions:
+          - "questions/q04.yml"
+      - name: "Continuous Learning"
+        exam_questions:
+          - "questions/q04.yml"
+      - name: "Technology Entrepreneurship"
+        exam_questions:
+          - "questions/q04.yml"
