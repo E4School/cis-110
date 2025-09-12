@@ -1,4 +1,4 @@
 id: 4
-question: "Explain what a hyperlink is"
+question: "Explain what a hyperlink is and what happens when you click on one"
 answer: "A hyperlink is a clickable element on a webpage that connects to another location, either within the same website or to an external resource. Hyperlinks are the fundamental building blocks that make the Web a 'web' of interconnected information. They can point to other webpages, specific sections within the same page, email addresses, files for download, or any other web resource. Hyperlinks are typically created using HTML anchor tags and are usually displayed as underlined text (though styling can vary with CSS). When clicked, hyperlinks trigger navigation to the specified destination, allowing users to move seamlessly between different pieces of content across the internet. This linking capability is what distinguishes the Web from simple document storage systems."
 topics: ["hyperlinks", "web navigation", "HTML links", "web connectivity"]

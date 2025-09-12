@@ -4,6 +4,8 @@ concept_map:
       - name: "Web Apps"
         exam_questions:
           - "questions/q01.yml"
+          - "questions/q05.yml"
       - name: "Cloud Computing"
         exam_questions:
           - "questions/q02.yml"
+          - "questions/q06.yml"

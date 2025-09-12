@@ -1,7 +1,7 @@
 concept_map:
   - category: ""
     concepts:
-      - name: "Web Concepts"
+      - name: "Browsers"
         exam_questions:
           - "questions/q01.yml"
           - "questions/q02.yml"
@@ -9,9 +9,9 @@ concept_map:
           - "questions/q04.yml"
           - "questions/q05.yml"
           - "questions/q06.yml"
-          - "questions/q07.yml"
-      - name: "Web Technologies"
+      - name: "Pages"
         exam_questions:
+          - "questions/q07.yml"
           - "questions/q08.yml"
           - "questions/q09.yml"
           - "questions/q10.yml"
