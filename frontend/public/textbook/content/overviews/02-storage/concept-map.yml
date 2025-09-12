@@ -1,49 +1,18 @@
 concept_map:
-  - category: "Storage Technologies"
+  - category: "Physical Layer"
     concepts:
-      - name: "Magnetic Storage (HDDs)"
-        exam_questions:
-          - "questions/q01.yml"
-      - name: "Optical Storage (DVD/Blu-ray)"
-        exam_questions:
-          - "questions/q01.yml"
-      - name: "Solid-State Storage (SSDs)"
+      - name: "Storage Technology Comparison"
         exam_questions:
           - "questions/q01.yml"
   
-  - category: "File Management Systems"
+  - category: "Logical Layer"
     concepts:
-      - name: "File Organization"
+      - name: "File Systems"
         exam_questions:
           - "questions/q02.yml"
           - "questions/q06.yml"
-      - name: "Version Control"
-        exam_questions:
-          - "questions/q02.yml"
-      - name: "Metadata Management"
-        exam_questions:
-          - "questions/q02.yml"
-      - name: "Backup Strategies"
-        exam_questions:
-          - "questions/q02.yml"
-  
-  - category: "File System Concepts"
-    concepts:
-      - name: "File Naming Conventions"
+          - "questions/q05.yml"
+      - name: "File paths"
         exam_questions:
           - "questions/q03.yml"
-      - name: "File Extensions"
-        exam_questions:
-          - "questions/q03.yml"
-      - name: "Path Resolution"
-        exam_questions:
           - "questions/q04.yml"
-      - name: "Absolute vs Relative Paths"
-        exam_questions:
-          - "questions/q04.yml"
-      - name: "Logical Storage Abstraction"
-        exam_questions:
-          - "questions/q05.yml"
-      - name: "Physical Storage Implementation"
-        exam_questions:
-          - "questions/q05.yml"

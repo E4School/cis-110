@@ -36,3 +36,9 @@ Meta:
 8. [**Cybersecurity**: Oops, Systems Do Get Hacked](/textbook/content/overviews/08-cybersecurity)
 9. [**People**: How Systems Shape Society](/textbook/content/overviews/09-people)
 10. [**You**: How Systems Shape You](/textbook/content/overviews/10-you)
+
+---
+
+## Other Resources
+
+[Full list of Exam Questions](/textbook/big-picture)

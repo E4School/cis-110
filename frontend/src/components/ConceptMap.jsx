@@ -18,10 +18,21 @@ function ConceptMap({ yamlPath, currentPath }) {
         setLoading(true);
         
         // Construct the full path to the YAML file
-        const directoryPath = currentPath ? currentPath.split('/').slice(0, -1).join('/') : '';
-        const fullPath = directoryPath ? 
-          `/textbook/${directoryPath}/${yamlPath}` : 
-          `/textbook/${yamlPath}`;
+        // If yamlPath is relative (doesn't contain '/'), resolve it relative to currentPath
+        // If yamlPath contains '/', treat it as absolute from textbook root
+        let fullPath;
+        if (yamlPath.includes('/')) {
+          // Absolute path from textbook root
+          fullPath = `/textbook/${yamlPath}`;
+        } else {
+          // Relative path - resolve relative to current page directory
+          // For pages like "content/overviews/02-storage/concepts", we need the directory part
+          const currentDir = currentPath === 'index' ? '' : currentPath.split('/').slice(0, -1).join('/');
+          const basePath = currentDir ? `/textbook/${currentDir}` : '/textbook';
+          fullPath = `${basePath}/${yamlPath}`;
+        }
+        
+        console.log('ConceptMap path resolution:', { yamlPath, currentPath, fullPath });
         
         const response = await fetch(fullPath);
         
@@ -59,14 +70,24 @@ function ConceptMap({ yamlPath, currentPath }) {
         
         // Fetch all referenced question files
         const questionPromises = Array.from(questionFiles).map(async (questionFile) => {
-          const questionPath = directoryPath ? 
-            `/textbook/${directoryPath}/${questionFile}` : 
+          // Question files should be relative to the concept map file location
+          let conceptMapDir;
+          if (yamlPath.includes('/')) {
+            // Absolute path from textbook root
+            conceptMapDir = yamlPath.split('/').slice(0, -1).join('/');
+          } else {
+            // Relative path - use current page directory (without the page name)
+            conceptMapDir = currentPath === 'index' ? '' : currentPath.split('/').slice(0, -1).join('/');
+          }
+          
+          const questionPath = conceptMapDir ? 
+            `/textbook/${conceptMapDir}/${questionFile}` : 
             `/textbook/${questionFile}`;
             
           try {
             const questionResponse = await fetch(questionPath);
             if (!questionResponse.ok) {
-              console.warn(`Failed to fetch question file: ${questionFile}`);
+              console.warn(`Failed to fetch question file: ${questionFile} at ${questionPath}`);
               return [questionFile, null];
             }
             
@@ -139,11 +160,6 @@ function ConceptMap({ yamlPath, currentPath }) {
 
   return (
     <div className="concept-map">
-      <h2>Concept Map</h2>
-      <p className="concept-map-description">
-        This map shows how concepts relate to exam questions. Click on categories to expand them.
-      </p>
-      
       <div className="concept-categories">
         {conceptMap.map((category, categoryIndex) => (
           <div key={categoryIndex} className="concept-category">

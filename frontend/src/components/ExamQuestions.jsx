@@ -103,11 +103,21 @@ function ExamQuestions({ yamlPath, currentPath }) {
         setLoading(true);
         
         // Construct the full path to the YAML file
-        // Remove the filename from currentPath to get just the directory
-        const directoryPath = currentPath ? currentPath.split('/').slice(0, -1).join('/') : '';
-        const fullPath = directoryPath ? 
-          `/textbook/${directoryPath}/${yamlPath}` : 
-          `/textbook/${yamlPath}`;
+        // If yamlPath is relative (doesn't contain '/'), resolve it relative to currentPath
+        // If yamlPath contains '/', treat it as absolute from textbook root
+        let fullPath;
+        if (yamlPath.includes('/')) {
+          // Absolute path from textbook root
+          fullPath = `/textbook/${yamlPath}`;
+        } else {
+          // Relative path - resolve relative to current page directory
+          // For pages like "content/overviews/02-storage/concepts", we need the directory part
+          const currentDir = currentPath === 'index' ? '' : currentPath.split('/').slice(0, -1).join('/');
+          const basePath = currentDir ? `/textbook/${currentDir}` : '/textbook';
+          fullPath = `${basePath}/${yamlPath}`;
+        }
+        
+        console.log('ExamQuestions path resolution:', { yamlPath, currentPath, fullPath });
         
         const response = await fetch(fullPath);
         
@@ -122,8 +132,18 @@ function ExamQuestions({ yamlPath, currentPath }) {
         if (indexData?.questions && indexData.questions[0]?.file) {
           // New format: load individual question files
           const questionPromises = indexData.questions.map(async (questionRef) => {
-            const questionPath = directoryPath ? 
-              `/textbook/${directoryPath}/${questionRef.file}` : 
+            // Question files should be relative to the exam-questions.yml file location
+            let examQuestionsDir;
+            if (yamlPath.includes('/')) {
+              // Absolute path from textbook root
+              examQuestionsDir = yamlPath.split('/').slice(0, -1).join('/');
+            } else {
+              // Relative path - use current page directory (without the page name)
+              examQuestionsDir = currentPath === 'index' ? '' : currentPath.split('/').slice(0, -1).join('/');
+            }
+            
+            const questionPath = examQuestionsDir ? 
+              `/textbook/${examQuestionsDir}/${questionRef.file}` : 
               `/textbook/${questionRef.file}`;
               
             const questionResponse = await fetch(questionPath);
