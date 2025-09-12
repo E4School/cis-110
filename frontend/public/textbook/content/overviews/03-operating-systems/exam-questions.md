@@ -1,3 +1,3 @@
 # Exam Questions
 
-{{ExamQuestions:exam-questions.yml}}
+{{ExamQuestions:concept-map.yml}}

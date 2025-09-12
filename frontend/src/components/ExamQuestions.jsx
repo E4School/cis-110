@@ -92,6 +92,9 @@ const processAnswerText = (text, vocabList) => {
 };
 
 function ExamQuestions({ yamlPath, currentPath }) {
+  // ExamQuestions component now loads questions from concept-map.yml files
+  // It extracts all unique question file paths from the concept map structure
+  // and loads each individual question file, then displays them sorted by ID
   const [questions, setQuestions] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -102,67 +105,80 @@ function ExamQuestions({ yamlPath, currentPath }) {
       try {
         setLoading(true);
         
-        // Construct the full path to the YAML file
-        // If yamlPath is relative (doesn't contain '/'), resolve it relative to currentPath
-        // If yamlPath contains '/', treat it as absolute from textbook root
-        let fullPath;
-        if (yamlPath.includes('/')) {
-          // Absolute path from textbook root
-          fullPath = `/textbook/${yamlPath}`;
-        } else {
-          // Relative path - resolve relative to current page directory
-          // For pages like "content/overviews/02-storage/concepts", we need the directory part
-          const currentDir = currentPath === 'index' ? '' : currentPath.split('/').slice(0, -1).join('/');
-          const basePath = currentDir ? `/textbook/${currentDir}` : '/textbook';
-          fullPath = `${basePath}/${yamlPath}`;
-        }
-        
-        console.log('ExamQuestions path resolution:', { yamlPath, currentPath, fullPath });
+        // Construct the full path to the concept-map.yml file
+        // Remove the filename from currentPath to get just the directory
+        const directoryPath = currentPath ? currentPath.split('/').slice(0, -1).join('/') : '';
+        const fullPath = directoryPath ? 
+          `/textbook/${directoryPath}/${yamlPath}` : 
+          `/textbook/${yamlPath}`;
         
         const response = await fetch(fullPath);
         
         if (!response.ok) {
-          throw new Error(`Failed to fetch questions: ${response.status}`);
+          throw new Error(`Failed to fetch concept map: ${response.status}`);
         }
         
         const yamlText = await response.text();
-        const indexData = yaml.load(yamlText);
+        const conceptMapData = yaml.load(yamlText);
         
-        // Check if this is the new format with file references
-        if (indexData?.questions && indexData.questions[0]?.file) {
-          // New format: load individual question files
-          const questionPromises = indexData.questions.map(async (questionRef) => {
-            // Question files should be relative to the exam-questions.yml file location
-            let examQuestionsDir;
-            if (yamlPath.includes('/')) {
-              // Absolute path from textbook root
-              examQuestionsDir = yamlPath.split('/').slice(0, -1).join('/');
-            } else {
-              // Relative path - use current page directory (without the page name)
-              examQuestionsDir = currentPath === 'index' ? '' : currentPath.split('/').slice(0, -1).join('/');
+        // Extract all unique question file paths from the concept map
+        const questionFiles = new Set();
+        
+        if (conceptMapData?.concept_map) {
+          // New concept map format
+          conceptMapData.concept_map.forEach(category => {
+            if (category.concepts) {
+              category.concepts.forEach(concept => {
+                if (concept.exam_questions) {
+                  concept.exam_questions.forEach(questionFile => {
+                    questionFiles.add(questionFile);
+                  });
+                }
+              });
             }
-            
-            const questionPath = examQuestionsDir ? 
-              `/textbook/${examQuestionsDir}/${questionRef.file}` : 
-              `/textbook/${questionRef.file}`;
-              
-            const questionResponse = await fetch(questionPath);
-            if (!questionResponse.ok) {
-              throw new Error(`Failed to fetch question file: ${questionRef.file}`);
-            }
-            
-            const questionYaml = await questionResponse.text();
-            const questionData = yaml.load(questionYaml);
-            return questionData;
           });
-          
-          const questions = await Promise.all(questionPromises);
-          setQuestions(questions);
-        } else {
+        } else if (conceptMapData?.questions && conceptMapData.questions[0]?.file) {
+          // Legacy exam-questions.yml format with file references
+          conceptMapData.questions.forEach(questionRef => {
+            questionFiles.add(questionRef.file);
+          });
+        } else if (conceptMapData?.questions) {
           // Legacy format: questions are directly in the main file
-          const questions = indexData?.questions || [];
-          setQuestions(questions);
+          setQuestions(conceptMapData.questions);
+          return;
         }
+        
+        if (questionFiles.size === 0) {
+          setQuestions([]);
+          return;
+        }
+        
+        // Load individual question files
+        const questionPromises = Array.from(questionFiles).map(async (questionFile) => {
+          const questionPath = directoryPath ? 
+            `/textbook/${directoryPath}/${questionFile}` : 
+            `/textbook/${questionFile}`;
+            
+          const questionResponse = await fetch(questionPath);
+          if (!questionResponse.ok) {
+            throw new Error(`Failed to fetch question file: ${questionFile}`);
+          }
+          
+          const questionYaml = await questionResponse.text();
+          const questionData = yaml.load(questionYaml);
+          return questionData;
+        });
+        
+        const questions = await Promise.all(questionPromises);
+        
+        // Sort questions by ID
+        questions.sort((a, b) => {
+          const aId = parseInt(a.id) || 0;
+          const bId = parseInt(b.id) || 0;
+          return aId - bId;
+        });
+        
+        setQuestions(questions);
       } catch (err) {
         setError(err.message);
       } finally {
@@ -176,11 +192,11 @@ function ExamQuestions({ yamlPath, currentPath }) {
   }, [yamlPath, currentPath]);
 
   if (loading) {
-    return <div>Loading exam questions...</div>;
+    return <div>Loading questions...</div>;
   }
 
   if (error) {
-    return <div>Error loading exam questions: {error}</div>;
+    return <div>Error loading questions: {error}</div>;
   }
 
   // Toggle accordion expansion
