@@ -1,77 +1,12 @@
 concept_map:
-  - category: "Software Types & Architecture"
+  - category: "Software Types and Processes"
     concepts:
-      - name: "System Software vs Application Software"
+      - name: "Types of Software"
         exam_questions:
           - "questions/q01.yml"
-      - name: "Software Architecture"
-        exam_questions:
-          - "questions/q01.yml"
-          - "questions/q04.yml"
-      - name: "Software Integration"
-        exam_questions:
-          - "questions/q01.yml"
-          - "questions/q04.yml"
-      - name: "Platform Services"
-        exam_questions:
-          - "questions/q01.yml"
-  
-  - category: "Software Licensing & Legal"
-    concepts:
-      - name: "Software Licensing"
-        exam_questions:
           - "questions/q02.yml"
-      - name: "Proprietary vs Open Source"
-        exam_questions:
-          - "questions/q02.yml"
-          - "questions/q04.yml"
-      - name: "Intellectual Property Rights"
-        exam_questions:
-          - "questions/q02.yml"
-      - name: "Subscription Models (SaaS)"
-        exam_questions:
-          - "questions/q02.yml"
-          - "questions/q04.yml"
-      - name: "Legal Compliance"
-        exam_questions:
-          - "questions/q02.yml"
-          - "questions/q04.yml"
-  
-  - category: "Development Process"
-    concepts:
-      - name: "Software Development Lifecycle"
-        exam_questions:
           - "questions/q03.yml"
-      - name: "Requirements Engineering"
-        exam_questions:
-          - "questions/q03.yml"
-          - "questions/q04.yml"
-      - name: "Software Testing"
-        exam_questions:
-          - "questions/q03.yml"
-      - name: "Quality Assurance"
-        exam_questions:
-          - "questions/q03.yml"
-          - "questions/q04.yml"
-      - name: "Deployment & Maintenance"
-        exam_questions:
-          - "questions/q03.yml"
-  
-  - category: "Software Evaluation & Selection"
-    concepts:
-      - name: "Software Evaluation"
+      - name: "Processes"
         exam_questions:
           - "questions/q04.yml"
-      - name: "Cost Analysis"
-        exam_questions:
-          - "questions/q04.yml"
-      - name: "Vendor Assessment"
-        exam_questions:
-          - "questions/q04.yml"
-      - name: "Technical Evaluation"
-        exam_questions:
-          - "questions/q04.yml"
-      - name: "Risk Management"
-        exam_questions:
-          - "questions/q03.yml"
-          - "questions/q04.yml"
+          - "questions/q05.yml"

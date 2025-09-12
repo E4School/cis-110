@@ -1,5 +1,8 @@
+# You Exam Questions
+# Each question is stored in a separate file in the questions/ directory
+
 questions:
-  - "questions/q01.yml"
-  - "questions/q02.yml"
-  - "questions/q03.yml"
-  - "questions/q04.yml"
+  - file: questions/q01.yml
+  - file: questions/q02.yml
+  - file: questions/q03.yml
+  - file: questions/q04.yml
