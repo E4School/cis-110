@@ -1,34 +1,18 @@
 concept_map:
-  - category: "Human-Computer Interaction"
+  - category: "People and Technology"
     concepts:
-      - name: "User Interface Design"
-      - name: "User Experience (UX)"
-      - name: "Usability Principles"
-      - name: "Accessibility Design"
-      - name: "Human Factors in Computing"
-      - name: "Cognitive Load Theory"
-  
-  - category: "Social Impact of Technology"
-    concepts:
-      - name: "Digital Divide"
-      - name: "Technology and Society"
-      - name: "Social Media Impact"
-      - name: "Automation and Employment"
-      - name: "Ethical Technology Use"
-      - name: "Digital Citizenship"
-  
-  - category: "Diversity and Inclusion in Tech"
-    concepts:
-      - name: "Representation in Technology"
-      - name: "Bias in Algorithms"
-      - name: "Inclusive Design"
-      - name: "Cultural Considerations"
-      - name: "Accessibility for All"
-  
-  - category: "Technology and Communication"
-    concepts:
-      - name: "Digital Communication"
-      - name: "Online Collaboration"
-      - name: "Remote Work Technologies"
-      - name: "Virtual Communities"
-      - name: "Information Sharing"
+      - name: "Social Media and Networks"
+        exam_questions:
+          - "questions/q01.yml"
+          - "questions/q02.yml"
+          - "questions/q06.yml"
+      - name: "Digital Rights and Ethics"
+        exam_questions:
+          - "questions/q03.yml"
+          - "questions/q04.yml"
+          - "questions/q05.yml"
+          - "questions/q07.yml"
+      - name: "Information and Media"
+        exam_questions:
+          - "questions/q08.yml"
+          - "questions/q09.yml"

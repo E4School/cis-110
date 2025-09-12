@@ -1,29 +1,9 @@
 concept_map:
-  - category: "Advanced Web Technologies"
+  - category: "Web Advanced Concepts"
     concepts:
-      - name: "Web APIs"
-      - name: "AJAX and Asynchronous Programming"
-      - name: "JSON Data Format"
-      - name: "REST Architecture"
-      - name: "Single Page Applications (SPAs)"
-      - name: "Progressive Web Apps (PWAs)"
-      - name: "Web Components"
-  
-  - category: "Modern Development Frameworks"
-    concepts:
-      - name: "Frontend Frameworks"
-      - name: "React/Vue/Angular"
-      - name: "Node.js"
-      - name: "Package Management"
-      - name: "Build Tools and Bundlers"
-      - name: "State Management"
-  
-  - category: "Advanced Web Concepts"
-    concepts:
-      - name: "Web Security"
-      - name: "Authentication and Authorization"
-      - name: "Database Integration"
-      - name: "Cloud Services"
-      - name: "Microservices Architecture"
-      - name: "WebSockets"
-      - name: "Content Delivery Networks (CDNs)"
+      - name: "Web Security Implications"
+        exam_questions:
+          - "questions/q01.yml"
+      - name: "Cloud Computing and Web Technologies"
+        exam_questions:
+          - "questions/q02.yml"

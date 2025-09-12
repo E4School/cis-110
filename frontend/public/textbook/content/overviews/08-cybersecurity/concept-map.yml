@@ -1,37 +1,18 @@
 concept_map:
-  - category: "Security Fundamentals"
+  - category: "Cybersecurity"
     concepts:
-      - name: "Information Security Principles"
-      - name: "Confidentiality, Integrity, Availability (CIA)"
-      - name: "Risk Assessment"
-      - name: "Threat Modeling"
-      - name: "Vulnerability Assessment"
-      - name: "Security Policies"
-  
-  - category: "Cryptography and Data Protection"
-    concepts:
-      - name: "Encryption and Decryption"
-      - name: "Public Key Infrastructure (PKI)"
-      - name: "Digital Signatures"
-      - name: "Hash Functions"
-      - name: "SSL/TLS"
-      - name: "Data Privacy"
-      - name: "Secure Communication"
-  
-  - category: "Cybersecurity Threats and Defense"
-    concepts:
-      - name: "Malware Types"
-      - name: "Social Engineering"
-      - name: "Phishing Attacks"
-      - name: "Network Security"
-      - name: "Firewalls and Intrusion Detection"
-      - name: "Incident Response"
-      - name: "Security Awareness"
-  
-  - category: "Legal and Ethical Considerations"
-    concepts:
-      - name: "Cybersecurity Laws"
-      - name: "Privacy Regulations"
-      - name: "Ethical Hacking"
-      - name: "Digital Forensics"
-      - name: "Compliance and Governance"
+      - name: "Defense"
+        exam_questions:
+          - "questions/q01.yml"
+          - "questions/q02.yml"
+          - "questions/q03.yml"
+          - "questions/q09.yml"
+      - name: "Attack"
+        exam_questions:
+          - "questions/q04.yml"
+          - "questions/q05.yml"
+          - "questions/q06.yml"
+          - "questions/q07.yml"
+          - "questions/q08.yml"
+          - "questions/q10.yml"
+          - "questions/q11.yml"
