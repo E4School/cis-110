@@ -1,5 +1,5 @@
 id: 2
-question: "Explain the role of the operating system in computer systems"
+question: "Explain the role of the operating system"
 answer: "The operating system serves as the fundamental software layer that abstracts hardware complexity, manages system resources, and provides essential services to applications. Key functions include process and thread scheduling to enable multitasking, memory management with virtual addressing and protection, filesystem organization and I/O coordination, security enforcement through authentication and access control, network communication management, and API provisioning for application development. The OS acts as an intermediary between user applications and hardware, ensuring resource sharing, system stability, and security while providing a consistent programming interface across diverse hardware platforms."
 vocab_answer: 
   - word: "operating system"
