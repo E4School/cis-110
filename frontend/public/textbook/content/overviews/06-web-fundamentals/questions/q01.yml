@@ -1,0 +1,4 @@
+id: 1
+question: "Explain how the Web works"
+answer: "The Web works through a client-server model where web browsers (clients) request resources from web servers using URLs and the HTTP protocol. When you type a URL into a browser, it sends an HTTP request to the appropriate web server, which then responds with the requested webpage content (HTML, CSS, JavaScript, images, etc.). The browser receives this content and renders it into the visual webpage you see. This process involves domain name resolution through DNS to translate human-readable URLs into IP addresses, establishing network connections, and the exchange of data packets across the internet infrastructure."
+topics: ["web fundamentals", "client-server model", "HTTP", "web browsers", "web servers"]

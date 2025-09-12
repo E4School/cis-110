@@ -1,28 +1,18 @@
 concept_map:
-  - category: "Web Fundamentals"
+  - category: "Web Concepts and Technologies"
     concepts:
-      - name: "World Wide Web"
-      - name: "HTML Basics"
-      - name: "CSS Styling"
-      - name: "JavaScript Fundamentals"
-      - name: "Web Browsers"
-      - name: "URLs and Domain Names"
-      - name: "HTTP Protocol"
-  
-  - category: "Web Technologies"
-    concepts:
-      - name: "Client-Server Architecture"
-      - name: "Frontend vs Backend"
-      - name: "Web Servers"
-      - name: "Static vs Dynamic Content"
-      - name: "Responsive Design"
-      - name: "Cross-Browser Compatibility"
-  
-  - category: "Web Development Process"
-    concepts:
-      - name: "Web Development Lifecycle"
-      - name: "Version Control for Web"
-      - name: "Testing and Debugging"
-      - name: "Web Standards"
-      - name: "Accessibility"
-      - name: "Performance Optimization"
+      - name: "Web Concepts"
+        exam_questions:
+          - "questions/q01.yml"
+          - "questions/q02.yml"
+          - "questions/q03.yml"
+          - "questions/q04.yml"
+          - "questions/q05.yml"
+          - "questions/q06.yml"
+          - "questions/q07.yml"
+      - name: "Web Technologies"
+        exam_questions:
+          - "questions/q08.yml"
+          - "questions/q09.yml"
+          - "questions/q10.yml"
+          - "questions/q11.yml"

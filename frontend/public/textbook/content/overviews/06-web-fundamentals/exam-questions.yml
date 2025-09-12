@@ -6,3 +6,10 @@ questions:
   - file: questions/q02.yml
   - file: questions/q03.yml
   - file: questions/q04.yml
+  - file: questions/q05.yml
+  - file: questions/q06.yml
+  - file: questions/q07.yml
+  - file: questions/q08.yml
+  - file: questions/q09.yml
+  - file: questions/q10.yml
+  - file: questions/q11.yml
