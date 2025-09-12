@@ -3,7 +3,7 @@ import './ExamDashboard.css';
 
 function ExamDashboard({ questions, onStartExam }) {
   const [percentage, setPercentage] = useState(50);
-  const [sortQuestions, setSortQuestions] = useState(false);
+  const [sortQuestions, setSortQuestions] = useState(true);
   const [showAnswerToggle, setShowAnswerToggle] = useState(true);
   
   // Get unique chapters from questions
@@ -81,7 +81,7 @@ function ExamDashboard({ questions, onStartExam }) {
                 onChange={(e) => setSortQuestions(e.target.checked)}
               />
               <span className="toggle-text">
-                {sortQuestions ? 'Sorted by Chapter' : 'Random Order'}
+                Sorted by Chapter
               </span>
               <div className="switch"></div>
             </label>
