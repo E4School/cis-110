@@ -1,6 +1,13 @@
 concept_map:
   - category: ""
     concepts:
+      - name: "Physical Components"
+        exam_questions:
+          - "questions/q03.yml"
+          - "questions/q04.yml"
+          - "questions/q05.yml"
+          - "questions/q06.yml"
+          - "questions/q08.yml"
       - name: "Conceptual Models"
         exam_questions:
           - "questions/q01.yml"
@@ -8,12 +15,4 @@ concept_map:
           - "questions/q07.yml"
           - "questions/q09.yml"
           - "questions/q12.yml"  
-      - name: "Material Components"
-        exam_questions:
-          - "questions/q03.yml"
-          - "questions/q04.yml"
-          - "questions/q05.yml"
-          - "questions/q06.yml"
-          - "questions/q08.yml"
-          - "questions/q10.yml"
   
