@@ -106,11 +106,18 @@ function ExamQuestions({ yamlPath, currentPath }) {
         setLoading(true);
         
         // Construct the full path to the concept-map.yml file
-        // Remove the filename from currentPath to get just the directory
-        const directoryPath = currentPath ? currentPath.split('/').slice(0, -1).join('/') : '';
-        const fullPath = directoryPath ? 
-          `/textbook/${directoryPath}/${yamlPath}` : 
-          `/textbook/${yamlPath}`;
+        // Handle both relative paths (from sub-pages) and absolute paths (from big-picture.md)
+        let fullPath;
+        if (yamlPath.startsWith('content/')) {
+          // Absolute path from textbook root (e.g., from big-picture.md)
+          fullPath = `/textbook/${yamlPath}`;
+        } else {
+          // Relative path (e.g., from sub-pages)
+          const directoryPath = currentPath ? currentPath.split('/').slice(0, -1).join('/') : '';
+          fullPath = directoryPath ? 
+            `/textbook/${directoryPath}/${yamlPath}` : 
+            `/textbook/${yamlPath}`;
+        }
         
         const response = await fetch(fullPath);
         
@@ -155,9 +162,18 @@ function ExamQuestions({ yamlPath, currentPath }) {
         
         // Load individual question files
         const questionPromises = Array.from(questionFiles).map(async (questionFile) => {
-          const questionPath = directoryPath ? 
-            `/textbook/${directoryPath}/${questionFile}` : 
-            `/textbook/${questionFile}`;
+          let questionPath;
+          if (yamlPath.startsWith('content/')) {
+            // Absolute path from textbook root - question files are relative to concept map directory
+            const conceptMapDir = yamlPath.substring(0, yamlPath.lastIndexOf('/'));
+            questionPath = `/textbook/${conceptMapDir}/${questionFile}`;
+          } else {
+            // Relative path - question files are relative to current page directory
+            const currentDir = currentPath ? currentPath.split('/').slice(0, -1).join('/') : '';
+            questionPath = currentDir ? 
+              `/textbook/${currentDir}/${questionFile}` : 
+              `/textbook/${questionFile}`;
+          }
             
           const questionResponse = await fetch(questionPath);
           if (!questionResponse.ok) {

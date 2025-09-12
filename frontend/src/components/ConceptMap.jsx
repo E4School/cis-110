@@ -202,9 +202,6 @@ function ConceptMap({ yamlPath, currentPath }) {
                               {concept.exam_questions.map((questionFile, questionIndex) => (
                                 <li key={questionIndex} className="question-item">
                                   <div className="question-header">
-                                    <span className="question-id">
-                                      {getQuestionId(questionFile)}
-                                    </span>
                                     <span className="question-title">
                                       {getQuestionTitle(questionFile)}
                                     </span>

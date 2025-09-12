@@ -4,6 +4,7 @@ import './App.css';
 import ExamDashboard from './components/ExamDashboard';
 import ExamInterface from './components/ExamInterface';
 import TextbookPage from './components/TextbookPage';
+import { loadAllQuestions } from './services/questionLoader';
 
 function AppContent() {
   const location = useLocation();
@@ -12,8 +13,7 @@ function AppContent() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/questions.json')
-      .then(response => response.json())
+    loadAllQuestions()
       .then(data => {
         setQuestions(data);
         setLoading(false);
