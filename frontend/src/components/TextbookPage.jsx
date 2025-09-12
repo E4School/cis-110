@@ -72,7 +72,7 @@ function renderContentWithComponents(content, textbookPath) {
   console.log('textbookPath:', textbookPath);
   
   // Look for component markers
-  const combinedRegex = /\{\{(ExamQuestions|VocabList|ConceptMap):([\w\-\.]+)\}\}/g;
+  const combinedRegex = /\{\{(ExamQuestions|VocabList|ConceptMap):([\w\-./]+)\}\}/g;
   
   const parts = [];
   let lastIndex = 0;

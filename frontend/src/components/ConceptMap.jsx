@@ -139,11 +139,6 @@ function ConceptMap({ yamlPath, currentPath }) {
 
   return (
     <div className="concept-map">
-      <h2>Concept Map</h2>
-      <p className="concept-map-description">
-        This map shows how concepts relate to exam questions. Click on categories to expand them.
-      </p>
-      
       <div className="concept-categories">
         {conceptMap.map((category, categoryIndex) => (
           <div key={categoryIndex} className="concept-category">
