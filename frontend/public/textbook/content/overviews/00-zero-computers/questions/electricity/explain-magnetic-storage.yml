@@ -1,0 +1,23 @@
+id: 5
+question: "How do magnetic fields store binary information?"
+answer: "Magnetic fields store binary information by magnetizing tiny regions of material in different directions. In traditional hard drives, microscopic areas can be magnetized either north-up (representing binary 1) or north-down (representing binary 0). A magnetic read/write head can detect these different magnetic orientations and interpret them as binary data. The magnetic field is stable and persists even when power is turned off, making it useful for long-term data storage. This is why hard drives can store your files permanently, unlike RAM which loses data when power is removed."
+vocab_answer: 
+  - word: "magnetization"
+    definition: "Process of giving magnetic properties to a material"
+  - word: "magnetic orientation"
+    definition: "Direction of magnetic field representing binary states"
+  - word: "north-up"
+    definition: "Magnetic field direction typically representing binary 1"
+  - word: "north-down"
+    definition: "Magnetic field direction typically representing binary 0"
+  - word: "read/write head"
+    definition: "Device that can detect and change magnetic orientations"
+  - word: "persistent storage"
+    definition: "Data storage that retains information without power"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Understand magnetic data storage"
+  - "Connect magnetism to binary representation"
+  - "Distinguish between temporary and permanent storage"

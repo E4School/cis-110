@@ -1,0 +1,20 @@
+id: 6
+question: "Explain what encryption is"
+answer: "Encryption is the process of converting readable information (plaintext) into an unreadable format (ciphertext) using mathematical algorithms and secret keys. Only people with the correct decryption key can convert the encrypted data back to its original, readable form. Encryption protects sensitive information like passwords, credit card numbers, and personal messages when they are stored on devices or transmitted over networks. Common examples include HTTPS websites (which encrypt data between your browser and the website) and encrypted messaging apps that protect your conversations from being read by others."
+vocab_answer: 
+  - word: "encryption"
+    definition: "Process of converting readable data into an unreadable format to protect it"
+  - word: "plaintext"
+    definition: "Original, readable form of data before encryption"
+  - word: "ciphertext"
+    definition: "Encrypted, unreadable form of data after encryption"
+  - word: "decryption key"
+    definition: "Secret code needed to convert encrypted data back to readable form"
+  - word: "HTTPS"
+    definition: "Secure version of HTTP that encrypts data between browsers and websites"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Understand basic data protection concepts"
+  - "Recognize the importance of encryption in digital security"

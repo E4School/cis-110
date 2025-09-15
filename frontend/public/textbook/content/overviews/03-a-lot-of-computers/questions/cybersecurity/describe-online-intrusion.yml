@@ -1,0 +1,20 @@
+id: 12
+question: "Describe how an online intrusion takes place"
+answer: "An online intrusion typically follows these steps: 1) Reconnaissance - attackers gather information about the target (through social media, company websites, or network scanning), 2) Initial access - using exploits like phishing emails, malware, or exploiting software vulnerabilities to gain entry, 3) Privilege escalation - expanding access from limited user accounts to administrative control, 4) Persistence - installing backdoors or rootkits to maintain access even after discovery, 5) Data collection - searching for valuable information like passwords, financial data, or trade secrets, and 6) Exfiltration - secretly copying and removing stolen data from the system. Throughout this process, attackers try to avoid detection by security systems and administrators."
+vocab_answer: 
+  - word: "reconnaissance"
+    definition: "Information gathering phase where attackers research their target before attacking"
+  - word: "privilege escalation"
+    definition: "Process of gaining higher levels of access than initially obtained"
+  - word: "backdoor"
+    definition: "Hidden method of bypassing normal authentication to access a system"
+  - word: "data exfiltration"
+    definition: "Unauthorized copying and removal of data from a computer system"
+  - word: "phishing"
+    definition: "Fraudulent attempts to obtain sensitive information by impersonating trustworthy entities"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Understand the stages of cyber attacks"
+  - "Recognize how attackers gain and maintain unauthorized access"

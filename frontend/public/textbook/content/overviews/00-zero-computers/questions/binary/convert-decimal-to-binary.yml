@@ -1,0 +1,19 @@
+id: 2
+question: "Convert the decimal number 13 to binary"
+answer: "To convert 13 to binary, we repeatedly divide by 2 and track the remainders: 13 ÷ 2 = 6 remainder 1, 6 ÷ 2 = 3 remainder 0, 3 ÷ 2 = 1 remainder 1, 1 ÷ 2 = 0 remainder 1. Reading the remainders from bottom to top gives us 1101. We can verify: 1×8 + 1×4 + 0×2 + 1×1 = 8 + 4 + 0 + 1 = 13. Therefore, 13 in decimal equals 1101 in binary."
+vocab_answer: 
+  - word: "decimal"
+    definition: "Base-10 number system using digits 0-9"
+  - word: "binary conversion"
+    definition: "Process of changing numbers from decimal to binary or vice versa"
+  - word: "remainder"
+    definition: "What's left over after division"
+  - word: "place value"
+    definition: "The value of a digit based on its position in a number"
+type: "problem_solving"
+points: 3
+difficulty: "beginner"
+learning_objectives:
+  - "Apply binary conversion techniques"
+  - "Understand place value in binary"
+  - "Practice computational thinking"

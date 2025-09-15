@@ -1,0 +1,18 @@
+id: 10
+question: "Explain what a rootkit is"
+answer: "A rootkit is a type of malware designed to hide its presence on a computer system by modifying the operating system itself. Unlike other malware that can be detected by antivirus software, rootkits gain deep, administrative-level access (called 'root' access) and modify system files to conceal themselves. They can hide processes, files, and network connections from normal detection methods. Rootkits are particularly dangerous because they can remain undetected for long periods while allowing attackers to maintain persistent access to the compromised system, steal data, or install additional malware."
+vocab_answer: 
+  - word: "rootkit"
+    definition: "Malware that hides its presence by modifying operating system components"
+  - word: "root access"
+    definition: "Highest level of access to a computer system with full administrative privileges"
+  - word: "persistent access"
+    definition: "Ability to maintain long-term unauthorized access to a computer system"
+  - word: "system modification"
+    definition: "Changes made to core operating system files and functions"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Understand advanced malware concealment techniques"
+  - "Recognize sophisticated threats to system security"

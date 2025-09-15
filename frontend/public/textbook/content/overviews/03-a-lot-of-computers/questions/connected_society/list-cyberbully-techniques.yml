@@ -1,0 +1,18 @@
+id: 5
+question: "List four techniques for dealing with cyberbullies"
+answer: "Four effective techniques for dealing with cyberbullies are: 1) Document and save evidence (screenshots, messages) before blocking or reporting, 2) Block the bully on all platforms and report them to the website/app administrators, 3) Don't engage or respond to the bullying behavior, as this often escalates the situation, and 4) Seek support from trusted adults, friends, or counselors who can provide guidance and emotional help. Additional strategies include adjusting privacy settings to limit who can contact you and taking breaks from social media when needed to protect your mental health."
+vocab_answer: 
+  - word: "cyberbullying"
+    definition: "Use of digital technology to repeatedly harass, threaten, or harm others"
+  - word: "digital evidence"
+    definition: "Screenshots, messages, or other electronic records that document online behavior"
+  - word: "privacy settings"
+    definition: "Controls that limit who can see your profile, contact you, or interact with your content"
+  - word: "platform administrators"
+    definition: "People responsible for managing and enforcing rules on websites and social media"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Identify effective responses to online harassment"
+  - "Understand digital safety and protection strategies"

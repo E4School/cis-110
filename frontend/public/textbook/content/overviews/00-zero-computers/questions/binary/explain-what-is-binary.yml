@@ -1,0 +1,19 @@
+id: 1
+question: "What is binary and why do computers use it?"
+answer: "Binary is a number system that uses only two digits: 0 and 1. Computers use binary because their fundamental components (transistors) can exist in two stable states - on or off, representing 1 or 0 respectively. This makes binary perfect for digital electronics because it's reliable and easy to distinguish between the two states. Each binary digit (bit) can store one piece of information, and by combining many bits, computers can represent any type of data including numbers, text, images, and sounds."
+vocab_answer: 
+  - word: "binary"
+    definition: "A number system using only two digits: 0 and 1"
+  - word: "bit"
+    definition: "Short for 'binary digit'; the smallest unit of data in computing, representing either 0 or 1"
+  - word: "transistor"
+    definition: "Electronic component that can be switched on or off to represent binary states"
+  - word: "digital electronics"
+    definition: "Electronic systems that use discrete values (like 0 and 1) rather than continuous values"
+type: "short_answer"
+points: 4
+difficulty: "beginner"
+learning_objectives:
+  - "Understand the binary number system"
+  - "Explain why computers use binary"
+  - "Connect binary to computer hardware"

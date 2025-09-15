@@ -1,0 +1,20 @@
+id: 4
+question: "Explain how Wikipedia articles are written and edited"
+answer: "Wikipedia articles are created and maintained through collaborative editing by volunteers worldwide. Anyone can create an account and edit most articles directly through their web browser. Editors add content, fix errors, update information, and cite reliable sources. All changes are tracked in a revision history, and controversial edits can be discussed on article talk pages. Wikipedia has policies requiring neutral point of view, verifiable information from reliable sources, and no original research. More experienced editors and administrators help maintain quality by reviewing changes, protecting important articles from vandalism, and resolving disputes through community discussion and consensus."
+vocab_answer: 
+  - word: "collaborative editing"
+    definition: "Process where multiple people work together to create and improve written content"
+  - word: "revision history"
+    definition: "Record of all changes made to a document over time, showing who made what changes"
+  - word: "neutral point of view"
+    definition: "Writing style that presents information fairly without bias toward any particular perspective"
+  - word: "reliable sources"
+    definition: "Published materials with a reputation for accuracy and fact-checking"
+  - word: "consensus"
+    definition: "General agreement reached through discussion among community members"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Understand collaborative content creation processes"
+  - "Recognize quality control mechanisms in open editing systems"

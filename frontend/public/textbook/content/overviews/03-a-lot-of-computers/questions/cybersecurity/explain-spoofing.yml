@@ -1,0 +1,20 @@
+id: 15
+question: "Explain what spoofing is"
+answer: "Spoofing is the practice of disguising or falsifying the identity of communication sources to appear as someone or something else. Common types include email spoofing (sending emails that appear to come from a different sender), IP spoofing (making network traffic appear to come from a different computer), and caller ID spoofing (making phone calls appear to come from different numbers). Cybercriminals use spoofing to trick people into trusting malicious communications, bypass security measures, or hide their true identity during attacks. For example, an attacker might spoof a bank's email address to send phishing messages that look legitimate to steal login credentials."
+vocab_answer: 
+  - word: "spoofing"
+    definition: "Practice of disguising communication sources to appear as someone or something else"
+  - word: "email spoofing"
+    definition: "Sending emails with false sender information to deceive recipients"
+  - word: "IP spoofing"
+    definition: "Falsifying the source IP address of network traffic"
+  - word: "caller ID spoofing"
+    definition: "Displaying false phone numbers on caller ID systems"
+  - word: "identity falsification"
+    definition: "Deliberately misrepresenting who you are in digital communications"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Understand deceptive communication techniques"
+  - "Recognize methods used to hide attacker identity"

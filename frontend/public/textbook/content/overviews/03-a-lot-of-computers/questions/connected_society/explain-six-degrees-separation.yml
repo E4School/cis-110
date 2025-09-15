@@ -1,0 +1,18 @@
+id: 1
+question: "Explain the 6 degrees of separation"
+answer: "The six degrees of separation is the theory that any two people in the world can be connected through a chain of no more than six intermediate personal relationships. For example, you know someone, who knows someone, who knows someone (and so on for up to six steps) who knows any other person on Earth. This concept highlights how interconnected human society is, even globally. Social media and digital networks have made these connections more visible and potentially reduced the actual number of degrees needed to connect people."
+vocab_answer: 
+  - word: "six degrees of separation"
+    definition: "Theory that everyone in the world is connected by no more than six intermediate relationships"
+  - word: "social network"
+    definition: "Structure of relationships and connections between individuals or groups"
+  - word: "interconnected"
+    definition: "Connected with each other in a complex network of relationships"
+  - word: "intermediate relationships"
+    definition: "Connections between people that serve as links in a chain of relationships"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Understand the concept of social connectivity"
+  - "Recognize how digital networks reflect social connections"

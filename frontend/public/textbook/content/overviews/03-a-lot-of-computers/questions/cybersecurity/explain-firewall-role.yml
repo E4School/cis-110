@@ -1,0 +1,20 @@
+id: 14
+question: "Explain the role of a firewall"
+answer: "A firewall is a security system that monitors and controls network traffic between a computer (or network) and the internet, acting like a digital security guard. It examines incoming and outgoing data packets and decides whether to allow or block them based on predetermined security rules. Firewalls can block malicious traffic, prevent unauthorized access to your system, and stop malware from communicating with external servers. They can be software-based (running on your computer) or hardware-based (separate devices protecting entire networks). Modern firewalls can also detect suspicious patterns of activity and provide detailed logs of network traffic for security analysis."
+vocab_answer: 
+  - word: "firewall"
+    definition: "Security system that filters network traffic to block unauthorized access and threats"
+  - word: "network traffic"
+    definition: "Data flowing between computers and networks over the internet"
+  - word: "data packets"
+    definition: "Small units of data transmitted across networks"
+  - word: "security rules"
+    definition: "Predetermined criteria that determine which network traffic to allow or block"
+  - word: "traffic monitoring"
+    definition: "Process of observing and analyzing network communications for security purposes"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Understand network security protection mechanisms"
+  - "Recognize the importance of traffic filtering in cybersecurity"

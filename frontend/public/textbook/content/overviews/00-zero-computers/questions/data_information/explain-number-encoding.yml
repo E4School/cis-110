@@ -1,0 +1,21 @@
+id: 7
+question: "How can numbers be encoded in binary, and what's the difference from the binary number system itself?"
+answer: "Numbers can be encoded in binary in different ways depending on their purpose. The binary number system directly represents quantities (like 1010 = 10), but numbers can also be encoded as text using ASCII. For example, the digit '5' as text is encoded as 00110101 (ASCII code 53), which is different from the number 5 in pure binary (101). Additionally, computers use special encoding for negative numbers (two's complement), decimal numbers (floating-point), and very large numbers. The encoding method depends on how the number will be used - for math calculations versus text display."
+vocab_answer: 
+  - word: "number encoding"
+    definition: "Different methods of representing numerical data in binary"
+  - word: "ASCII digits"
+    definition: "Text representation of number characters (0-9)"
+  - word: "two's complement"
+    definition: "Method for encoding negative numbers in binary"
+  - word: "floating-point"
+    definition: "Binary encoding for decimal numbers"
+  - word: "pure binary"
+    definition: "Direct binary representation of quantities for calculations"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Distinguish between number systems and encoding methods"
+  - "Understand multiple ways to represent numbers"
+  - "Connect data types to storage methods"

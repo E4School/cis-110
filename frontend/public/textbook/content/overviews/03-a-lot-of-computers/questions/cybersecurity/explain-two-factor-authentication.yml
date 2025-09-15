@@ -1,0 +1,18 @@
+id: 7
+question: "Explain what two-factor authentication is"
+answer: "Two-factor authentication (2FA) is a security method that requires two different forms of verification to access an account, rather than just a password. The two factors typically include something you know (like a password) and something you have (like your phone or a security token). For example, after entering your password, you might receive a text message with a code to enter, or use an authenticator app to generate a temporary code. This makes accounts much more secure because even if someone steals your password, they would still need access to your second factor (like your phone) to log in."
+vocab_answer: 
+  - word: "two-factor authentication"
+    definition: "Security method requiring two different types of verification to access an account"
+  - word: "authentication factor"
+    definition: "Different category of evidence used to verify identity (something you know, have, or are)"
+  - word: "security token"
+    definition: "Physical or digital device that generates codes for authentication"
+  - word: "authenticator app"
+    definition: "Mobile application that generates temporary codes for two-factor authentication"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Understand multi-factor security concepts"
+  - "Recognize enhanced protection methods for digital accounts"

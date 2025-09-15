@@ -1,0 +1,17 @@
+id: 3
+question: "Convert the binary number 1010 to decimal"
+answer: "To convert binary 1010 to decimal, we use place values. From right to left, the positions represent: 1s place, 2s place, 4s place, and 8s place. So: 1×8 + 0×4 + 1×2 + 0×1 = 8 + 0 + 2 + 0 = 10. Therefore, binary 1010 equals decimal 10."
+vocab_answer: 
+  - word: "place value"
+    definition: "The value represented by a digit's position in a number"
+  - word: "powers of two"
+    definition: "Binary place values: 1, 2, 4, 8, 16, 32, etc."
+  - word: "binary to decimal"
+    definition: "Converting from base-2 to base-10 number system"
+type: "problem_solving"
+points: 3
+difficulty: "beginner"
+learning_objectives:
+  - "Apply binary to decimal conversion"
+  - "Understand powers of two"
+  - "Practice place value calculations"

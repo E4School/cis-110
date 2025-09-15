@@ -1,0 +1,23 @@
+id: 16
+question: "Explain what social engineering is and how it is used in cyberattacks"
+answer: "Social engineering is the manipulation of people to divulge confidential information or perform actions that compromise security, rather than using technical hacking methods. It exploits human psychology, trust, and emotions to bypass security measures. Common techniques include phishing emails that appear to be from trusted sources, pretexting (creating fake scenarios to extract information), baiting (offering something enticing to gain access), and tailgating (following authorized personnel into secure areas). Social engineering is effective because it targets the weakest link in security systems - humans. For example, an attacker might call pretending to be IT support and ask for passwords, or send urgent emails claiming to be from a boss requesting sensitive data."
+vocab_answer: 
+  - word: "social engineering"
+    definition: "Manipulation of people to divulge information or compromise security through psychological tactics"
+  - word: "phishing"
+    definition: "Fraudulent emails or messages designed to steal sensitive information"
+  - word: "pretexting"
+    definition: "Creating fake scenarios or identities to extract information from victims"
+  - word: "baiting"
+    definition: "Offering enticing items or information to lure victims into compromising security"
+  - word: "tailgating"
+    definition: "Following authorized personnel into secure areas without proper authorization"
+  - word: "human psychology"
+    definition: "Mental processes and behaviors that can be exploited in social engineering attacks"
+type: "short_answer"
+points: 6
+difficulty: "beginner"
+learning_objectives:
+  - "Understand non-technical attack methods"
+  - "Recognize psychological manipulation in cybersecurity"
+  - "Identify common social engineering techniques"

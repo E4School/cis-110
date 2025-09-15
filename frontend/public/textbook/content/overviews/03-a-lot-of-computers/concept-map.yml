@@ -1,11 +1,35 @@
 concept_map:
-  - category: ""
+  - category: "Connected Society"
     concepts:
-      - name: "Basic Definitions"
+      - name: "Social Networks and Connectivity"
         exam_questions:
-          - "questions/q02.yml"
-          - "questions/q04.yml"
-      - name: "Hardware Abstraction Details"
+          - "questions/connected_society/explain-six-degrees-separation.yml"
+      - name: "Digital Rights and Ethics"
         exam_questions:
-          - "questions/q01.yml"
-          - "questions/q03.yml"
+          - "questions/connected_society/explain-copyright-digital-age.yml"
+          - "questions/connected_society/explain-fair-use-doctrine.yml"
+      - name: "Information and Collaboration"
+        exam_questions:
+          - "questions/connected_society/describe-wikipedia-model.yml"
+      - name: "Online Safety"
+        exam_questions:
+          - "questions/connected_society/explain-cyberbullying.yml"
+  - category: "Cybersecurity"
+    concepts:
+      - name: "Data Protection"
+        exam_questions:
+          - "questions/cybersecurity/explain-encryption.yml"
+          - "questions/cybersecurity/explain-two-factor-authentication.yml"
+          - "questions/cybersecurity/discuss-strong-password-issues.yml"
+      - name: "Threats and Attacks"
+        exam_questions:
+          - "questions/cybersecurity/explain-malware.yml"
+          - "questions/cybersecurity/explain-rootkit.yml"
+          - "questions/cybersecurity/identify-malware-exploits.yml"
+          - "questions/cybersecurity/describe-online-intrusion.yml"
+          - "questions/cybersecurity/explain-zero-day-exploit.yml"
+          - "questions/cybersecurity/explain-spoofing.yml"
+          - "questions/cybersecurity/explain-social-engineering.yml"
+      - name: "Security Measures"
+        exam_questions:
+          - "questions/cybersecurity/explain-firewall-role.yml"

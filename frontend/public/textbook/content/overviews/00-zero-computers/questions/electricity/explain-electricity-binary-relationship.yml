@@ -1,0 +1,21 @@
+id: 4
+question: "How does electricity enable computers to represent binary digits?"
+answer: "Electricity enables binary representation through voltage levels in electronic circuits. A high voltage (typically around 3-5 volts) represents binary 1, while low or no voltage (0 volts) represents binary 0. Transistors act as electrical switches that can be turned on (allowing current to flow) or off (blocking current). When billions of these switches are combined in computer chips, they can store and process binary information. The on/off states are stable and easy to detect, making electrical signals perfect for representing the two states of binary."
+vocab_answer: 
+  - word: "voltage"
+    definition: "Electrical potential difference that can represent binary states"
+  - word: "high voltage"
+    definition: "Electrical state representing binary 1"
+  - word: "low voltage"
+    definition: "Electrical state representing binary 0"
+  - word: "electrical switch"
+    definition: "Device that can start or stop the flow of electricity"
+  - word: "current"
+    definition: "Flow of electrical charge through a circuit"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Connect electricity to binary representation"
+  - "Understand voltage as information storage"
+  - "Relate hardware to data representation"

@@ -1,0 +1,18 @@
+id: 3
+question: "List the four factors that characterize fair use"
+answer: "The four factors that determine fair use are: 1) The purpose and character of the use (commercial vs. educational, transformative nature), 2) The nature of the copyrighted work (factual vs. creative, published vs. unpublished), 3) The amount and substantiality of the portion used (how much of the original work was used), and 4) The effect of the use on the market or value of the original work (does it harm the creator's ability to profit). Courts consider all four factors together when determining if a use qualifies as fair use, which allows limited use of copyrighted material without permission for purposes like criticism, comment, teaching, or research."
+vocab_answer: 
+  - word: "fair use"
+    definition: "Legal doctrine allowing limited use of copyrighted material without permission for specific purposes"
+  - word: "transformative use"
+    definition: "Use that adds new expression, meaning, or message to the original work"
+  - word: "market impact"
+    definition: "Effect that unauthorized use has on the commercial value of the original work"
+  - word: "substantiality"
+    definition: "Importance or significance of the portion used relative to the whole work"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Understand fair use limitations on copyright"
+  - "Recognize factors in determining legal use of copyrighted material"

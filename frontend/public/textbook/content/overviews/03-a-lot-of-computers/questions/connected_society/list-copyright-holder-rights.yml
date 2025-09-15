@@ -1,0 +1,18 @@
+id: 2
+question: "List the six rights that are exclusively exercised by copyright holders"
+answer: "The six exclusive rights of copyright holders are: 1) The right to reproduce the work (make copies), 2) The right to create derivative works (adaptations, translations, modifications), 3) The right to distribute copies to the public (sell, lease, or transfer), 4) The right to perform the work publicly (for literary, musical, dramatic works), 5) The right to display the work publicly (for artistic, literary works), and 6) The right to perform sound recordings publicly by digital audio transmission. These rights give creators control over how their original works are used, copied, and distributed."
+vocab_answer: 
+  - word: "copyright"
+    definition: "Legal protection giving creators exclusive rights to control use of their original works"
+  - word: "derivative work"
+    definition: "New work based on or adapted from an existing copyrighted work"
+  - word: "public performance"
+    definition: "Performing a work in a place open to the public or where people gather"
+  - word: "public distribution"
+    definition: "Making copies of a work available to the general public through sale or transfer"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Understand basic copyright protections"
+  - "Identify the scope of creator rights in digital content"
