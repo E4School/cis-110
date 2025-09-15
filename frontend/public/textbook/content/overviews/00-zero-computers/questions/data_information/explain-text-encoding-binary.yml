@@ -1,5 +1,5 @@
 id: 6
-question: "How can letters and words be encoded in binary?"
+question: "How might letters and words be encoded in binary?"
 answer: "Letters and words are encoded in binary using standardized systems like ASCII (American Standard Code for Information Interchange). Each letter is assigned a unique binary number. For example, the letter 'A' is represented by the binary number 01000001 (decimal 65), and 'a' is 01100001 (decimal 97). To spell a word like 'Hi', the computer stores the binary codes for 'H' (01001000) followed by 'i' (01101001). By agreeing on these standard codes, all computers can understand and display the same text when they read the binary patterns."
 vocab_answer: 
   - word: "ASCII"

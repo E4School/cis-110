@@ -1,0 +1,23 @@
+id: 6
+question: "What is a transistor and how does it work in computers?"
+answer: "A transistor is a tiny electronic switch that can be turned on or off to control the flow of electricity. It's made from semiconductor materials like silicon and has three parts: a source (where electricity enters), a drain (where electricity exits), and a gate (which controls whether electricity can flow). When voltage is applied to the gate, it allows electricity to flow from source to drain (representing binary 1). When no voltage is applied to the gate, electricity cannot flow (representing binary 0). Modern computer chips contain billions of these microscopic transistors working together to process information. Transistors are the fundamental building blocks that make all digital computing possible."
+vocab_answer: 
+  - word: "transistor"
+    definition: "Electronic switch that controls electrical flow, fundamental building block of computers"
+  - word: "semiconductor"
+    definition: "Material like silicon that can conduct or block electricity depending on conditions"
+  - word: "gate"
+    definition: "Part of a transistor that controls whether electricity can flow through it"
+  - word: "source"
+    definition: "Part of a transistor where electrical current enters"
+  - word: "drain"
+    definition: "Part of a transistor where electrical current exits"
+  - word: "electronic switch"
+    definition: "Device that can turn electrical flow on or off electronically"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Understand basic transistor functionality"
+  - "Connect transistors to binary representation"
+  - "Recognize transistors as computing foundations"

@@ -1,0 +1,21 @@
+id: 9
+question: "How might a pair of numbers, like a coordinate (7,2), be encoded in binary?"
+answer: "A coordinate pair like (7,2) can be encoded in binary by converting each number separately and then combining them with a clear structure. First, convert each coordinate to binary: 7 becomes 111 and 2 becomes 10. Then store them sequentially with enough bits for each coordinate - for example, using 8 bits each: 00000111 00000010. The decoder needs to know the format beforehand (like 'first 8 bits are x-coordinate, next 8 bits are y-coordinate')."
+vocab_answer: 
+  - word: "coordinate pair"
+    definition: "Two numbers that specify a position, typically (x,y)"
+  - word: "sequential storage"
+    definition: "Storing multiple values one after another in memory"
+  - word: "bit allocation"
+    definition: "Deciding how many binary digits to use for each piece of data"
+  - word: "data structure"
+    definition: "Organized way of storing related pieces of information"
+  - word: "memory layout"
+    definition: "How data is arranged and stored in computer memory"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Understand encoding of multiple related values"
+  - "Recognize structured data storage"
+  - "Connect coordinates to binary representation"
