@@ -4,7 +4,6 @@ concept_map:
       - name: "Browser Fundamentals"
         exam_questions:
           - "questions/browsers/explain-web-browser-purpose.yml"
-          - "questions/browsers/compare-popular-browsers.yml"
           - "questions/browsers/explain-browser-caching-history-privacy.yml"
           - "questions/browsers/explain-http-https.yml"
           - "questions/browsers/explain-web-cookies.yml"
@@ -18,6 +17,7 @@ concept_map:
         exam_questions:
           - "questions/networks/explain-internet-vs-web.yml"
           - "questions/networks/explain-ip-address-importance.yml"
+          - "questions/networks/explain-url-behind-scenes.yml"
       - name: "Cloud Computing"
         exam_questions:
           - "questions/the_cloud/explain-cloud-computing-benefits.yml"

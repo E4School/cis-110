@@ -1,0 +1,17 @@
+id: 21
+question: "What are the basic steps in the programming process from writing code to running a program?"
+answer: "The programming process involves several key steps: \n**1. Writing Source Code** - Programmer writes instructions in a high-level language using a text editor or IDE. \n**2. Compilation/Translation** - A compiler or interpreter processes the source code, checking for syntax errors and translating it to machine code or preparing it for execution. \n**3. Loading** - The operating system loads the program from storage into memory. \n**4. Execution** - The CPU fetches, decodes, and executes the machine code instructions one by one. \n**5. Runtime** - The program runs, potentially interacting with users, reading files, or communicating over networks. Each step transforms the human-readable code into something the computer can execute."
+vocab_answer: 
+  - word: "IDE"
+    definition: "Integrated Development Environment - software for writing and testing programs"
+  - word: "loading"
+    definition: "Process of copying a program from storage into memory for execution"
+  - word: "runtime"
+    definition: "Period when a program is actively executing"
+type: "short_answer"
+points: 6
+difficulty: "beginner"
+learning_objectives:
+  - "Understand the complete programming workflow"
+  - "Recognize the role of different software tools"
+  - "Connect programming concepts to execution"

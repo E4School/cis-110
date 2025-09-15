@@ -1,0 +1,23 @@
+id: 19
+question: "Explain what happens 'behind the scenes' when you access a URL in your browser"
+answer: "When you type a URL like 'www.example.com' and press Enter, several steps happen automatically: \n**1. DNS Lookup** - Your browser contacts a DNS (Domain Name System) server to translate the human-readable domain name into an IP address (like 192.168.1.1). \n**2. Connection** - Your browser establishes a connection to the web server at that IP address using HTTP or HTTPS protocol. \n**3. Request** - Your browser sends an HTTP request asking for the specific webpage or resource. \n**4. Server Processing** - The web server receives the request, processes it, and prepares the response (HTML, CSS, images, etc.). \n**5. Response** - The server sends the webpage data back to your browser. \n**6. Rendering** - Your browser receives the data and renders it into the visual webpage you see. This entire process typically happens in seconds, involving multiple computers and network infrastructure working together seamlessly."
+vocab_answer: 
+  - word: "DNS"
+    definition: "Domain Name System - service that translates domain names to IP addresses"
+  - word: "domain name"
+    definition: "Human-readable web address like www.example.com"
+  - word: "IP address"
+    definition: "Numerical address that identifies a specific computer on the internet"
+  - word: "HTTP request"
+    definition: "Message sent by browser asking for specific web content"
+  - word: "web server"
+    definition: "Computer that stores and serves web pages to browsers"
+  - word: "rendering"
+    definition: "Process of converting HTML/CSS code into visual webpage display"
+type: "short_answer"
+points: 6
+difficulty: "beginner"
+learning_objectives:
+  - "Understand the URL resolution process"
+  - "Recognize the role of DNS in web browsing"
+  - "Trace the complete web request lifecycle"

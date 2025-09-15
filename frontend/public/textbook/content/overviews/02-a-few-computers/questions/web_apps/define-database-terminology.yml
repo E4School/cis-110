@@ -1,6 +1,6 @@
 id: 10
-question: "Define basic database terminology: fields, records, rows, columns, and tables"
-answer: "Database terminology describes how information is organized: A **table** is like a spreadsheet that stores related data (e.g., customer information). A **row** (also called a record) contains all the information about one item (e.g., one customer's complete details). A **column** (also called a field) represents one type of information across all rows (e.g., all customer names). A **record** is another term for a row - it's a complete set of related data. A **field** is another term for a column - it's one piece of information. For example, in a customer table: each row/record represents one customer, and columns/fields include name, email, phone number, and address."
+question: "Define basic database terminology: records, rows, columns, and tables"
+answer: "Database terminology describes how information is organized: A **table** is like a spreadsheet that stores related data (e.g., customer information). A **row** (also called a record) contains all the information about one item (e.g., one customer's complete details). A **column** represents one type of information across all rows (e.g., all customer names). A **record** is another term for a row - it's a complete set of related data. For example, in a customer table: each row/record represents one customer, and columns/fields include name, email, phone number, and address."
 vocab_answer: 
   - word: "table"
     definition: "Collection of related data organized in rows and columns"

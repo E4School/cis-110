@@ -17,7 +17,6 @@ concept_map:
           - "questions/os/explain-os-hardware-software-integration.yml"
       - name: "Files"
         exam_questions:
-          - "questions/files/explain-role-of-file-management.yml"
           - "questions/files/discuss-file-naming-conventions.yml"
           - "questions/files/explain-absolute-vs-relative-paths.yml"
           - "questions/files/explain-logical-vs-physical-storage.yml"
@@ -26,3 +25,8 @@ concept_map:
         exam_questions:
           - "questions/programs/describe-stored-program-concept.yml"
           - "questions/programs/analyze-computer-system-execution.yml"
+          - "questions/programs/explain-what-is-compiler.yml"
+          - "questions/programs/compare-compiler-interpreter.yml"
+          - "questions/programs/trace-machine-code-execution.yml"
+          - "questions/programs/explain-programming-process.yml"
+          - "questions/programs/explain-assembly-language.yml"

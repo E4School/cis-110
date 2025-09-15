@@ -1,0 +1,23 @@
+id: 22
+question: "What is assembly language and how does it relate to machine code?"
+answer: "Assembly language is a low-level programming language that uses human-readable mnemonics (like ADD, LOAD, STORE) to represent machine code instructions. Each assembly instruction corresponds directly to one machine code instruction, making it a one-to-one translation. For example, 'ADD R1, R2' in assembly might translate to the binary machine code '01001001 00000001 00000010'. Assembly language makes machine code programming more manageable for humans while still giving direct control over the CPU. An assembler (a simple type of compiler) translates assembly language into machine code. Assembly is used for system programming, device drivers, and situations requiring precise hardware control, though most modern programming is done in higher-level languages."
+vocab_answer: 
+  - word: "assembly language"
+    definition: "Low-level programming language using mnemonics for machine instructions"
+  - word: "mnemonics"
+    definition: "Human-readable abbreviations for machine code instructions (like ADD, LOAD)"
+  - word: "assembler"
+    definition: "Program that translates assembly language into machine code"
+  - word: "one-to-one translation"
+    definition: "Direct correspondence between assembly instructions and machine code"
+  - word: "low-level language"
+    definition: "Programming language close to machine code with minimal abstraction"
+  - word: "device drivers"
+    definition: "Programs that control specific hardware components"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Understand assembly language as machine code abstraction"
+  - "Recognize the relationship between assembly and machine code"
+  - "Identify use cases for low-level programming"

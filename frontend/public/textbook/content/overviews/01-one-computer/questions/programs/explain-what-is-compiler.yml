@@ -1,0 +1,23 @@
+id: 18
+question: "What is a compiler and what does it do?"
+answer: "A compiler is a special program that translates source code written in a high-level programming language into machine code that the CPU can directly execute. The compiler reads the entire program, checks it for syntax errors, and converts it into binary instructions specific to the target processor. This translation happens before the program runs, creating an executable file that can run independently. The compiler optimizes the code for better performance and ensures that the programmer's instructions are correctly converted to the low-level operations the computer understands. Without compilers, programmers would have to write directly in machine code, which is extremely difficult and time-consuming."
+vocab_answer: 
+  - word: "compiler"
+    definition: "Program that translates high-level source code into machine code"
+  - word: "source code"
+    definition: "Human-readable program written in a programming language"
+  - word: "machine code"
+    definition: "Binary instructions that the CPU can directly execute"
+  - word: "high-level language"
+    definition: "Programming language designed to be easy for humans to read and write"
+  - word: "executable file"
+    definition: "Compiled program that can run directly on a computer"
+  - word: "syntax errors"
+    definition: "Mistakes in the structure or grammar of programming code"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Understand the role of compilers in programming"
+  - "Distinguish between source code and machine code"
+  - "Recognize compilation as a translation process"

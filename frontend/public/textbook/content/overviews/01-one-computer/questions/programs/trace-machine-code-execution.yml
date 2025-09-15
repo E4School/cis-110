@@ -1,0 +1,23 @@
+id: 20
+question: "Explain how these simple machine code instructions would behave when executed by the CPU: \n1. LOAD R1, 5\n2. LOAD R2, 3\n3. ADD R1, R2\n4. STORE R1, 100"
+answer: "These machine code instructions demonstrate basic CPU operations with registers and memory: \n**Step 1:** LOAD R1, 5 - The CPU loads the value 5 into register R1. \n**Step 2:** LOAD R2, 3 - The CPU loads the value 3 into register R2. \n**Step 3:** ADD R1, R2 - The CPU's arithmetic logic unit (ALU) adds the contents of R1 (5) and R2 (3), storing the result (8) back in R1. \n**Step 4:** STORE R1, 100 - The CPU stores the value in R1 (8) to memory address 100. \nAfter execution: R1 contains 8, R2 contains 3, and memory location 100 contains 8. This sequence demonstrates the basic fetch-decode-execute cycle and shows how the CPU performs arithmetic using registers as temporary storage."
+vocab_answer: 
+  - word: "register"
+    definition: "High-speed storage location inside the CPU for temporary data"
+  - word: "LOAD instruction"
+    definition: "Machine code command to copy data from memory to a register"
+  - word: "ADD instruction"
+    definition: "Machine code command to perform arithmetic addition"
+  - word: "STORE instruction"
+    definition: "Machine code command to copy data from register to memory"
+  - word: "arithmetic logic unit (ALU)"
+    definition: "CPU component that performs mathematical and logical operations"
+  - word: "memory address"
+    definition: "Numerical location where data is stored in computer memory"
+type: "problem_solving"
+points: 7
+difficulty: "beginner"
+learning_objectives:
+  - "Trace execution of simple machine code"
+  - "Understand CPU register operations"
+  - "Connect machine instructions to hardware behavior"
