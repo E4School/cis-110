@@ -167,7 +167,7 @@ function ExamInterface({ questions, settings, onEndExam }) {
 
         <div className="answer-section">
           <textarea
-            placeholder="Enter your answer here..."
+            placeholder="Your notes can go here..."
             value={answers[currentQuestion.id]?.answer || ''}
             onChange={(e) => handleAnswerChange(e.target.value)}
             rows="6"
