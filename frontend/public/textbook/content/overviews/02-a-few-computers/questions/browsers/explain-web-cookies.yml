@@ -1,0 +1,21 @@
+id: 14
+question: "Explain what a Web cookie is"
+answer: "A web cookie is a small text file that websites store on your computer through your browser to remember information about your visit. Cookies contain data like login status, shopping cart contents, language preferences, or tracking information. When you revisit a website, your browser sends the cookie back to the site, allowing it to 'remember' you and provide a personalized experience. There are different types: session cookies (deleted when you close the browser) and persistent cookies (stay until they expire or you delete them). While cookies enable useful features like staying logged in, they also raise privacy concerns because they can track browsing behavior across websites."
+vocab_answer: 
+  - word: "cookie"
+    definition: "Small text file stored by websites on your computer to remember information"
+  - word: "session cookie"
+    definition: "Temporary cookie deleted when browser is closed"
+  - word: "persistent cookie"
+    definition: "Cookie that remains until it expires or is manually deleted"
+  - word: "tracking cookie"
+    definition: "Cookie used to monitor user behavior across websites"
+  - word: "personalization"
+    definition: "Customizing web experiences based on user preferences"
+type: "short_answer"
+points: 4
+difficulty: "beginner"
+learning_objectives:
+  - "Understand web cookie functionality"
+  - "Distinguish between cookie types"
+  - "Recognize privacy implications of cookies"

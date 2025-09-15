@@ -1,0 +1,23 @@
+id: 17
+question: "Explain what CSS is"
+answer: "CSS (Cascading Style Sheets) is a language used to control the visual appearance and layout of web pages. While HTML provides the structure and content, CSS defines how that content should look - colors, fonts, spacing, positioning, and responsive design. CSS works by selecting HTML elements and applying style rules to them. The 'cascading' refers to how styles can inherit from parent elements and how more specific rules override general ones. CSS can be written inline (in HTML tags), internal (in the HTML document), or external (separate .css files). This separation of content (HTML) and presentation (CSS) makes websites easier to maintain and allows the same content to have different visual designs."
+vocab_answer: 
+  - word: "CSS"
+    definition: "Cascading Style Sheets - language for styling web page appearance"
+  - word: "cascading"
+    definition: "How CSS styles inherit and override each other based on specificity"
+  - word: "style rules"
+    definition: "CSS instructions that define how HTML elements should appear"
+  - word: "selectors"
+    definition: "CSS patterns that identify which HTML elements to style"
+  - word: "responsive design"
+    definition: "Web design that adapts to different screen sizes and devices"
+  - word: "separation of concerns"
+    definition: "Design principle separating content (HTML) from presentation (CSS)"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Understand CSS's role in web development"
+  - "Distinguish between HTML structure and CSS styling"
+  - "Recognize CSS as presentation layer"

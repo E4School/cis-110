@@ -1,0 +1,21 @@
+id: 12
+question: "Explain the role of a Web browser with respect to caching, history, and privacy"
+answer: "Web browsers manage three key areas: **Caching** - browsers store copies of web pages, images, and files locally to load sites faster on repeat visits and reduce bandwidth usage. **History** - browsers track websites you visit, creating a chronological record that helps you revisit sites and provides autocomplete suggestions. **Privacy** - browsers offer features like private/incognito mode (doesn't save history or cookies), cookie management, tracking protection, and password storage. Modern browsers also include privacy settings to block ads, prevent tracking, and manage what data websites can access. These features balance user convenience with privacy protection and performance optimization."
+vocab_answer: 
+  - word: "caching"
+    definition: "Storing copies of web files locally for faster future access"
+  - word: "browser history"
+    definition: "Record of websites visited in chronological order"
+  - word: "private browsing"
+    definition: "Browser mode that doesn't save history, cookies, or other data"
+  - word: "tracking protection"
+    definition: "Browser feature that blocks websites from tracking user behavior"
+  - word: "bandwidth"
+    definition: "Amount of data that can be transmitted over an internet connection"
+type: "short_answer"
+points: 6
+difficulty: "beginner"
+learning_objectives:
+  - "Understand browser privacy features"
+  - "Explain browser performance optimization"
+  - "Recognize browser data management"

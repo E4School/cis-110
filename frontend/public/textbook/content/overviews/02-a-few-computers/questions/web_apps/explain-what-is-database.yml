@@ -1,0 +1,21 @@
+id: 9
+question: "Explain what a database is"
+answer: "A database is a structured collection of data that is organized, stored, and managed in a way that allows for efficient retrieval, updating, and manipulation of information. Databases serve as digital filing systems that can store vast amounts of information in an organized manner. They use software called Database Management Systems (DBMS) to handle operations like storing, retrieving, and organizing data. Databases are essential for web applications because they allow websites to store user information, product catalogs, transaction records, and other dynamic content that changes over time. Examples include customer lists, inventory systems, and social media posts."
+vocab_answer: 
+  - word: "database"
+    definition: "Structured collection of organized data stored electronically"
+  - word: "Database Management System (DBMS)"
+    definition: "Software that manages and organizes databases"
+  - word: "data retrieval"
+    definition: "Process of accessing and extracting information from a database"
+  - word: "structured data"
+    definition: "Information organized in a specific format for easy access"
+  - word: "digital filing system"
+    definition: "Electronic method of organizing and storing information"
+type: "short_answer"
+points: 4
+difficulty: "beginner"
+learning_objectives:
+  - "Understand the purpose of databases"
+  - "Recognize databases as data organization tools"
+  - "Connect databases to web applications"

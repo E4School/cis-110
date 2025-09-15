@@ -1,0 +1,23 @@
+id: 16
+question: "List 5 common HTML tags and explain what they do"
+answer: "Here are 5 common HTML tags: 1) **&lt;h1&gt;** - Creates the largest heading, used for main titles. 2) **&lt;p&gt;** - Defines a paragraph of text with automatic spacing above and below. 3) **&lt;a&gt;** - Creates hyperlinks to other web pages or sections, using the href attribute for the destination. 4) **&lt;img&gt;** - Displays images on the webpage, using src attribute for the image file location. 5) **&lt;ul&gt;** and **&lt;li&gt;** - Create unordered (bulleted) lists, where &lt;ul&gt; contains the list and &lt;li&gt; defines each list item. These tags form the building blocks of most web pages by structuring content into headings, text, links, images, and lists."
+vocab_answer: 
+  - word: "heading tag"
+    definition: "HTML tag (h1-h6) used to create titles and section headers"
+  - word: "paragraph tag"
+    definition: "HTML &lt;p&gt; tag used to group text into paragraphs"
+  - word: "anchor tag"
+    definition: "HTML &lt;a&gt; tag used to create hyperlinks"
+  - word: "image tag"
+    definition: "HTML &lt;img&gt; tag used to display pictures"
+  - word: "list tags"
+    definition: "HTML tags (&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;) used to create organized lists"
+  - word: "attribute"
+    definition: "Additional information added to HTML tags (like href or src)"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Identify common HTML tags"
+  - "Understand basic web page structure"
+  - "Recognize HTML tag purposes"

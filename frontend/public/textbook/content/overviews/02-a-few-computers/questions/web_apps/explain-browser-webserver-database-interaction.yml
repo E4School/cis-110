@@ -1,0 +1,21 @@
+id: 11
+question: "Explain how a browser, webserver, and database interact"
+answer: "The three components work together to deliver dynamic web content: 1) **Browser** sends a request to the webserver when you visit a website or submit a form. 2) **Webserver** receives the request and determines if it needs data from the database. If so, it queries the database for the required information. 3) **Database** processes the query and returns the requested data to the webserver. 4) **Webserver** takes the database results, formats them into HTML/CSS/JavaScript, and sends the complete webpage back to the browser. 5) **Browser** displays the webpage with the database information. For example, when you search for products on an e-commerce site, your browser requests search results, the webserver queries the product database, and the database returns matching products that get displayed in your browser."
+vocab_answer: 
+  - word: "webserver"
+    definition: "Computer program that serves web pages and handles requests from browsers"
+  - word: "database query"
+    definition: "Request for specific information from a database"
+  - word: "dynamic content"
+    definition: "Web page content that changes based on user requests or database information"
+  - word: "three-tier architecture"
+    definition: "System design with browser (presentation), webserver (logic), and database (data) layers"
+  - word: "request-response cycle"
+    definition: "Process of browser requesting information and receiving a response"
+type: "short_answer"
+points: 6
+difficulty: "beginner"
+learning_objectives:
+  - "Understand web application architecture"
+  - "Explain component interactions in web systems"
+  - "Trace the flow of information in web applications"

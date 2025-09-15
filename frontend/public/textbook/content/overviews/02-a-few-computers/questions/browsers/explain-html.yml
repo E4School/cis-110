@@ -1,0 +1,21 @@
+id: 15
+question: "Explain what HTML is"
+answer: "HTML (HyperText Markup Language) is the standard markup language used to create the structure and content of web pages. HTML uses tags (keywords surrounded by angle brackets) to define different elements like headings, paragraphs, links, images, and lists. It's called 'markup' because you mark up text with tags to indicate how it should be displayed or structured. HTML provides the skeleton of a webpage - the basic content and organization - while CSS handles the visual styling and JavaScript adds interactivity. Every web page you visit is built with HTML, which browsers interpret to display the content in a formatted way."
+vocab_answer: 
+  - word: "HTML"
+    definition: "HyperText Markup Language - standard language for creating web pages"
+  - word: "markup language"
+    definition: "System of tags used to structure and format content"
+  - word: "tags"
+    definition: "Keywords in angle brackets that define HTML elements"
+  - word: "elements"
+    definition: "Individual components of an HTML document (headings, paragraphs, etc.)"
+  - word: "web page structure"
+    definition: "Basic organization and hierarchy of content on a webpage"
+type: "short_answer"
+points: 4
+difficulty: "beginner"
+learning_objectives:
+  - "Understand HTML's role in web development"
+  - "Define markup language concepts"
+  - "Recognize HTML as webpage foundation"
