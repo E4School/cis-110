@@ -1,0 +1,31 @@
+concept_map:
+  - category: ""
+    concepts:
+      - name: "Hardware"
+        exam_questions:
+          - "questions/hardware/q01.yml"
+          - "questions/hardware/q02.yml"
+          - "questions/hardware/q03.yml"
+          - "questions/hardware/q04.yml"
+          - "questions/hardware/q05.yml"
+      - name: "Operating System"
+        exam_questions:
+          - "questions/os/q01.yml"
+          - "questions/os/q02.yml"
+          - "questions/os/q03.yml"
+          - "questions/os/q04.yml"
+          - "questions/os/q05.yml"  
+      - name: "Files"
+        exam_questions:
+          - "questions/files/q01.yml"
+          - "questions/files/q02.yml"
+          - "questions/files/q03.yml"
+          - "questions/files/q04.yml"
+          - "questions/files/q05.yml"  
+      - name: "Programs"
+        exam_questions:
+          - "questions/programs/q01.yml"
+          - "questions/programs/q02.yml"
+          - "questions/programs/q03.yml"
+          - "questions/programs/q04.yml"
+          - "questions/programs/q05.yml"
