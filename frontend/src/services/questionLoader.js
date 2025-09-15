@@ -2,15 +2,10 @@ import * as yaml from 'js-yaml';
 
 // Define all concept map paths
 const CONCEPT_MAP_PATHS = [
-  'content/overviews/01-hardware/concept-map.yml',
-  'content/overviews/02-storage/concept-map.yml',
-  'content/overviews/03-operating-systems/concept-map.yml',
-  'content/overviews/04-software-systems/concept-map.yml',
-  'content/overviews/05-databases/concept-map.yml',
-  'content/overviews/06-web-fundamentals/concept-map.yml',
-  'content/overviews/07-web-advanced/concept-map.yml',
-  'content/overviews/08-cybersecurity/concept-map.yml',
-  'content/overviews/09-people/concept-map.yml'
+  'content/overviews/00-zero-computers/concept-map.yml',
+  'content/overviews/01-one-computer/concept-map.yml',
+  'content/overviews/02-a-few-computers/concept-map.yml',
+  'content/overviews/03-a-lot-of-computers/concept-map.yml'
 ];
 
 // Helper function to extract chapter number from path
