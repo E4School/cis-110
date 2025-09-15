@@ -1,13 +1,19 @@
 concept_map:
   - category: ""
     concepts:
-      - name: "Physical"
+      - name: "Browsers"
         exam_questions:
-          - "questions/q01.yml"
-      - name: "Logical"
+          - "questions/browsers/explain-web-browser-purpose.yml"
+          - "questions/browsers/compare-popular-browsers.yml"
+      - name: "Networks"
         exam_questions:
-          - "questions/q02.yml"
-          - "questions/q03.yml"
-          - "questions/q04.yml"
-          - "questions/q05.yml"
-          - "questions/q06.yml"
+          - "questions/networks/explain-internet-vs-web.yml"
+          - "questions/networks/explain-ip-address-importance.yml"
+      - name: "Cloud Computing"
+        exam_questions:
+          - "questions/the_cloud/explain-cloud-computing-benefits.yml"
+          - "questions/the_cloud/identify-cloud-service-examples.yml"
+      - name: "Web Applications"
+        exam_questions:
+          - "questions/web_apps/explain-web-vs-desktop-apps.yml"
+          - "questions/web_apps/identify-useful-web-applications.yml"

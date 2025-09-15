@@ -1,0 +1,18 @@
+id: 4
+question: "What is an IP address and why is it important for internet communication?"
+answer: "An IP address (Internet Protocol address) is a unique numerical identifier assigned to every device connected to a network, similar to a postal address for mail delivery. It's important because it allows computers to find and communicate with each other across the internet. When you visit a website, your computer uses the website's IP address to locate the correct server and request the web pages. IP addresses ensure that data packets are delivered to the right destination in the vast network of interconnected computers."
+vocab_answer: 
+  - word: "IP address"
+    definition: "Unique numerical identifier assigned to devices on a network for communication"
+  - word: "Internet Protocol"
+    definition: "Set of rules governing how data is sent and received over the internet"
+  - word: "data packets"
+    definition: "Small units of data transmitted across networks, containing both content and routing information"
+  - word: "server"
+    definition: "Computer that provides services, resources, or data to other computers over a network"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Understand the purpose of IP addresses"
+  - "Recognize the role of addressing in network communication"

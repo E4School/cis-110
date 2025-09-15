@@ -1,0 +1,18 @@
+id: 8
+question: "Name three web applications you have used and explain what makes them useful."
+answer: "Three common web applications are: 1) Google Docs - allows collaborative document editing in real-time from any device without installing software, 2) YouTube - provides access to vast video content with personalized recommendations and the ability to upload and share videos, and 3) Online banking websites - enable secure account management, bill payments, and financial transactions from anywhere with internet access. These web apps are useful because they provide powerful functionality without software installation, enable collaboration and sharing, and offer convenience through universal access from any internet-connected device."
+vocab_answer: 
+  - word: "collaborative editing"
+    definition: "Multiple users working on the same document simultaneously in real-time"
+  - word: "real-time"
+    definition: "Happening immediately without noticeable delay"
+  - word: "universal access"
+    definition: "Ability to use a service from any compatible device with internet connection"
+  - word: "secure transactions"
+    definition: "Protected financial or data exchanges that prevent unauthorized access"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Identify common web applications"
+  - "Understand the practical benefits of web applications"

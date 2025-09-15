@@ -1,0 +1,18 @@
+id: 3
+question: "What is the internet and how does it differ from the World Wide Web?"
+answer: "The internet is a global network of interconnected computers that can communicate with each other using standardized protocols. The World Wide Web (WWW) is a service that runs on the internet, consisting of websites, web pages, and web applications accessed through browsers. The internet is the infrastructure (like roads), while the web is one of many services that use that infrastructure (like cars driving on the roads). Other internet services include email, file transfer, and online gaming."
+vocab_answer: 
+  - word: "internet"
+    definition: "Global network of interconnected computers that communicate using standardized protocols"
+  - word: "World Wide Web"
+    definition: "System of interlinked hypertext documents accessed via the internet using web browsers"
+  - word: "protocol"
+    definition: "Set of rules that define how data is transmitted between computers on a network"
+  - word: "network"
+    definition: "Group of interconnected computers that can share resources and communicate"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Distinguish between internet and World Wide Web"
+  - "Understand basic networking concepts"

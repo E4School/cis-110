@@ -1,0 +1,18 @@
+id: 6
+question: "Give three examples of cloud services that you might use in daily life and explain what each one does."
+answer: "Three common cloud services are: 1) Google Drive/Dropbox - cloud storage services that let you save files online and access them from any device, 2) Netflix/Spotify - streaming services that deliver entertainment content over the internet without requiring local storage, and 3) Gmail/Outlook.com - email services that store and manage your email messages on remote servers rather than on your computer. These services demonstrate how cloud computing provides storage, entertainment, and communication capabilities through internet-connected servers."
+vocab_answer: 
+  - word: "cloud storage"
+    definition: "Service that stores data on remote servers accessible via the internet"
+  - word: "streaming"
+    definition: "Delivery of media content over the internet in real-time without downloading"
+  - word: "web-based email"
+    definition: "Email service accessed through a web browser rather than dedicated software"
+  - word: "remote servers"
+    definition: "Computers located elsewhere that provide services over the internet"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Identify common cloud services in daily use"
+  - "Understand different types of cloud applications"

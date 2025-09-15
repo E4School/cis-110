@@ -1,0 +1,18 @@
+id: 7
+question: "What is a web application and how does it differ from a traditional desktop application?"
+answer: "A web application is software that runs in a web browser and is accessed over the internet, rather than being installed directly on your computer. The main differences are: web apps run in browsers and don't require installation, can be accessed from any device with internet and a browser, updates happen automatically on the server side, and typically require an internet connection to function. Desktop applications are installed locally, work offline, and must be updated manually. Examples of web apps include Google Docs, Facebook, and online banking websites."
+vocab_answer: 
+  - word: "web application"
+    definition: "Software application that runs in a web browser and is accessed over the internet"
+  - word: "desktop application"
+    definition: "Software installed and run directly on a local computer"
+  - word: "browser-based"
+    definition: "Software that operates within a web browser environment"
+  - word: "server-side updates"
+    definition: "Software updates that happen on remote servers rather than individual user devices"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Distinguish between web and desktop applications"
+  - "Understand the characteristics of web applications"

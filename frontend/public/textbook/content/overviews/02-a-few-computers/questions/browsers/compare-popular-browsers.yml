@@ -1,0 +1,18 @@
+id: 2
+question: "Name three popular web browsers and explain why someone might choose one over another."
+answer: "Three popular web browsers are Google Chrome, Mozilla Firefox, and Microsoft Edge. Users might choose Chrome for its speed and integration with Google services, Firefox for its privacy features and customization options, or Edge for its integration with Windows and Microsoft services. Factors influencing choice include speed, security features, privacy settings, compatibility with websites, and integration with other software or services the user relies on."
+vocab_answer: 
+  - word: "Google Chrome"
+    definition: "Web browser developed by Google, known for speed and integration with Google services"
+  - word: "Mozilla Firefox"
+    definition: "Open-source web browser known for privacy features and customization"
+  - word: "Microsoft Edge"
+    definition: "Web browser developed by Microsoft, integrated with Windows operating system"
+  - word: "browser compatibility"
+    definition: "How well a browser can display and interact with different websites correctly"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Identify common web browsers"
+  - "Understand factors that influence browser choice"

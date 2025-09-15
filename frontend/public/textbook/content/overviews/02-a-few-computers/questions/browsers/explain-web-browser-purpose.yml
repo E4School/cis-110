@@ -1,0 +1,18 @@
+id: 1
+question: "What is a web browser and what is its primary purpose?"
+answer: "A web browser is a software application that allows users to access, view, and navigate websites on the internet. Its primary purpose is to interpret and display web content (HTML, CSS, JavaScript) in a user-friendly format, enabling users to interact with web pages, follow links, and access online information and services."
+vocab_answer: 
+  - word: "web browser"
+    definition: "Software application used to access and display web pages on the internet"
+  - word: "HTML"
+    definition: "HyperText Markup Language, the standard markup language for creating web pages"
+  - word: "CSS"
+    definition: "Cascading Style Sheets, used to describe the presentation and styling of web pages"
+  - word: "JavaScript"
+    definition: "Programming language used to create interactive and dynamic web page content"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Understand the basic function of web browsers"
+  - "Identify the role of browsers in accessing web content"

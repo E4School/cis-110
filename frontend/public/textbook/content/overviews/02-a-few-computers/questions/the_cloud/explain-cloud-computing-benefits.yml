@@ -1,0 +1,18 @@
+id: 5
+question: "What is cloud computing and how does it benefit everyday users?"
+answer: "Cloud computing is the delivery of computing services (storage, software, processing power) over the internet instead of using only local devices. Benefits for everyday users include: accessing files from any device with internet connection, automatic backups and synchronization, reduced need for expensive hardware, access to powerful software without installation, and collaboration features that allow multiple people to work on the same documents simultaneously. Examples include Google Drive, iCloud, and Microsoft OneDrive."
+vocab_answer: 
+  - word: "cloud computing"
+    definition: "Delivery of computing services over the internet rather than using local devices"
+  - word: "storage"
+    definition: "Space where data and files are kept, either locally on a device or remotely on servers"
+  - word: "synchronization"
+    definition: "Process of keeping files and data consistent across multiple devices"
+  - word: "collaboration"
+    definition: "Working together with others, often using shared digital tools and resources"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Define cloud computing in simple terms"
+  - "Identify benefits of cloud services for users"
