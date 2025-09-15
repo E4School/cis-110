@@ -32,8 +32,8 @@ function AppContent() {
     setCurrentExam(null);
   };
 
-  const isTextbookPage = location.pathname.startsWith('/textbook');
-  const isExamPage = currentExam || (!isTextbookPage && location.pathname === '/');
+  const isExamPage = location.pathname.startsWith('/exams');
+  const isTextbookPage = !isExamPage;
 
   if (loading) {
     return (
@@ -54,15 +54,15 @@ function AppContent() {
           <nav className="main-nav">
             <Link 
               to="/" 
-              className={`nav-link ${isExamPage ? 'active' : ''}`}
-            >
-              Exams
-            </Link>
-            <Link 
-              to="/textbook" 
               className={`nav-link ${isTextbookPage ? 'active' : ''}`}
             >
               Textbook
+            </Link>
+            <Link 
+              to="/exams" 
+              className={`nav-link ${isExamPage ? 'active' : ''}`}
+            >
+              Exams
             </Link>
           </nav>
         </div>
@@ -70,7 +70,8 @@ function AppContent() {
 
       <main>
         <Routes>
-          <Route path="/" element={
+          <Route path="/" element={<TextbookPage />} />
+          <Route path="/exams" element={
             currentExam ? (
               <ExamInterface 
                 questions={currentExam.questions} 

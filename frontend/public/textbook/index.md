@@ -1,8 +1,12 @@
 # Overview
 
-## How to pass the final
+Welcome!  This is a short textbook that I wrote and compiled to help introduce students to essential concepts in computing and information systems.  It is coupled with an exam generator so you can self-test and determine how well you know the material.
 
-[Video coming soon
+## How to use this resource
+
+[Video coming soon]
+
+<!--
 
 * Memory: https://freedium.cfd/https:/evakeiffenheim.medium.com/the-smartest-people-i-know-are-obsessed-with-a-skill-many-were-told-is-useless-b9416c6fb856
 * course overview
@@ -21,15 +25,16 @@ Meta:
   - Vibe coding, content creation, etc...
   - Diagrams + very short practice exam 
   - Final 
-]
 
+-->
 
 ## Chapters
 
-1. [**One Computer**](/textbook/content/overviews/01-one-computer)
-2. [**A Few Computers**](/textbook/content/overviews/02-a-few-computers)
-3. [**A Lot of Computers**](/textbook/content/overviews/03-a-lot-of-computers)
+- [**Zero Computers**](/textbook/content/overviews/00-zero-computers)
+- [**One Computer**](/textbook/content/overviews/01-one-computer)
+- [**A Few Computers**](/textbook/content/overviews/02-a-few-computers)
+- [**Lot of Computers**](/textbook/content/overviews/03-a-lot-of-computers)
 
-## Other Resources
+## Other Helpful Links
 
 [Full list of Exam Questions](/textbook/big-picture)
