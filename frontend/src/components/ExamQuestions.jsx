@@ -5,18 +5,11 @@ import './ExamQuestions.css';
 
 // Additional answer levels with their display names (reversed order - kindergarten first)
 const ADDITIONAL_ANSWER_LEVELS = [
-  { key: 'answer_kindergarten', label: 'Kindergarten Level' },
-
-    // Note that the display labels are different from the keys.
-    // For example, 'answer_3rd_grade' is displayed as '7th Grade Level'.
-    // That's by design.  Let's keep it that way, as they keys represent
-    // what I asked AI ("Give a 7th Grade Level explanation") vs what I think
-    // an actual 7th Grade Level explanation should be. 
-    // ~Stephen
-  { key: 'answer_3rd_grade', label: '7th Grade Level' },
-  { key: 'answer_7th_grade', label: 'High School Level' },
-  { key: 'answer_high_school', label: 'Undergraduate Level' },
-  { key: 'answer_undergraduate', label: 'Postgraduate Level' }
+  { key: 'answer_kindergarten', label: '🧸 Tell Me Like I\'m 5' },
+  { key: 'answer_3rd_grade', label: '📚 A little bit harder please...' },
+  { key: 'answer_7th_grade', label: '🤔 Even harder!' },
+  { key: 'answer_high_school', label: '🎓 I want to impress people' },
+  { key: 'answer_undergraduate', label: '🧠 I want to go to grad school' }
 ];
 
 // Function to process text and highlight vocabulary words with tooltips

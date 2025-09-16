@@ -7,6 +7,7 @@ concept_map:
           - "questions/hardware/explain-how-processor-works.yml"
           - "questions/hardware/explain-ram-vs-rom.yml"
           - "questions/hardware/explain-io-devices.yml"
+          - "questions/hardware/explain-cpu-vs-gpu.yml"
           - "questions/hardware/trace-data-flow-through-system.yml"
           - "questions/hardware/discuss-storage-technology-strengths.yml"
       - name: "Operating System"

@@ -18,21 +18,39 @@ Please click through the following categories and read the exam questions.  I'd 
 
 The following three sections cover each of the three topics and provide multiple acceptable ways to answer each final exam question.  At the end of this page, you'll find the Bonus Videos section with links to various videos that cover these same topics (often in much greater depth than is required for this course).
 
-### Ideas ↔ Numbers
+### Information ↔ Numbers
 
-These are the questions on the exam that will test your understanding of how seemingly non-numeric ideas can be represented as numbers
+Almost anything humans can see, hear, think about, or interact with can be represented numerically. This might seem surprising at first—how can something like a photograph, a song, or even the position of an object be turned into numbers? The key insight is that we can break down complex information into measurable components.
+
+For example, a color can be described by how much red, green, and blue light it contains. A sound can be captured by measuring air pressure thousands of times per second. Text can be encoded by assigning each letter a unique number. Even abstract concepts like coordinates on a map are already numeric pairs that specify exact locations.
+
+This numerical representation is crucial because once we have numbers, we can store them, transmit them, and manipulate them using mathematical operations.  Learning to answer following questions will help deepen your understanding of this essential idea.  
+
+#### Exam Questions
 
 {{ExamQuestions:concept-map.yml concept_filter:"Information ↔ Numbers"}}
 
 ### Numbers ↔ Binary
 
-These are the questions on the exam that will test your understanding of how numbers can be converted to and from binary.
+Every number can be represented using only two digits: 0 and 1. This might seem limiting, but binary (base-2) numbers are just as powerful as our familiar decimal (base-10) numbers—they can represent any quantity, no matter how large or small.
+
+Why is this important? Because having only two symbols makes binary numbers incredibly reliable to store and transmit. In the physical world, it's much easier to distinguish between two states (like on/off, high voltage/low voltage, or magnetized/not magnetized) than to distinguish between ten different states. This simplicity makes binary the perfect foundation for digital systems.
+
+The conversion between regular numbers and binary is straightforward once you understand the pattern. Just as decimal numbers use powers of 10 (ones, tens, hundreds), binary numbers use powers of 2 (ones, twos, fours, eights, and so on). Learning to convert between these number systems helps you understand how computers store and process all that numerical information from the previous section.
+
+#### Exam Questions
 
 {{ExamQuestions:concept-map.yml concept_filter:"Numbers ↔ Binary"}}
 
 ### Binary ↔ Electromagnetism
 
-These are the questions on the exam that will test your understanding of how binary numbers can be represented and manipulated in an electronic device. 
+Binary numbers can be physically represented and manipulated using electromagnetic phenomena. This is where the magic happens—where abstract mathematical concepts become tangible, manipulable reality that can process information at incredible speeds.
+
+Think about it: once we have information encoded as binary numbers, we need a way to store those 0s and 1s and perform operations on them. Electricity and magnetism provide the perfect tools. A 0 might be represented by low voltage and a 1 by high voltage. Magnetic materials can be oriented in two directions to store binary data. Transistors can switch between conducting and non-conducting states billions of times per second.
+
+This electromagnetic foundation enables all the computational power we take for granted. Every calculation, every image displayed on your screen, every video streamed over the internet—it all happens because we can reliably represent and manipulate binary numbers using electromagnetic principles. The questions below explore how this physical layer makes digital computation possible.
+
+#### Exam Questions
 
 {{ExamQuestions:concept-map.yml concept_filter:"Binary ↔ Electromagnetism"}}
 
