@@ -1,15 +1,39 @@
-# Hardware: How Physics Does Math 
+# Systems with One Computer
 
-[Video coming soon]
+## Overview
 
+* 
+* 
+* 
+*
 
-## Chapter Contents
+## Pre-Test
 
-- [**Big Picture Concepts**](concepts) - Start here
-- [**Exam Questions**](exam-questions) - Practice questions and detailed answers
-- [**Vocabulary**](vocabulary) - Giant list of related terms and definitions (use this only for reference)
+Please click through the following categories and read the exam questions.  I'd recommend making a note of the ones you think will be easy and which ones you think will be hard. 
 
-## Recommended Videos
+{{ConceptMap:concept-map.yml}}
+
+## Main Content
+
+The following three sections cover each of the three topics and provide multiple acceptable ways to answer each final exam question.  At the end of this page, you'll find the Bonus Videos section with links to various videos that cover these same topics (often in much greater depth than is required for this course).
+
+### Hardware
+
+{{ExamQuestions:concept-map.yml concept_filter:"Hardware"}}
+
+### Operating System
+
+{{ExamQuestions:concept-map.yml concept_filter:"Operating System"}}
+
+### Files 
+
+{{ExamQuestions:concept-map.yml concept_filter:"Files"}}
+
+### Programs
+
+{{ExamQuestions:concept-map.yml concept_filter:"Programs"}}
+
+## Bonus Videos
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DBRNE3A5Wvw?si=T581yRzXaPev2-hZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -23,16 +47,3 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HjneAhCy2N4?si=HEbo1Rk3v3CKf93M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## Bonus Videos
-
-The following are not required for this course.  I include them, however, because some of you may be interested in the physics that makes computer hardware work.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FU_YFpfDqqA?si=6ha9ALIIWIghenJE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/I0-izyq6q5s?si=FE7D4Dru0BJ0rRvL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bHIhgxav9LY?si=g9BGO46f-wGtT5Lu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/iph500cPK28?si=6ThaCAWBsR3zlDTY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/oI_X2cMHNe0?si=BXNyQeTtEQAz9vOr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
