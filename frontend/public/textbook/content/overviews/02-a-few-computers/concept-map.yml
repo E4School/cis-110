@@ -1,14 +1,12 @@
 concept_map:
   - category: "Web Technologies"
     concepts:
-      - name: "Browser Fundamentals"
+      - name: "Browsers"
         exam_questions:
           - "questions/browsers/explain-web-browser-purpose.yml"
           - "questions/browsers/explain-browser-caching-history-privacy.yml"
           - "questions/browsers/explain-http-https.yml"
           - "questions/browsers/explain-web-cookies.yml"
-      - name: "Web Languages"
-        exam_questions:
           - "questions/browsers/explain-html.yml"
           - "questions/browsers/list-common-html-tags.yml"
           - "questions/browsers/explain-css.yml"
@@ -22,7 +20,7 @@ concept_map:
         exam_questions:
           - "questions/the_cloud/explain-cloud-computing-benefits.yml"
           - "questions/the_cloud/identify-cloud-service-examples.yml"
-      - name: "Web Applications"
+      - name: "Web Apps"
         exam_questions:
           - "questions/web_apps/explain-web-vs-desktop-apps.yml"
           - "questions/web_apps/identify-useful-web-applications.yml"
