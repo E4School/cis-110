@@ -1,27 +1,24 @@
 concept_map:
   - category: "Connected Society"
     concepts:
-      - name: "Social Networks and Connectivity"
-        exam_questions:
-          - "questions/connected_society/explain-six-degrees-separation.yml"
-      - name: "Digital Rights and Ethics"
+      - name: "Conflict"
         exam_questions:
           - "questions/connected_society/explain-copyright-digital-age.yml"
           - "questions/connected_society/explain-fair-use-doctrine.yml"
-      - name: "Information and Collaboration"
-        exam_questions:
-          - "questions/connected_society/describe-wikipedia-model.yml"
-      - name: "Online Safety"
-        exam_questions:
           - "questions/connected_society/explain-cyberbullying.yml"
+      - name: "Collaboration"
+        exam_questions:
+          - "questions/connected_society/explain-six-degrees-separation.yml"
+          - "questions/connected_society/describe-wikipedia-model.yml"
   - category: "Cybersecurity"
     concepts:
-      - name: "Data Protection"
+      - name: "Defense"
         exam_questions:
           - "questions/cybersecurity/explain-encryption.yml"
           - "questions/cybersecurity/explain-two-factor-authentication.yml"
           - "questions/cybersecurity/discuss-strong-password-issues.yml"
-      - name: "Threats and Attacks"
+          - "questions/cybersecurity/explain-firewall-role.yml"
+      - name: "Attack"
         exam_questions:
           - "questions/cybersecurity/explain-malware.yml"
           - "questions/cybersecurity/explain-rootkit.yml"
@@ -30,6 +27,3 @@ concept_map:
           - "questions/cybersecurity/explain-zero-day-exploit.yml"
           - "questions/cybersecurity/explain-spoofing.yml"
           - "questions/cybersecurity/explain-social-engineering.yml"
-      - name: "Security Measures"
-        exam_questions:
-          - "questions/cybersecurity/explain-firewall-role.yml"

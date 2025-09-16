@@ -17,40 +17,30 @@ Please click through the following categories and read the exam questions.  I'd 
 
 The following sections cover each of the topics and provide multiple acceptable ways to answer each final exam question.  At the end of this page, you'll find the Bonus Videos section with links to various videos that cover these same topics (often in much greater depth than is required for this course).
 
-### Social Networks and Connectivity
+### Conflict
 
-{{ExamQuestions:concept-map.yml concept_filter:"Social Networks and Connectivity"}}
+{{ExamQuestions:concept-map.yml concept_filter:"Conflict"}}
 
-### Digital Rights and Ethics
+### Collaboration
 
-{{ExamQuestions:concept-map.yml concept_filter:"Digital Rights and Ethics"}}
+{{ExamQuestions:concept-map.yml concept_filter:"Collaboration"}}
 
-### Information and Collaboration
+### Defense
 
-{{ExamQuestions:concept-map.yml concept_filter:"Information and Collaboration"}}
+{{ExamQuestions:concept-map.yml concept_filter:"Defense"}}
 
-### Online Safety
+### Attack
 
-{{ExamQuestions:concept-map.yml concept_filter:"Online Safety"}}
-
-### Data Protection
-
-{{ExamQuestions:concept-map.yml concept_filter:"Data Protection"}}
-
-### Threats and Attacks
-
-{{ExamQuestions:concept-map.yml concept_filter:"Threats and Attacks"}}
+{{ExamQuestions:concept-map.yml concept_filter:"Attack"}}
 
 ## Bonus Videos
 
 <!-- Add relevant YouTube video embeds here -->
 
-### Social Media and Digital Communication
+### Digital Conflict and Rights
 
-### Copyright and Fair Use
+### Online Collaboration
 
-### Online Collaboration and Wikipedia
+### Cybersecurity Defense
 
-### Cybersecurity Fundamentals
-
-### Digital Privacy and Protection
+### Cybersecurity Attacks
