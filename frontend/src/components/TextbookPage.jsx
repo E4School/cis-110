@@ -71,8 +71,8 @@ function renderContentWithComponents(content, textbookPath) {
   console.log('renderContentWithComponents called with content:', content.substring(0, 200) + '...');
   console.log('textbookPath:', textbookPath);
   
-  // Look for component markers
-  const combinedRegex = /\{\{(ExamQuestions|VocabList|ConceptMap):([\w\-./]+)\}\}/g;
+  // Look for component markers with optional props
+  const combinedRegex = /\{\{(ExamQuestions|VocabList|ConceptMap):([\w\-./]+)([^}]*)\}\}/g;
   
   const parts = [];
   let lastIndex = 0;
@@ -81,7 +81,35 @@ function renderContentWithComponents(content, textbookPath) {
   while ((match = combinedRegex.exec(content)) !== null) {
     const componentType = match[1];
     const fileName = match[2];
-    console.log(`Found ${componentType} marker:`, match[0], 'File:', fileName);
+    const propsString = match[3] ? match[3].trim() : '';
+    console.log(`Found ${componentType} marker:`, match[0], 'File:', fileName, 'Props:', propsString);
+    
+    // Parse props from the props string
+    const parseProps = (propsStr) => {
+      const props = {};
+      if (!propsStr) return props;
+      
+      // Enhanced parsing to handle quoted values with spaces
+      const regex = /(\w+):\s*("[^"]*"|'[^']*'|\S+)/g;
+      let match;
+      
+      while ((match = regex.exec(propsStr)) !== null) {
+        const key = match[1];
+        let value = match[2];
+        
+        // Remove surrounding quotes if present
+        if ((value.startsWith('"') && value.endsWith('"')) || 
+            (value.startsWith("'") && value.endsWith("'"))) {
+          value = value.slice(1, -1);
+        }
+        
+        props[key] = value;
+      }
+      
+      return props;
+    };
+    
+    const additionalProps = parseProps(propsString);
     
     // Add markdown content before the component
     if (match.index > lastIndex) {
@@ -105,7 +133,8 @@ function renderContentWithComponents(content, textbookPath) {
         <ExamQuestions 
           key={`eq-${parts.length}`}
           yamlPath={fileName} 
-          currentPath={textbookPath} 
+          currentPath={textbookPath}
+          {...additionalProps}
         />
       );
     } else if (componentType === 'VocabList') {
@@ -113,15 +142,18 @@ function renderContentWithComponents(content, textbookPath) {
         <VocabList 
           key={`vl-${parts.length}`}
           yamlPath={fileName} 
-          currentPath={textbookPath} 
+          currentPath={textbookPath}
+          {...additionalProps}
         />
       );
     } else if (componentType === 'ConceptMap') {
+      console.log('Creating ConceptMap component with props:', { yamlPath: fileName, currentPath: textbookPath, ...additionalProps });
       parts.push(
         <ConceptMap 
           key={`cm-${parts.length}`}
           yamlPath={fileName} 
-          currentPath={textbookPath} 
+          currentPath={textbookPath}
+          {...additionalProps}
         />
       );
     }

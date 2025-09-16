@@ -1,0 +1,21 @@
+id: 11
+question: "How might a video be represented numerically?"
+answer: "A video can be represented numerically as a sequence of images (frames) combined with timing information. Each frame is stored as numeric pixel data just like a still image, but the computer also stores the frame rate (like 30 frames per second) and the total duration. For example, a 10-second video at 30 fps would contain 300 individual image frames, each with its own pixel color data. The computer plays the video by displaying each frame in sequence at the specified timing intervals. Additional numeric data includes audio tracks (stored as sound wave measurements), subtitle timing, and compression parameters that reduce file size while maintaining visual quality."
+vocab_answer: 
+  - word: "video frame"
+    definition: "Individual still image that is part of a video sequence"
+  - word: "frame rate"
+    definition: "Number of images displayed per second in a video (measured in fps)"
+  - word: "frame sequence"
+    definition: "Ordered series of images that create motion when played rapidly"
+  - word: "temporal data"
+    definition: "Time-based information that controls when frames are displayed"
+  - word: "video compression"
+    definition: "Mathematical techniques to reduce video file size using numeric algorithms"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Understand video as sequences of numeric image data"
+  - "Learn about temporal encoding in digital media"
+  - "Connect motion pictures to numeric representation"

@@ -1,4 +1,0 @@
-id: 3
-question: "Explain what the four parts of a URL are"
-answer: "A URL (Uniform Resource Locator) consists of four main parts that work together to specify the location of a resource on the web. First, the **protocol** (like http:// or https://) specifies how the browser should communicate with the server. Second, the **domain name** (like www.example.com) identifies the specific server hosting the website. Third, the **path** (like /products/laptops) specifies the exact location or directory of the resource on that server. Fourth, the **query parameters** (like ?category=gaming&price=1000) provide additional information or filters for the requested resource. For example, in the URL 'https://www.store.com/products/laptops?brand=dell', the protocol is 'https://', the domain is 'www.store.com', the path is '/products/laptops', and the query parameter is '?brand=dell'."
-topics: ["URLs", "web addresses", "protocol", "domain names", "web navigation"]

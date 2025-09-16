@@ -1,31 +1,70 @@
-# Hardware: How Physics Does Math 
+# Zero Computers
 
-[Video coming soon]
+There are zero computers in this chapter, but we'll cover the three ideas that make modern computers possible.  In the next three bullets, I'm going to gloss over a few thousand years of fascinating advances in philosophy, mathematics, physics, and engineering.  But alas, computing is a big field, and this is a short book, so here goes: 
 
+* **Information ↔ Numbers.** Much of what humans see, hear, say, and think about can be converted to and from numbers, including things that don't really seem to be numeric -- like images, text, and music.
+* **Numbers ↔ Binary.** All numbers can be converted to and from special numbers called binary numbers, which can be written using only the digits 0 and 1.
+* **Binary ↔ Electromagnetism.** Due to their simplicity, binary numbers can be converted to and from electromagnetic states, allowing for extremely fast manipulation of binary numbers.
 
-## Chapter Contents
+Everything cool about computers -- from 3D games, to the internet, to ChatGPT -- has been built "on top of" these fundamental truths.  So let's dive in.
 
-- [**Big Picture Concepts**](concepts) - Start here
-- [**Exam Questions**](exam-questions) - Practice questions and detailed answers
-- [**Vocabulary**](vocabulary) - Giant list of related terms and definitions (use this only for reference)
+## Pre-Test
 
-## Recommended Videos
+Please click through the following categories and read the exam questions.  I'd recommend making a note of the ones you think will be easy and which ones you think will be hard. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DBRNE3A5Wvw?si=T581yRzXaPev2-hZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+{{ConceptMap:concept-map.yml}}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SbqXqQ-2ixs?si=nRVsIZnBsgwbxRFT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+## Study
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1dZ55MjjZY0?si=072Rs5vodSStDWMp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+The following three sections cover each of the three topics and provide multiple acceptable ways to answer each final exam question.  At the end of this page, you'll find the Bonus Videos section with links to various videos that cover these same topics (often in much greater depth than is required for this course).
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AkFi90lZmXA?si=DIsD6Mb9Ri5KautB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+### Ideas ↔ Numbers
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CBf-jIn44X0?si=J8Um3quXON9RMKep" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+These are the questions on the exam that will test your understanding of how seemingly non-numeric ideas can be represented as numbers
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/HjneAhCy2N4?si=HEbo1Rk3v3CKf93M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+{{ExamQuestions:concept-map.yml concept_filter:"Information ↔ Numbers"}}
+
+### Numbers ↔ Binary
+
+These are the questions on the exam that will test your understanding of how numbers can be converted to and from binary.
+
+{{ExamQuestions:concept-map.yml concept_filter:"Numbers ↔ Binary"}}
+
+### Binary ↔ Electromagnetism
+
+These are the questions on the exam that will test your understanding of how binary numbers can be represented and manipulated in an electronic device. 
+
+{{ExamQuestions:concept-map.yml concept_filter:"Binary ↔ Electromagnetism"}}
 
 ## Bonus Videos
 
-The following are not required for this course.  I include them, however, because some of you may be interested in the physics that makes computer hardware work.
+### Encoding Information in Binary
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7rd77bWIgRs?si=kMd0zQXktxguUYcd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YuUep2Lb6sU?si=9LhyX8AL51fXMEZu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dFr-dCSFbJU?si=DVpOb6dS1oQ86h_u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1GSjbWt0c9M?si=FpmXw89NPZBsG3ls" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gBKBKfikLbo?si=NDO-FgHHLLdt5_Si" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Binary (and Booleans)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gFXW92O5vFg?si=oWuU6xMeu4VWiEWd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E5V9zBBAfWM?si=sR81mqsyN8G3mh7D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/INEtYZqtjTo?si=_W5dKhdMu0T_FH-K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UvI-AMAtrvE?si=sSVcDewFbkid8EG6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gI-qXk7XojA?si=KS-YWuJ0zVHJVuA2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Electricity
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xpk67YzOn5w?si=xe3SfsDUNxsz_ACn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FU_YFpfDqqA?si=6ha9ALIIWIghenJE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 

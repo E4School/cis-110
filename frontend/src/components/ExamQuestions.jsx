@@ -91,7 +91,7 @@ const processAnswerText = (text, vocabList) => {
   });
 };
 
-function ExamQuestions({ yamlPath, currentPath }) {
+function ExamQuestions({ yamlPath, currentPath, concept_filter }) {
   // ExamQuestions component now loads questions from concept-map.yml files
   // It extracts all unique question file paths from the concept map structure
   // and loads each individual question file, then displays them sorted by ID
@@ -104,6 +104,9 @@ function ExamQuestions({ yamlPath, currentPath }) {
     const fetchQuestions = async () => {
       try {
         setLoading(true);
+        console.log('ExamQuestions: yamlPath =', yamlPath);
+        console.log('ExamQuestions: currentPath =', currentPath);
+        console.log('ExamQuestions: concept_filter =', concept_filter);
         
         // Construct the full path to the concept-map.yml file
         // Handle both relative paths (from sub-pages) and absolute paths (from big-picture.md)
@@ -111,15 +114,21 @@ function ExamQuestions({ yamlPath, currentPath }) {
         if (yamlPath.startsWith('content/')) {
           // Absolute path from textbook root (e.g., from big-picture.md)
           fullPath = `/textbook/${yamlPath}`;
+          console.log('ExamQuestions: Using absolute path:', fullPath);
         } else {
           // Relative path (e.g., from sub-pages)
-          const directoryPath = currentPath ? currentPath.split('/').slice(0, -1).join('/') : '';
+          // If currentPath doesn't end with a file extension, it's already a directory path
+          const directoryPath = currentPath && currentPath.includes('.') ? 
+            currentPath.split('/').slice(0, -1).join('/') : 
+            currentPath;
           fullPath = directoryPath ? 
             `/textbook/${directoryPath}/${yamlPath}` : 
             `/textbook/${yamlPath}`;
+          console.log('ExamQuestions: Using relative path. directoryPath:', directoryPath, 'fullPath:', fullPath);
         }
         
         const response = await fetch(fullPath);
+        console.log('ExamQuestions: Fetch response status:', response.status, 'for path:', fullPath);
         
         if (!response.ok) {
           throw new Error(`Failed to fetch concept map: ${response.status}`);
@@ -128,17 +137,28 @@ function ExamQuestions({ yamlPath, currentPath }) {
         const yamlText = await response.text();
         const conceptMapData = yaml.load(yamlText);
         
-        // Extract all unique question file paths from the concept map
-        const questionFiles = new Set();
+        // Extract all question file paths from the concept map, preserving order
+        const questionFiles = [];
         
         if (conceptMapData?.concept_map) {
           // New concept map format
           conceptMapData.concept_map.forEach(category => {
             if (category.concepts) {
               category.concepts.forEach(concept => {
+                console.log('ExamQuestions: Checking concept:', concept.name, 'against filter:', concept_filter);
+                // Apply concept filter if provided
+                if (concept_filter && concept.name !== concept_filter) {
+                  console.log('ExamQuestions: Skipping concept due to filter mismatch');
+                  return; // Skip this concept if it doesn't match the filter
+                }
+                console.log('ExamQuestions: Including concept:', concept.name);
+                
                 if (concept.exam_questions) {
                   concept.exam_questions.forEach(questionFile => {
-                    questionFiles.add(questionFile);
+                    // Only add if not already present (avoid duplicates while preserving order)
+                    if (!questionFiles.includes(questionFile)) {
+                      questionFiles.push(questionFile);
+                    }
                   });
                 }
               });
@@ -147,7 +167,9 @@ function ExamQuestions({ yamlPath, currentPath }) {
         } else if (conceptMapData?.questions && conceptMapData.questions[0]?.file) {
           // Legacy exam-questions.yml format with file references
           conceptMapData.questions.forEach(questionRef => {
-            questionFiles.add(questionRef.file);
+            if (!questionFiles.includes(questionRef.file)) {
+              questionFiles.push(questionRef.file);
+            }
           });
         } else if (conceptMapData?.questions) {
           // Legacy format: questions are directly in the main file
@@ -155,13 +177,14 @@ function ExamQuestions({ yamlPath, currentPath }) {
           return;
         }
         
-        if (questionFiles.size === 0) {
+        console.log('ExamQuestions: Total question files found:', questionFiles.length, questionFiles);
+        if (questionFiles.length === 0) {
           setQuestions([]);
           return;
         }
         
-        // Load individual question files
-        const questionPromises = Array.from(questionFiles).map(async (questionFile) => {
+        // Load individual question files in the order specified in concept map
+        const questionPromises = questionFiles.map(async (questionFile) => {
           let questionPath;
           if (yamlPath.startsWith('content/')) {
             // Absolute path from textbook root - question files are relative to concept map directory
@@ -169,13 +192,18 @@ function ExamQuestions({ yamlPath, currentPath }) {
             questionPath = `/textbook/${conceptMapDir}/${questionFile}`;
           } else {
             // Relative path - question files are relative to current page directory
-            const currentDir = currentPath ? currentPath.split('/').slice(0, -1).join('/') : '';
+            const currentDir = currentPath && currentPath.includes('.') ? 
+              currentPath.split('/').slice(0, -1).join('/') : 
+              currentPath;
             questionPath = currentDir ? 
               `/textbook/${currentDir}/${questionFile}` : 
               `/textbook/${questionFile}`;
           }
+          
+          console.log('ExamQuestions: Loading question file from path:', questionPath);
             
           const questionResponse = await fetch(questionPath);
+          console.log('ExamQuestions: Question file response status:', questionResponse.status, 'for:', questionFile);
           if (!questionResponse.ok) {
             throw new Error(`Failed to fetch question file: ${questionFile}`);
           }
@@ -187,13 +215,7 @@ function ExamQuestions({ yamlPath, currentPath }) {
         
         const questions = await Promise.all(questionPromises);
         
-        // Sort questions by ID
-        questions.sort((a, b) => {
-          const aId = parseInt(a.id) || 0;
-          const bId = parseInt(b.id) || 0;
-          return aId - bId;
-        });
-        
+        // Questions are already in concept map order, no need to sort
         setQuestions(questions);
       } catch (err) {
         setError(err.message);
@@ -228,8 +250,7 @@ function ExamQuestions({ yamlPath, currentPath }) {
     <div className="exam-questions">
       {questions.map((q, index) => (
         <div key={q.id || index} className="question-item">
-          <h3>Question {q.id || index + 1}</h3>
-          <p><strong>{q.question}</strong></p>
+          <h3>{q.question}</h3> 
           
           {/* Main answer - always shown (no accordion) */}
           {q.answer && (

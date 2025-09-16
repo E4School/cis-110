@@ -4,7 +4,7 @@ import * as yaml from 'js-yaml';
 import './ConceptMap.css';
 
 function ConceptMap({ yamlPath, currentPath }) {
-  console.log('ConceptMap component mounted with:', { yamlPath, currentPath });
+  console.log('ConceptMap: Component mounted with:', { yamlPath, currentPath });
   const [conceptMap, setConceptMap] = useState([]);
   const [questionDetails, setQuestionDetails] = useState({});
   const [loading, setLoading] = useState(true);
@@ -13,28 +13,33 @@ function ConceptMap({ yamlPath, currentPath }) {
   const [expandedQuestions, setExpandedQuestions] = useState({});
 
   useEffect(() => {
+    console.log('ConceptMap: useEffect triggered with yamlPath:', yamlPath);
     const fetchConceptMap = async () => {
       try {
+        console.log('ConceptMap: Starting fetchConceptMap...');
         setLoading(true);
         
         // Construct the full path to the YAML file
-        // If yamlPath is relative (doesn't contain '/'), resolve it relative to currentPath
-        // If yamlPath contains '/', treat it as absolute from textbook root
+        // Handle both relative paths (from sub-pages) and absolute paths (from big-picture.md)
         let fullPath;
-        if (yamlPath.includes('/')) {
-          // Absolute path from textbook root
+        if (yamlPath.startsWith('content/')) {
+          // Absolute path from textbook root (e.g., from big-picture.md)
           fullPath = `/textbook/${yamlPath}`;
+          console.log('ConceptMap: Using absolute path:', fullPath);
         } else {
-          // Relative path - resolve relative to current page directory
-          // For pages like "content/overviews/02-storage/concepts", we need the directory part
-          const currentDir = currentPath === 'index' ? '' : currentPath.split('/').slice(0, -1).join('/');
-          const basePath = currentDir ? `/textbook/${currentDir}` : '/textbook';
-          fullPath = `${basePath}/${yamlPath}`;
+          // Relative path (e.g., from sub-pages)
+          // If currentPath doesn't end with a file extension, it's already a directory path
+          const directoryPath = currentPath && currentPath.includes('.') ? 
+            currentPath.split('/').slice(0, -1).join('/') : 
+            currentPath;
+          fullPath = directoryPath ? 
+            `/textbook/${directoryPath}/${yamlPath}` : 
+            `/textbook/${yamlPath}`;
+          console.log('ConceptMap: Using relative path. directoryPath:', directoryPath, 'fullPath:', fullPath);
         }
         
-        console.log('ConceptMap path resolution:', { yamlPath, currentPath, fullPath });
-        
         const response = await fetch(fullPath);
+        console.log('ConceptMap: Fetch response status:', response.status, 'for path:', fullPath);
         
         if (!response.ok) {
           throw new Error(`Failed to fetch concept map: ${response.status}`);
@@ -43,9 +48,13 @@ function ConceptMap({ yamlPath, currentPath }) {
         const yamlText = await response.text();
         const conceptMapData = yaml.load(yamlText);
         
-        console.log('Loaded concept map data:', conceptMapData);
+        console.log('ConceptMap: Loaded concept map data:', conceptMapData);
+        console.log('ConceptMap: Type of conceptMapData:', typeof conceptMapData);
+        console.log('ConceptMap: Keys in conceptMapData:', Object.keys(conceptMapData || {}));
+        console.log('ConceptMap: Has concept_map property:', !!conceptMapData?.concept_map);
         
         if (!conceptMapData?.concept_map) {
+          console.error('ConceptMap: Missing concept_map array. Full data:', conceptMapData);
           throw new Error('Invalid concept map format: missing concept_map array');
         }
         
@@ -71,31 +80,35 @@ function ConceptMap({ yamlPath, currentPath }) {
         // Fetch all referenced question files
         const questionPromises = Array.from(questionFiles).map(async (questionFile) => {
           // Question files should be relative to the concept map file location
-          let conceptMapDir;
-          if (yamlPath.includes('/')) {
-            // Absolute path from textbook root
-            conceptMapDir = yamlPath.split('/').slice(0, -1).join('/');
+          let questionPath;
+          if (yamlPath.startsWith('content/')) {
+            // Absolute path from textbook root - question files are relative to concept map directory
+            const conceptMapDir = yamlPath.substring(0, yamlPath.lastIndexOf('/'));
+            questionPath = `/textbook/${conceptMapDir}/${questionFile}`;
           } else {
-            // Relative path - use current page directory (without the page name)
-            conceptMapDir = currentPath === 'index' ? '' : currentPath.split('/').slice(0, -1).join('/');
+            // Relative path - question files are relative to current page directory
+            const currentDir = currentPath && currentPath.includes('.') ? 
+              currentPath.split('/').slice(0, -1).join('/') : 
+              currentPath;
+            questionPath = currentDir ? 
+              `/textbook/${currentDir}/${questionFile}` : 
+              `/textbook/${questionFile}`;
           }
-          
-          const questionPath = conceptMapDir ? 
-            `/textbook/${conceptMapDir}/${questionFile}` : 
-            `/textbook/${questionFile}`;
             
           try {
+            console.log('ConceptMap: Loading question file from path:', questionPath);
             const questionResponse = await fetch(questionPath);
             if (!questionResponse.ok) {
-              console.warn(`Failed to fetch question file: ${questionFile} at ${questionPath}`);
+              console.warn(`ConceptMap: Failed to fetch question file: ${questionFile} at ${questionPath}`);
               return [questionFile, null];
             }
             
             const questionYaml = await questionResponse.text();
             const questionData = yaml.load(questionYaml);
+            console.log('ConceptMap: Loaded question data for:', questionFile, questionData);
             return [questionFile, questionData];
           } catch (err) {
-            console.warn(`Error loading question file ${questionFile}:`, err);
+            console.warn(`ConceptMap: Error loading question file ${questionFile}:`, err);
             return [questionFile, null];
           }
         });

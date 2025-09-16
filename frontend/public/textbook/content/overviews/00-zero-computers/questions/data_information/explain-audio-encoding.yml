@@ -1,0 +1,21 @@
+id: 12
+question: "How might audio be represented numerically?"
+answer: "Audio can be represented numerically by measuring and storing sound wave amplitudes at regular time intervals. This process, called sampling, captures thousands of numeric measurements per second - typically 44,100 samples per second for CD quality audio. Each sample records how far the sound wave has moved from its resting position at that precise moment, storing this as a number (often between -32,768 and +32,767). To recreate the sound, the computer reads these numbers in sequence and moves a speaker cone to match each stored amplitude value. For stereo sound, the computer stores separate numeric sequences for left and right audio channels, synchronized to play simultaneously."
+vocab_answer: 
+  - word: "audio sampling"
+    definition: "Process of measuring sound wave positions at regular time intervals"
+  - word: "sample rate"
+    definition: "Number of audio measurements taken per second (like 44,100 Hz)"
+  - word: "amplitude"
+    definition: "Numeric measure of how far a sound wave moves from its resting position"
+  - word: "digital audio"
+    definition: "Sound represented as sequences of numeric amplitude measurements"
+  - word: "audio channels"
+    definition: "Separate numeric sequences for different speakers (left/right stereo)"
+type: "short_answer"
+points: 4
+difficulty: "beginner"
+learning_objectives:
+  - "Understand digital audio representation"
+  - "Learn about sampling and quantization"
+  - "Connect sound waves to numeric sequences"

@@ -1,0 +1,21 @@
+id: 10
+question: "How might an image be represented numerically?"
+answer: "An image can be represented numerically as a grid of pixels, where each pixel contains numeric color values. For a digital photo, the computer stores the width and height of the image (like 800×600 pixels), then stores the RGB color values for each pixel position. For example, a simple 3×3 image might store: Row 1: (255,0,0), (0,255,0), (0,0,255); Row 2: (255,255,255), (0,0,0), (128,128,128); Row 3: (255,255,0), (255,0,255), (0,255,255). The computer reads these numbers sequentially, recreating the image by setting each pixel to its stored color values. Additional metadata like image format, compression settings, and color space information are also stored as numbers."
+vocab_answer: 
+  - word: "pixel grid"
+    definition: "Two-dimensional array of picture elements that form an image"
+  - word: "image dimensions"
+    definition: "Width and height measurements of an image in pixels"
+  - word: "pixel data"
+    definition: "Numeric color values stored for each point in an image"
+  - word: "image metadata"
+    definition: "Additional numeric information about image format and properties"
+  - word: "raster graphics"
+    definition: "Images represented as grids of colored pixels"
+type: "short_answer"
+points: 4
+difficulty: "beginner"
+learning_objectives:
+  - "Understand digital image representation"
+  - "Connect visual content to numeric data structures"
+  - "Recognize pixel-based image encoding"
