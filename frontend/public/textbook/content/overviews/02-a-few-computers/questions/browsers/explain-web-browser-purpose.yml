@@ -1,6 +1,16 @@
 id: 1
 question: "What is a web browser and what is its primary purpose?"
 answer: "A web browser is a software application that allows users to access, view, and navigate websites on the internet. Its primary purpose is to interpret and display web content (HTML, CSS, JavaScript) in a user-friendly format, enabling users to interact with web pages, follow links, and access online information and services."
+
+answer_kindergarten: "🧸 A web browser is like a magic window on your computer that lets you look at websites! Just like you use your eyes to look at books and pictures, you use a web browser to look at websites. You can click on things, watch videos, play games, and explore the whole internet through this special window. Popular browsers have names like Chrome, Safari, and Firefox!"
+
+answer_3rd_grade: "📚 A web browser is a special program on your computer that helps you visit websites on the internet. Think of it like a translator that takes website code (which looks like gibberish to us) and turns it into pretty pictures, text, and videos that we can understand and use. When you want to go to a website, you type its address in the browser, and it goes and gets that website for you to see!"
+
+answer_7th_grade: "🤔 A web browser is software that fetches web pages from servers across the internet and displays them on your device. It takes website code (HTML for structure, CSS for styling, JavaScript for interactivity) and renders it as the visual web pages you see. Browsers handle things like following links, managing your browsing history, storing passwords, and running website code safely. Examples include Chrome, Firefox, Safari, and Edge."
+
+answer_high_school: "🎓 Web browsers are complex applications that implement web standards (HTML5, CSS3, JavaScript ES6+) through rendering engines (Blink, Gecko, WebKit). They manage the full web stack: DNS resolution, HTTP/HTTPS requests, DOM parsing, CSS layout computation, JavaScript execution, and pixel rendering. Browsers provide security through sandboxing, same-origin policy, and content security policies. Modern browsers support Progressive Web Apps, WebAssembly, Service Workers, and advanced APIs for multimedia, geolocation, and device integration."
+
+answer_undergraduate: "🧠 Browsers implement sophisticated multi-process architectures with site isolation, process-per-tab models, and GPU acceleration for rendering. The browser engine orchestrates networking (HTTP/2, HTTP/3), parsing (incremental HTML/CSS), layout (box model, flexbox, grid), painting (layers, compositing), and JavaScript execution (V8, JIT compilation). Security models include process sandboxing, certificate validation, mixed content policies, and vulnerability mitigations (ASLR, CFI). Modern browsers support emerging standards like WebXR, WebGPU, and participate in web platform evolution through standards bodies (W3C, WHATWG)."
 vocab_answer: 
   - word: "web browser"
     definition: "Software application used to access and display web pages on the internet"

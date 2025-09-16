@@ -49,7 +49,7 @@ function AppContent() {
         <div className="header-content">
           <div className="header-title">
             <h1>CIS110</h1>
-            <p>Computer Information Systems Foundations</p>
+            <p>Computer Information Systems Concepts</p>
           </div>
           <nav className="main-nav">
             <Link 
