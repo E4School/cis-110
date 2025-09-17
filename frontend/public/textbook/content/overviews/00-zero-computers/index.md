@@ -2,6 +2,17 @@
 
 ## Overview
 
+<!--
+
+Video about first assignment?
+
+* Demonstrate how to study for the exams 
+  - Do explainers for a few questions 
+  - Model level of depth
+* Set up exam expectations
+
+-->
+
 There are zero computers in this chapter, but we'll cover the three ideas that make modern computers possible.  In the next three bullets, I'm going to summarize several centuries of fascinating advances in philosophy, mathematics, physics, and engineering:
 
 * **Information ↔ Numbers.** Much of what humans see, hear, say, and think about can be converted to and from numbers, including things that don't really seem to be numeric -- like images, text, and music.

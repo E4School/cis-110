@@ -3,13 +3,14 @@ concept_map:
     concepts:
       - name: "Conflict"
         exam_questions:
-          - "questions/connected_society/explain-copyright-digital-age.yml"
-          - "questions/connected_society/explain-fair-use-doctrine.yml"
-          - "questions/connected_society/explain-cyberbullying.yml"
+          - "questions/connected_society/list-copyright-holder-rights.yml"
+          - "questions/connected_society/list-fair-use-factors.yml"
+          - "questions/connected_society/list-cyberbully-techniques.yml"
       - name: "Collaboration"
         exam_questions:
           - "questions/connected_society/explain-six-degrees-separation.yml"
-          - "questions/connected_society/describe-wikipedia-model.yml"
+          - "questions/connected_society/explain-wikipedia-editing.yml"
+          - "questions/connected_society/explain-pull-request.yml"
   - category: "Cybersecurity"
     concepts:
       - name: "Defense"

@@ -2,9 +2,11 @@
 
 Welcome!  This is a short textbook that I wrote and compiled to help introduce students to essential concepts in computing and information systems.  It is coupled with an exam generator so you can self-test and determine how well you know the material.
 
-## How to use this resource
+## Watch these first 
 
-[Video coming soon]
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hDLDBuP4txA?si=wlQZzJSv5I9rTZ_v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8qBpefbseNM?si=2flev3MyApkn4Vte" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <!--
 
