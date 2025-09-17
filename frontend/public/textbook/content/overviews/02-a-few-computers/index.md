@@ -1,4 +1,4 @@
-# Systems with A Few Computers
+# A Few Computers
 
 ## Overview
 

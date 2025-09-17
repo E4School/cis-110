@@ -1,4 +1,4 @@
-# Systems with One Computer
+# One Computer
 
 ## Overview
 

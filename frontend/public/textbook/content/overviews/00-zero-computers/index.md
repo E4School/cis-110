@@ -1,4 +1,4 @@
-# Systems with Zero Computers
+# Zero Computers
 
 ## Overview
 
