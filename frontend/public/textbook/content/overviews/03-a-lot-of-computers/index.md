@@ -158,40 +158,65 @@ These videos provide additional depth on the complex issues that arise when vast
 
 ### Connected Society
 
+{{YouTube:https://www.youtube.com/watch?v=TcxZSmzPw8k}}
+
+{{YouTube:https://www.youtube.com/watch?v=X0mHf3oSUdU}}
+
 #### Collaboration
 
-{{YouTube:https://www.youtube.com/watch?v=RrlEy46pdlg}}
+{{YouTube:https://www.youtube.com/watch?v=zbKdDsNNOhg}}
 
-{{YouTube:https://www.youtube.com/watch?v=yJDv-zdhzMY}}
+{{YouTube:https://www.youtube.com/watch?v=e9lnsKot_SQ}}
 
-{{YouTube:https://www.youtube.com/watch?v=5fVhDJVkMT4}}
+{{YouTube:https://www.youtube.com/watch?v=Yc8sCSeMhi4}}
+
+{{YouTube:https://www.youtube.com/watch?v=7EZ-dCSrlaM}}
+
+{{YouTube:https://www.youtube.com/watch?v=For9VtrQx58}}
+
+{{YouTube:https://www.youtube.com/watch?v=F4bYIGnoS1k}}
 
 #### Conflict
 
-{{YouTube:https://www.youtube.com/watch?v=5tu32CCA_Ig}}
+{{YouTube:https://www.youtube.com/watch?v=Im80FZKTKIk}}
 
-{{YouTube:https://www.youtube.com/watch?v=H5xzREAPn8A}}
+{{YouTube:https://www.youtube.com/watch?v=XzzkSZ0Jrko}}
 
-{{YouTube:https://www.youtube.com/watch?v=WQbJM9XMJn8}}
+{{YouTube:https://www.youtube.com/watch?v=xvZHNwBHirQ}}
+
+{{YouTube:https://www.youtube.com/watch?v=Tamoj84j64I}}
+
+{{YouTube:https://www.youtube.com/watch?v=0Xo8N9qlJtk}}
+
+{{YouTube:https://www.youtube.com/watch?v=vtfMzmkYp9E}}
 
 ### Cybersecurity 
 
+{{YouTube:https://www.youtube.com/watch?v=inWWhr5tnEA}}
+
+{{YouTube:https://www.youtube.com/watch?v=bPVaOlJ6ln0}}
+
+{{YouTube:https://www.youtube.com/watch?v=jhXCTbFnK8o}}
+
 #### Defense
 
-{{YouTube:https://www.youtube.com/watch?v=AQDCe585Lnc}}
+{{YouTube:https://www.youtube.com/watch?v=6-JjHa-qLPk}}
 
-{{YouTube:https://www.youtube.com/watch?v=_bDJb7Yxzu0}}
+{{YouTube:https://www.youtube.com/watch?v=2llWuivdS7w}}
 
-{{YouTube:https://www.youtube.com/watch?v=hhUb5iknVJs}}
+{{YouTube:https://www.youtube.com/watch?v=kDEX1HXybrU}}
 
-{{YouTube:https://www.youtube.com/watch?v=FJJ1HG9fPDs}}
 
 #### Attack
 
-{{YouTube:https://www.youtube.com/watch?v=U_P23SqJaDc}}
+{{YouTube:https://www.youtube.com/watch?v=h85G7dBqBKU}}
 
-{{YouTube:https://www.youtube.com/watch?v=FTQF76CbZys}}
+{{YouTube:https://www.youtube.com/watch?v=mqzP7gJDM2s}}
 
-{{YouTube:https://www.youtube.com/watch?v=GGULKUlEpfE}}
+{{YouTube:https://www.youtube.com/watch?v=rxN4zWTNSds}}
 
-{{YouTube:https://www.youtube.com/watch?v=Qw1nNPiH_Go}}
+{{YouTube:https://www.youtube.com/watch?v=NNdCaNiqqTo}}
+
+{{YouTube:https://www.youtube.com/watch?v=lEK84lV6dxs}}
+
+{{YouTube:https://www.youtube.com/watch?v=uMkOphesrqI}}
