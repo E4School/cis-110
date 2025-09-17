@@ -5,6 +5,7 @@ import rehypeRaw from 'rehype-raw';
 import ExamQuestions from './ExamQuestions';
 import VocabList from './VocabList';
 import ConceptMap from './ConceptMap';
+import YouTube from './YouTube';
 import './TextbookPage.css';
 
 // Custom link component for internal textbook links
@@ -72,7 +73,7 @@ function renderContentWithComponents(content, textbookPath) {
   console.log('textbookPath:', textbookPath);
   
   // Look for component markers with optional props
-  const combinedRegex = /\{\{(ExamQuestions|VocabList|ConceptMap):([\w\-./]+)([^}]*)\}\}/g;
+  const combinedRegex = /\{\{(ExamQuestions|VocabList|ConceptMap|YouTube):([^}\s]+)([^}]*)\}\}/g;
   
   const parts = [];
   let lastIndex = 0;
@@ -153,6 +154,14 @@ function renderContentWithComponents(content, textbookPath) {
           key={`cm-${parts.length}`}
           yamlPath={fileName} 
           currentPath={textbookPath}
+          {...additionalProps}
+        />
+      );
+    } else if (componentType === 'YouTube') {
+      parts.push(
+        <YouTube 
+          key={`yt-${parts.length}`}
+          url={fileName}
           {...additionalProps}
         />
       );
