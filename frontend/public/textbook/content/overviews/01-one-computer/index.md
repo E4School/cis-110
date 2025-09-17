@@ -172,8 +172,6 @@ These videos provide deeper insights into the fundamental components and concept
 
 {{YouTube:https://www.youtube.com/watch?v=9GDX-IyZ_C8}}
 
-{{YouTube:https://www.youtube.com/watch?v=ACsLvXuaKxw}}
-
 {{YouTube:https://www.youtube.com/watch?v=vBURTt97EkA}}
 
 {{YouTube:https://www.youtube.com/watch?v=VjPgYcQqqN0}}
@@ -199,7 +197,5 @@ These videos provide deeper insights into the fundamental components and concept
 {{YouTube:https://www.youtube.com/watch?v=CBf-jIn44X0}}
 
 {{YouTube:https://www.youtube.com/watch?v=HjneAhCy2N4}}
-
-{{YouTube:https://www.youtube.com/watch?v=IEYFlGLAhyo}}
 
 {{YouTube:https://www.youtube.com/watch?v=fpnE6UAfbtU}}

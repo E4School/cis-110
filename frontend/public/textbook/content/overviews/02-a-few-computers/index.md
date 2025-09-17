@@ -120,34 +120,48 @@ Web applications have transformed how we interact with software, making powerful
 
 These videos provide additional depth and perspective on the web technologies that connect our digital world.
 
-### Web Technologies and Browsers
+### Web Browsers
 
-{{YouTube:https://www.youtube.com/watch?v=hJHvdBlSxug}}
-*How the Internet Works - A comprehensive overview of internet infrastructure and protocols*
+{{YouTube:https://www.youtube.com/watch?v=AlkDbnbv7dk}}
 
-{{YouTube:https://www.youtube.com/watch?v=AuBdEIDGvFw}}
-*How Web Browsers Work - Deep dive into browser rendering engines and JavaScript execution*
+{{YouTube:https://www.youtube.com/watch?v=gT0Lh1eYk78}}
+
+{{YouTube:https://www.youtube.com/watch?v=E_wX40fQwEA}}
+
+{{YouTube:https://www.youtube.com/watch?v=U8542COlBiU}}
+
+{{YouTube:https://www.youtube.com/watch?v=salY_Sm6mv4}}
+
+{{YouTube:https://www.youtube.com/watch?v=xwKbtUP87Dk}}
+
+{{YouTube:https://www.youtube.com/watch?v=FxqlmI0Oqis}}
+
+{{YouTube:https://www.youtube.com/watch?v=QzohDuGk4mM}}
 
 ### Networking and the Internet
 
+{{YouTube:https://www.youtube.com/watch?v=hJHvdBlSxug}}
+
 {{YouTube:https://www.youtube.com/watch?v=x3c1ih2NJEg}}
-*How Does the Internet Work? - Visual explanation of data packets and network routing*
 
 {{YouTube:https://www.youtube.com/watch?v=9hIQjrMHTv4}}
-*HTTP vs HTTPS - Understanding web security and encryption*
 
 ### Cloud Computing
 
 {{YouTube:https://www.youtube.com/watch?v=M988_fsOSWo}}
-*What is Cloud Computing? - Amazon Web Services explains cloud fundamentals*
 
 {{YouTube:https://www.youtube.com/watch?v=mxT233EdY5c}}
-*Cloud Computing Explained - Microsoft Azure's perspective on cloud services*
 
 ### Web Applications and Databases
 
-{{YouTube:https://www.youtube.com/watch?v=F6bDA1M2VfA}}
-*How Modern Web Apps Work - Frontend vs Backend architecture explained*
+{{YouTube:https://www.youtube.com/watch?v=lyoT1xuZmx4}}
 
-{{YouTube:https://www.youtube.com/watch?v=4ckB4sTkAMs}}
-*Databases and Web Development - How web applications store and retrieve data*
+{{YouTube:https://www.youtube.com/watch?v=xv0Be4QfkH0}}
+
+{{YouTube:https://www.youtube.com/watch?v=_higfXfhjdo}}
+
+{{YouTube:https://www.youtube.com/watch?v=RsQ1tFLwldY}}
+
+{{YouTube:https://www.youtube.com/watch?v=lYbATjjjDxM}}
+
+{{YouTube:https://www.youtube.com/watch?v=sDlCSIDwpDs}}
