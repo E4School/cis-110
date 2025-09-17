@@ -161,51 +161,37 @@ These videos provide additional depth on the complex issues that arise when vast
 #### Collaboration
 
 {{YouTube:https://www.youtube.com/watch?v=RrlEy46pdlg}}
-*How Wikipedia Works - The collaborative knowledge creation process*
 
 {{YouTube:https://www.youtube.com/watch?v=yJDv-zdhzMY}}
-*Six Degrees of Separation Explained - Network theory and social connections*
 
 {{YouTube:https://www.youtube.com/watch?v=5fVhDJVkMT4}}
-*Open Source Software Revolution - How global collaboration builds software*
 
 #### Conflict
 
 {{YouTube:https://www.youtube.com/watch?v=5tu32CCA_Ig}}
-*Digital Copyright and Fair Use - Legal challenges in the internet age*
 
 {{YouTube:https://www.youtube.com/watch?v=H5xzREAPn8A}}
-*Cyberbullying Prevention - Understanding online harassment and solutions*
 
 {{YouTube:https://www.youtube.com/watch?v=WQbJM9XMJn8}}
-*Information Wars - How misinformation spreads online*
 
 ### Cybersecurity 
 
 #### Defense
 
 {{YouTube:https://www.youtube.com/watch?v=AQDCe585Lnc}}
-*How Encryption Works - Protecting data in transit and at rest*
 
 {{YouTube:https://www.youtube.com/watch?v=_bDJb7Yxzu0}}
-*Two-Factor Authentication Explained - Adding extra security layers*
 
 {{YouTube:https://www.youtube.com/watch?v=hhUb5iknVJs}}
-*Firewall Basics - Network security fundamentals*
 
 {{YouTube:https://www.youtube.com/watch?v=FJJ1HG9fPDs}}
-*Password Security Best Practices - Creating and managing strong passwords*
 
 #### Attack
 
 {{YouTube:https://www.youtube.com/watch?v=U_P23SqJaDc}}
-*Malware Explained - Viruses, trojans, and ransomware*
 
 {{YouTube:https://www.youtube.com/watch?v=FTQF76CbZys}}
-*Social Engineering Attacks - How hackers manipulate people*
 
 {{YouTube:https://www.youtube.com/watch?v=GGULKUlEpfE}}
-*Zero-Day Exploits - Advanced persistent threats*
 
 {{YouTube:https://www.youtube.com/watch?v=Qw1nNPiH_Go}}
-*DDoS Attacks Explained - Distributed denial of service*
