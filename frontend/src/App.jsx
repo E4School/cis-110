@@ -5,7 +5,6 @@ import ExamDashboard from './components/ExamDashboard';
 import ExamInterface from './components/ExamInterface';
 import TextbookPage from './components/TextbookPage';
 import { loadAllQuestions } from './services/questionLoader';
-import { getBasePath } from './utils/paths';
 
 function AppContent() {
   const location = useLocation();
@@ -96,8 +95,19 @@ function AppContent() {
 }
 
 function App() {
+  // Only set basename in production
+  const isDev = import.meta.env.DEV || window.location.hostname === 'localhost';
+  
+  if (isDev) {
+    return (
+      <Router>
+        <AppContent />
+      </Router>
+    );
+  }
+  
   return (
-    <Router basename={getBasePath()}>
+    <Router basename="/cis-110">
       <AppContent />
     </Router>
   );
