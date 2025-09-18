@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useLocation, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link, useLocation, Navigate } from 'react-router-dom';
 import './App.css';
 import ExamDashboard from './components/ExamDashboard';
 import ExamInterface from './components/ExamInterface';
@@ -95,19 +95,8 @@ function AppContent() {
 }
 
 function App() {
-  // Only set basename in production
-  const isDev = import.meta.env.DEV || window.location.hostname === 'localhost';
-  
-  if (isDev) {
-    return (
-      <Router>
-        <AppContent />
-      </Router>
-    );
-  }
-  
   return (
-    <Router basename="/cis-110">
+    <Router>
       <AppContent />
     </Router>
   );
