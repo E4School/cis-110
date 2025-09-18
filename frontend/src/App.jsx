@@ -5,6 +5,7 @@ import ExamDashboard from './components/ExamDashboard';
 import ExamInterface from './components/ExamInterface';
 import TextbookPage from './components/TextbookPage';
 import { loadAllQuestions } from './services/questionLoader';
+import { getBasePath } from './utils/paths';
 
 function AppContent() {
   const location = useLocation();
@@ -96,7 +97,7 @@ function AppContent() {
 
 function App() {
   return (
-    <Router>
+    <Router basename={getBasePath()}>
       <AppContent />
     </Router>
   );
