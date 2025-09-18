@@ -6,6 +6,7 @@ import ExamQuestions from './ExamQuestions';
 import VocabList from './VocabList';
 import ConceptMap from './ConceptMap';
 import YouTube from './YouTube';
+import { getAssetUrl } from '../utils/paths';
 import './TextbookPage.css';
 
 // Custom link component for internal textbook links
@@ -209,7 +210,7 @@ function TextbookPage() {
 
   // Default to index if no path provided
   const textbookPath = path || 'index';
-  const markdownUrl = `/textbook/${textbookPath}.md`;
+  const markdownUrl = getAssetUrl(`textbook/${textbookPath}.md`);
 
   useEffect(() => {
     const fetchMarkdown = async () => {
@@ -222,15 +223,15 @@ function TextbookPage() {
         
         // For 'index' path, try /textbook/index.md directly
         if (textbookPath === 'index') {
-          const url = `/textbook/index.md`;
+          const url = getAssetUrl(`textbook/index.md`);
           attemptedUrls.push(url);
           response = await fetch(url);
         } else {
           // Strategy: Try multiple URL patterns to handle both folder and direct file links
           // Try direct file first (more common), then folder with index.md
           const urlsToTry = [
-            `/textbook/${textbookPath}.md`,         // For direct file links like /textbook/content/overviews/01-hardware-how-we-got-physics-to-do-math-r
-            `/textbook/${textbookPath}/index.md`   // For folder-style links like /textbook/hardware
+            getAssetUrl(`textbook/${textbookPath}.md`),         // For direct file links like /textbook/content/overviews/01-hardware-how-we-got-physics-to-do-math-r
+            getAssetUrl(`textbook/${textbookPath}/index.md`)   // For folder-style links like /textbook/hardware
           ];
           
           // Try each URL until we find one that works
