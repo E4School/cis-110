@@ -1,0 +1,33 @@
+concept_map:
+  - category: ""
+    concepts:
+      - name: "Hardware"
+        exam_questions:
+          - "questions/hardware/explain-ipo-model.yml"
+          - "questions/hardware/explain-how-processor-works.yml"
+          - "questions/hardware/explain-ram-vs-rom.yml"
+          - "questions/hardware/explain-io-devices.yml"
+          - "questions/hardware/explain-cpu-vs-gpu.yml"
+          - "questions/hardware/trace-data-flow-through-system.yml"
+          - "questions/hardware/discuss-storage-technology-strengths.yml"
+      - name: "Operating System"
+        exam_questions:
+          - "questions/os/explain-device-drivers.yml"
+          - "questions/os/explain-role-of-operating-system.yml"
+          - "questions/os/explain-multitasking-vs-multiprocessing.yml"
+          - "questions/os/explain-os-hardware-software-integration.yml"
+      - name: "Files"
+        exam_questions:
+          - "questions/files/discuss-file-naming-conventions.yml"
+          - "questions/files/explain-absolute-vs-relative-paths.yml"
+          - "questions/files/explain-logical-vs-physical-storage.yml"
+          - "questions/files/design-efficient-file-organization.yml"
+      - name: "Programs"
+        exam_questions:
+          - "questions/programs/describe-stored-program-concept.yml"
+          - "questions/programs/analyze-computer-system-execution.yml"
+          - "questions/programs/explain-what-is-compiler.yml"
+          - "questions/programs/compare-compiler-interpreter.yml"
+          - "questions/programs/trace-machine-code-execution.yml"
+          - "questions/programs/explain-programming-process.yml"
+          - "questions/programs/explain-assembly-language.yml"

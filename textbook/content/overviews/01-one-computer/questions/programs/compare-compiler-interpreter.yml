@@ -1,0 +1,31 @@
+id: 19
+question: "What is the difference between a compiler and an interpreter?"
+answer: "A compiler and interpreter are both tools that process programming code, but they work differently. A **compiler** translates the entire program into machine code before execution, creating a separate executable file that can run independently and typically runs faster. An **interpreter** reads and executes the program line-by-line in real-time without creating a separate executable file, making it easier to test and debug but generally slower to run. Compiled languages (like C++) must be compiled before running, while interpreted languages (like Python) can be run directly from source code. Some languages use both approaches - for example, Java compiles to bytecode which is then interpreted by the Java Virtual Machine."
+
+answer_kindergarten: "🧸 A compiler is like having your mom help you pack your lunch the night before school - she puts everything together ahead of time, and in the morning you just grab your lunchbox and go! An interpreter is like making your sandwich fresh each morning - it takes more time, but you can change what you want as you go."
+
+answer_3rd_grade: "📚 Think of code like a recipe written in another language. A compiler is like translating the whole recipe into English before you start cooking - this takes time at first, but then you can cook really fast! An interpreter is like having a translator help you while you cook - they tell you each step as you go, which is slower but lets you change things easily."
+
+answer_7th_grade: "🤔 A compiler reads your entire program and converts it all into machine code (the 1s and 0s the computer understands) before the program runs. This creates a fast executable file, but you have to recompile every time you change the code. An interpreter reads and executes your code line by line as the program runs. This makes testing easier since you can see results immediately, but the program runs slower because translation happens during execution."
+
+answer_high_school: "🎓 Compilers perform static analysis and optimization, translating source code to machine code or intermediate code in a separate compilation phase. This enables aggressive optimization and faster runtime execution, but requires recompilation after code changes. Interpreters use dynamic execution, parsing and executing source code at runtime. This provides immediate feedback and easier debugging through interactive environments, but with runtime overhead. Modern approaches include JIT (Just-In-Time) compilation, which combines benefits by compiling code during execution based on runtime behavior."
+
+answer_undergraduate: "🧠 Compilers implement multi-phase translation pipelines (lexical analysis, parsing, semantic analysis, optimization, code generation) that enable sophisticated static optimizations like dead code elimination, loop unrolling, and register allocation. They produce self-contained executables with minimal runtime dependencies. Interpreters use runtime execution engines that maintain program state and execution context, enabling dynamic features like reflection, runtime type checking, and interactive REPLs. Hybrid approaches include bytecode compilation (Java, C#) and transpilation (TypeScript→JavaScript), while modern JIT systems use adaptive optimization based on profiling data to optimize hot code paths at runtime."
+vocab_answer: 
+  - word: "interpreter"
+    definition: "Program that executes source code directly, line by line"
+  - word: "compilation"
+    definition: "Process of translating entire program to machine code before execution"
+  - word: "interpretation"
+    definition: "Process of executing source code directly without pre-compilation"
+  - word: "bytecode"
+    definition: "Intermediate code between source code and machine code"
+  - word: "virtual machine"
+    definition: "Software that simulates a computer to run bytecode or interpreted programs"
+type: "short_answer"
+points: 6
+difficulty: "beginner"
+learning_objectives:
+  - "Compare compilation and interpretation approaches"
+  - "Understand trade-offs between speed and flexibility"
+  - "Recognize different program execution models"

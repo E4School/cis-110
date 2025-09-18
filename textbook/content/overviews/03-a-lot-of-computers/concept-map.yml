@@ -1,0 +1,32 @@
+concept_map:
+  - category: "Connected Society"
+    concepts:
+      - name: "Conflict"
+        exam_questions:
+          - "questions/connected_society/list-copyright-holder-rights.yml"
+          - "questions/connected_society/list-fair-use-factors.yml"
+          - "questions/connected_society/list-cyberbully-techniques.yml"
+          - "questions/connected_society/discuss-ai-generated-content-impact.yml"
+          - "questions/connected_society/discuss-ai-algorithm-information-shaping.yml"
+      - name: "Collaboration"
+        exam_questions:
+          - "questions/connected_society/explain-six-degrees-separation.yml"
+          - "questions/connected_society/explain-wikipedia-editing.yml"
+          - "questions/connected_society/explain-pull-request.yml"
+  - category: "Cybersecurity"
+    concepts:
+      - name: "Defense"
+        exam_questions:
+          - "questions/cybersecurity/explain-encryption.yml"
+          - "questions/cybersecurity/explain-two-factor-authentication.yml"
+          - "questions/cybersecurity/discuss-strong-password-issues.yml"
+          - "questions/cybersecurity/explain-firewall-role.yml"
+      - name: "Attack"
+        exam_questions:
+          - "questions/cybersecurity/explain-malware.yml"
+          - "questions/cybersecurity/explain-rootkit.yml"
+          - "questions/cybersecurity/identify-malware-exploits.yml"
+          - "questions/cybersecurity/describe-online-intrusion.yml"
+          - "questions/cybersecurity/explain-zero-day-exploit.yml"
+          - "questions/cybersecurity/explain-spoofing.yml"
+          - "questions/cybersecurity/explain-social-engineering.yml"

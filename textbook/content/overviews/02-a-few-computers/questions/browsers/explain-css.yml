@@ -1,0 +1,33 @@
+id: 17
+question: "Explain what CSS is"
+answer: "CSS (Cascading Style Sheets) is a language used to control the visual appearance and layout of web pages. While HTML provides the structure and content, CSS defines how that content should look - colors, fonts, spacing, positioning, and responsive design. CSS works by selecting HTML elements and applying style rules to them. The 'cascading' refers to how styles can inherit from parent elements and how more specific rules override general ones. CSS can be written inline (in HTML tags), internal (in the HTML document), or external (separate .css files). This separation of content (HTML) and presentation (CSS) makes websites easier to maintain and allows the same content to have different visual designs."
+
+answer_kindergarten: "🧸 CSS is like choosing what clothes your website wears! HTML is like the body of your website - it has all the important parts like the head, arms, and legs. CSS is like picking out a pretty dress, colorful shoes, and a nice hat to make your website look beautiful. You can change the colors, make text big or small, and make everything look exactly how you want!"
+
+answer_3rd_grade: "📚 Think of HTML as the bones and muscles of a webpage - it has all the text and pictures. CSS is like the skin, hair, and clothes that make it look good! CSS lets you choose colors for your text, pick fonts that look cool, decide where things go on the page, and make your website pretty. It's like decorating your room - the room is there (HTML), but you choose the paint colors and where to put the furniture (CSS)!"
+
+answer_7th_grade: "🤔 CSS (Cascading Style Sheets) is a language that controls how web pages look. HTML creates the structure (headings, paragraphs, links), while CSS makes it visually appealing (colors, fonts, layout). You write CSS rules that select HTML elements and apply styles to them. The 'cascading' means styles flow down from parent to child elements, and more specific rules override general ones. CSS can be in the same file as HTML or in separate .css files, which makes it easier to maintain websites."
+
+answer_high_school: "🎓 CSS is a declarative stylesheet language that defines presentation semantics for HTML documents. It uses a selector-property-value syntax where selectors target DOM elements and properties define visual characteristics. The cascade algorithm resolves conflicts using specificity calculations (inline > ID > class > element), inheritance from parent elements, and source order. CSS supports responsive design through media queries, flexible layouts with Flexbox/Grid, and modern features like custom properties (CSS variables), animations, and transforms. The separation of content and presentation enables maintainable, accessible web design."
+
+answer_undergraduate: "🧠 CSS implements a sophisticated styling system with the CSS Object Model (CSSOM) that browsers parse into render trees. The cascade resolves style conflicts using specificity weighting (1000 for inline, 100 for IDs, 10 for classes, 1 for elements), inheritance propagation, and source order precedence. Modern CSS includes advanced layout systems (Grid for 2D layouts, Flexbox for 1D), custom properties with dynamic scoping, CSS-in-JS approaches, preprocessing (Sass/Less), post-processing (PostCSS), and emerging features like container queries, subgrid, and CSS Houdini for custom layout algorithms and paint worklets."
+vocab_answer: 
+  - word: "CSS"
+    definition: "Cascading Style Sheets - language for styling web page appearance"
+  - word: "cascading"
+    definition: "How CSS styles inherit and override each other based on specificity"
+  - word: "style rules"
+    definition: "CSS instructions that define how HTML elements should appear"
+  - word: "selectors"
+    definition: "CSS patterns that identify which HTML elements to style"
+  - word: "responsive design"
+    definition: "Web design that adapts to different screen sizes and devices"
+  - word: "separation of concerns"
+    definition: "Design principle separating content (HTML) from presentation (CSS)"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Understand CSS's role in web development"
+  - "Distinguish between HTML structure and CSS styling"
+  - "Recognize CSS as presentation layer"

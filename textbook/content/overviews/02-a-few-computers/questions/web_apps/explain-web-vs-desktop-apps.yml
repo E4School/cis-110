@@ -1,0 +1,28 @@
+id: 7
+question: "What is a web application and how does it differ from a traditional desktop application?"
+answer: "A web application is software that runs in a web browser and is accessed over the internet, rather than being installed directly on your computer. The main differences are: web apps run in browsers and don't require installation, can be accessed from any device with internet and a browser, updates happen automatically on the server side, and typically require an internet connection to function. Desktop applications are installed locally, work offline, and must be updated manually. Examples of web apps include Google Docs, Facebook, and online banking websites."
+
+answer_kindergarten: "🧸 A web app is like a game or program that lives on the internet instead of on your computer! You don't have to ask a grown-up to install it - you just open your web browser and go to the website. It's like the difference between having a coloring book at home (desktop app) versus going to a coloring website on the computer (web app). The web app can be used on any computer, but you need the internet to play with it!"
+
+answer_3rd_grade: "📚 Web applications are programs you use through your internet browser (like Chrome or Safari), while desktop applications are programs you install on your computer. **Web apps**: Don't need to be downloaded, work on any computer with internet, update automatically, need internet to work. **Desktop apps**: Must be installed, only work on that computer, you have to update them yourself, work without internet. Google Docs is a web app, Microsoft Word installed on your computer is a desktop app!"
+
+answer_7th_grade: "🤔 **Web Applications** run in browsers and are accessed via URLs. They don't require installation, work on any device with a browser, and updates happen automatically on the server. However, they usually need internet connectivity. **Desktop Applications** are installed locally on your computer, can work offline, and often have more powerful features since they have direct access to your computer's resources. Web apps prioritize accessibility and convenience, while desktop apps often provide more performance and offline functionality."
+
+answer_high_school: "🎓 Web applications use client-server architecture where the browser acts as a thin client, with most processing happening on remote servers. They leverage web technologies (HTML, CSS, JavaScript) and APIs for functionality. Benefits include platform independence, automatic updates, and collaboration features. Desktop applications have direct OS integration, better performance for intensive tasks, and full offline capabilities. Modern approaches include Progressive Web Apps (PWAs) that combine web accessibility with app-like features, and hybrid applications using frameworks like Electron that package web technologies as desktop apps."
+
+answer_undergraduate: "🧠 Web applications implement distributed architectures with stateless HTTP protocols, client-side rendering (React, Vue, Angular) or server-side rendering (Next.js, Nuxt), and RESTful or GraphQL APIs. They face constraints like Same-Origin Policy, limited local storage, and network latency, but benefit from CDN distribution and horizontal scalability. Desktop applications leverage native APIs, direct hardware access, and optimized memory management. Modern development blurs boundaries through technologies like WebAssembly, service workers for offline functionality, and cross-platform frameworks (Electron, Tauri) that enable web-to-desktop deployment strategies."
+vocab_answer: 
+  - word: "web application"
+    definition: "Software application that runs in a web browser and is accessed over the internet"
+  - word: "desktop application"
+    definition: "Software installed and run directly on a local computer"
+  - word: "browser-based"
+    definition: "Software that operates within a web browser environment"
+  - word: "server-side updates"
+    definition: "Software updates that happen on remote servers rather than individual user devices"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Distinguish between web and desktop applications"
+  - "Understand the characteristics of web applications"

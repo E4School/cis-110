@@ -1,0 +1,28 @@
+id: 3
+question: "What is the internet and how does it differ from the World Wide Web?"
+answer: "The internet is a global network of interconnected computers that can communicate with each other using standardized protocols. The World Wide Web (WWW) is a service that runs on the internet, consisting of websites, web pages, and web applications accessed through browsers. The internet is the infrastructure (like roads), while the web is one of many services that use that infrastructure (like cars driving on the roads). Other internet services include email, file transfer, and online gaming."
+
+answer_kindergarten: "🧸 Think of the internet like all the roads in the world connected together - it's the way computers talk to each other everywhere! The World Wide Web (or just 'the web') is like all the stores and fun places you can visit using those roads. The internet is the roads, and the web is like Google, YouTube, and all the websites you visit. You need the roads (internet) to get to the stores (websites)!"
+
+answer_3rd_grade: "📚 The internet is like a giant highway system that connects all the computers in the world so they can send messages to each other. The World Wide Web (WWW) is like all the fun places you can visit using that highway - websites like games, videos, and information! The internet also carries other things like email and video calls. So the internet is the delivery system, and the web is one of the things it delivers!"
+
+answer_7th_grade: "🤔 The internet is the physical network infrastructure - cables, routers, and protocols that allow computers worldwide to communicate. The World Wide Web is a service that runs on top of the internet, consisting of websites connected by hyperlinks that you access through browsers. Think of it this way: the internet is like the postal system (infrastructure), while the web is like magazines being delivered through that system. Email, gaming, and streaming also use the internet but aren't part of the web."
+
+answer_high_school: "🎓 The internet is a decentralized network of networks using TCP/IP protocols for global computer communication, including physical infrastructure (fiber optic cables, routers, ISPs) and logical addressing (IP addresses, DNS). The World Wide Web is an application layer service using HTTP/HTTPS protocols to access hyperlinked documents via URLs. The web represents just one internet service alongside SMTP (email), FTP (file transfer), SSH (remote access), and P2P protocols. The internet provides the transport mechanism; the web provides a specific content delivery and browsing experience."
+
+answer_undergraduate: "🧠 The internet implements a layered protocol stack (TCP/IP model) with physical infrastructure (autonomous systems, BGP routing, submarine cables), network layer addressing (IPv4/IPv6), and transport protocols (TCP/UDP). The World Wide Web operates at the application layer using HTTP semantics, REST architectural principles, and hypermedia as the engine of application state (HATEOAS). Internet governance involves organizations like ICANN (domain management), IETF (standards), and regional registries. The web's evolution includes semantic web technologies (RDF, OWL), progressive web apps, and integration with emerging internet protocols like QUIC and DNS-over-HTTPS."
+vocab_answer: 
+  - word: "internet"
+    definition: "Global network of interconnected computers that communicate using standardized protocols"
+  - word: "World Wide Web"
+    definition: "System of interlinked hypertext documents accessed via the internet using web browsers"
+  - word: "protocol"
+    definition: "Set of rules that define how data is transmitted between computers on a network"
+  - word: "network"
+    definition: "Group of interconnected computers that can share resources and communicate"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Distinguish between internet and World Wide Web"
+  - "Understand basic networking concepts"

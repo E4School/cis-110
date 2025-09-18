@@ -1,0 +1,21 @@
+concept_map:
+  - category: "Zero Computers"
+    concepts:
+      - name: "Information ↔ Numbers"
+        exam_questions:
+          - "questions/data_information/explain-coordinate-encoding.yml"
+          - "questions/data_information/explain-color-encoding.yml"
+          - "questions/data_information/explain-image-encoding.yml"
+          - "questions/data_information/explain-video-encoding.yml"
+          - "questions/data_information/explain-audio-encoding.yml"
+          - "questions/data_information/explain-text-encoding-binary.yml"
+      - name: "Numbers ↔ Binary"
+        exam_questions:
+          - "questions/binary/explain-what-is-binary.yml"
+          - "questions/binary/convert-decimal-to-binary.yml"
+          - "questions/binary/convert-binary-to-decimal.yml"
+      - name: "Binary ↔ Electromagnetism"
+        exam_questions:
+          - "questions/electricity/explain-electricity-binary-relationship.yml"
+          - "questions/electricity/explain-magnetic-storage.yml"
+          - "questions/electricity/explain-transistors.yml"

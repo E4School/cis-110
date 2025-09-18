@@ -1,0 +1,28 @@
+id: 1
+question: "Explain the 6 degrees of separation"
+answer: "The six degrees of separation is the theory that any two people in the world can be connected through a chain of no more than six intermediate personal relationships. For example, you know someone, who knows someone, who knows someone (and so on for up to six steps) who knows any other person on Earth. This concept highlights how interconnected human society is, even globally. Social media and digital networks have made these connections more visible and potentially reduced the actual number of degrees needed to connect people."
+
+answer_kindergarten: "🧸 Six degrees of separation means that you can be connected to anyone in the whole world through your friends and their friends! It's like this: You know your mom, your mom knows her friend Sarah, Sarah knows her cousin Jake, Jake knows his teacher Mr. Smith, Mr. Smith knows someone famous, and that famous person knows someone in another country! So you're connected to people far away through a chain of friends. It shows that everyone in the world is connected somehow!"
+
+answer_3rd_grade: "📚 Imagine you want to get a message to someone very far away, like a kid in Japan. The six degrees of separation says you can do it through just six people! You give the message to your friend, who gives it to their older brother, who gives it to his college roommate, who gives it to someone they met online, who gives it to their pen pal, who gives it to the kid in Japan. That's six steps! It means the world is more connected than it seems."
+
+answer_7th_grade: "🤔 Six degrees of separation is the idea that everyone on Earth is connected to everyone else by a maximum of six personal relationships. If you pick any random person anywhere in the world, you can trace a path of acquaintances from you to them in six steps or fewer. This theory was tested through experiments and became more visible with social media platforms like Facebook, which actually found the average connection is closer to 3-4 degrees. It demonstrates how interconnected human society really is, even across continents and cultures."
+
+answer_high_school: "🎓 The six degrees of separation theory, popularized by psychologist Stanley Milgram's 1960s experiments, suggests that any two people can be connected through an average of six intermediary relationships. This reflects the 'small world' phenomenon in network theory, where social networks exhibit high clustering but short path lengths between nodes. Digital platforms have validated and refined this concept - Facebook's research found the average separation is now 3.57 degrees. The theory has implications for understanding social influence, information spread, disease transmission, and the structure of human connectivity in an increasingly networked world."
+
+answer_undergraduate: "🧠 Six degrees of separation represents a fundamental property of scale-free social networks with power-law degree distributions and small-world characteristics. Milgram's original small-world experiments demonstrated average path lengths of ~6 in social graphs, later formalized through Watts-Strogatz models showing how random rewiring creates shortcuts in regular lattices. Modern graph analysis of social media platforms reveals even smaller average path lengths due to super-connected hubs (celebrities, influencers) and algorithmic friend recommendations. This has implications for epidemiology (disease spread), viral marketing, social capital theory, and understanding how information cascades through networked populations with heterogeneous connectivity patterns."
+vocab_answer: 
+  - word: "six degrees of separation"
+    definition: "Theory that everyone in the world is connected by no more than six intermediate relationships"
+  - word: "social network"
+    definition: "Structure of relationships and connections between individuals or groups"
+  - word: "interconnected"
+    definition: "Connected with each other in a complex network of relationships"
+  - word: "intermediate relationships"
+    definition: "Connections between people that serve as links in a chain of relationships"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Understand the concept of social connectivity"
+  - "Recognize how digital networks reflect social connections"

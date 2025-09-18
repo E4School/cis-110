@@ -1,0 +1,28 @@
+id: 5
+question: "What is cloud computing and how does it benefit everyday users?"
+answer: "Cloud computing is the delivery of computing services (storage, software, processing power) over the internet instead of using only local devices. Benefits for everyday users include: accessing files from any device with internet connection, automatic backups and synchronization, reduced need for expensive hardware, access to powerful software without installation, and collaboration features that allow multiple people to work on the same documents simultaneously. Examples include Google Drive, iCloud, and Microsoft OneDrive."
+
+answer_kindergarten: "🧸 The cloud is like having a magic backpack that you can reach into from anywhere! Instead of keeping all your toys (files) in your room, you put them in this special magic backpack. Then whether you're at home, at school, or at grandma's house, you can always reach into your backpack and get your toys! Plus, if you lose your regular backpack, all your toys are still safe in the magic one!"
+
+answer_3rd_grade: "📚 Cloud computing means using the internet to store your files and run programs instead of keeping everything on your computer. It's like having a super powerful computer that lives on the internet that you can use from any device! The benefits are: you can get your files from any computer or phone, your files are automatically saved and backed up, you don't need a super expensive computer, and you can work on projects with friends at the same time!"
+
+answer_7th_grade: "🤔 Cloud computing provides computing resources (storage, software, processing) over the internet instead of your local device. Key benefits: **Accessibility** - access files from any device anywhere, **Automatic Backup** - files are saved and protected automatically, **Cost Savings** - no need for expensive hardware or software licenses, **Collaboration** - multiple people can edit documents simultaneously, **Scalability** - get more storage or power when needed. Services like Google Workspace, iCloud, and Dropbox are cloud computing examples."
+
+answer_high_school: "🎓 Cloud computing delivers on-demand computing resources through service models: SaaS (Software as a Service), PaaS (Platform as a Service), and IaaS (Infrastructure as a Service). Benefits include elastic scalability, reduced capital expenditure, automatic updates, disaster recovery, and global accessibility. Cloud providers offer security, compliance, and redundancy that individual users couldn't achieve locally. Examples range from consumer services (Netflix, Spotify) to enterprise solutions (AWS, Azure, Google Cloud) enabling everything from data analytics to machine learning."
+
+answer_undergraduate: "🧠 Cloud computing implements virtualization, distributed systems, and service-oriented architectures to provide scalable, elastic resource allocation through APIs. Economic benefits include OpEx vs CapEx models, pay-per-use pricing, and economies of scale. Technical advantages encompass horizontal scaling, fault tolerance through geographic distribution, and access to cutting-edge services (ML/AI, serverless computing, edge computing). Cloud-native architectures enable microservices, containerization (Docker/Kubernetes), and DevOps practices with CI/CD pipelines, while multi-cloud and hybrid strategies provide vendor independence and regulatory compliance."
+vocab_answer: 
+  - word: "cloud computing"
+    definition: "Delivery of computing services over the internet rather than using local devices"
+  - word: "storage"
+    definition: "Space where data and files are kept, either locally on a device or remotely on servers"
+  - word: "synchronization"
+    definition: "Process of keeping files and data consistent across multiple devices"
+  - word: "collaboration"
+    definition: "Working together with others, often using shared digital tools and resources"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Define cloud computing in simple terms"
+  - "Identify benefits of cloud services for users"

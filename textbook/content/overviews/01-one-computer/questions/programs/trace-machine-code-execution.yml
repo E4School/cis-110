@@ -1,0 +1,33 @@
+id: 20
+question: "Explain how these simple machine code instructions would behave when executed by the CPU: \n1. LOAD R1, 5\n2. LOAD R2, 3\n3. ADD R1, R2\n4. STORE R1, 100"
+answer: "These machine code instructions demonstrate basic CPU operations with registers and memory: \n**Step 1:** LOAD R1, 5 - The CPU loads the value 5 into register R1. \n**Step 2:** LOAD R2, 3 - The CPU loads the value 3 into register R2. \n**Step 3:** ADD R1, R2 - The CPU's arithmetic logic unit (ALU) adds the contents of R1 (5) and R2 (3), storing the result (8) back in R1. \n**Step 4:** STORE R1, 100 - The CPU stores the value in R1 (8) to memory address 100. \nAfter execution: R1 contains 8, R2 contains 3, and memory location 100 contains 8. This sequence demonstrates the basic fetch-decode-execute cycle and shows how the CPU performs arithmetic using registers as temporary storage."
+
+answer_kindergarten: "🧸 Imagine the computer has special boxes called registers (R1 and R2) where it keeps numbers while working. First, it puts the number 5 in box R1 and number 3 in box R2. Then it adds 5+3=8 and puts 8 back in box R1. Finally, it writes the number 8 in its big memory book at page 100. It's like doing math with two small boxes and then writing the answer in a big notebook!"
+
+answer_3rd_grade: "📚 The computer follows these instructions step by step: 1) Put 5 in register R1 (like a temporary pocket), 2) Put 3 in register R2 (another pocket), 3) Add what's in both pockets (5+3=8) and put the answer back in R1, 4) Write the answer (8) in the computer's memory at address 100 (like writing in slot 100 of a filing cabinet). The registers are like the computer's scratch paper for doing quick calculations!"
+
+answer_7th_grade: "🤔 Let's trace through each instruction: 1) LOAD R1, 5 puts the number 5 into CPU register R1, 2) LOAD R2, 3 puts 3 into register R2, 3) ADD R1, R2 tells the ALU to add R1 (5) + R2 (3) = 8, storing the result back in R1, 4) STORE R1, 100 copies the value in R1 (8) to memory location 100. Final state: R1=8, R2=3, memory[100]=8. This shows how the CPU uses registers for fast temporary storage during calculations."
+
+answer_high_school: "🎓 This instruction sequence demonstrates the fetch-decode-execute cycle: 1) LOAD R1, 5 - CPU fetches this instruction, decodes it as a load operation, executes by copying immediate value 5 to register R1, 2) LOAD R2, 3 - loads immediate value 3 to R2, 3) ADD R1, R2 - ALU performs addition operation, reading both registers and writing sum to destination register R1, 4) STORE R1, 100 - writes R1 contents to memory address 100. The CPU pipeline processes each instruction through instruction fetch, decode, execute, and writeback stages, managing data dependencies between instructions."
+
+answer_undergraduate: "🧠 Execution trace with microarchitectural details: 1) LOAD R1, 5 - Instruction fetch from program counter, decode immediate addressing mode, execute by routing immediate operand to register file write port, 2) LOAD R2, 3 - Similar immediate load with potential pipeline overlap, 3) ADD R1, R2 - Decode identifies R-type instruction, register file provides source operands to ALU input ports, ALU performs addition, result written to register file, 4) STORE R1, 100 - Memory stage writes register data to cache/memory hierarchy. Modern superscalar processors would execute these with out-of-order execution, register renaming to eliminate false dependencies, and potential memory forwarding optimizations."
+vocab_answer: 
+  - word: "register"
+    definition: "High-speed storage location inside the CPU for temporary data"
+  - word: "LOAD instruction"
+    definition: "Machine code command to copy data from memory to a register"
+  - word: "ADD instruction"
+    definition: "Machine code command to perform arithmetic addition"
+  - word: "STORE instruction"
+    definition: "Machine code command to copy data from register to memory"
+  - word: "arithmetic logic unit (ALU)"
+    definition: "CPU component that performs mathematical and logical operations"
+  - word: "memory address"
+    definition: "Numerical location where data is stored in computer memory"
+type: "problem_solving"
+points: 7
+difficulty: "beginner"
+learning_objectives:
+  - "Trace execution of simple machine code"
+  - "Understand CPU register operations"
+  - "Connect machine instructions to hardware behavior"

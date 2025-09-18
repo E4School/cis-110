@@ -1,0 +1,33 @@
+id: 13
+question: "Explain what HTTP and HTTPS are"
+answer: "HTTP (HyperText Transfer Protocol) is the standard communication protocol used for transferring web pages and data between browsers and web servers. It defines how requests and responses should be formatted and transmitted over the internet. HTTPS (HTTP Secure) is the secure version of HTTP that adds encryption using SSL/TLS protocols. HTTPS protects data in transit by scrambling information so that intercepted data cannot be read by unauthorized parties. You can identify HTTPS websites by the lock icon in your browser's address bar and URLs that start with 'https://' instead of 'http://'. HTTPS is essential for protecting sensitive information like passwords, credit card numbers, and personal data."
+
+answer_kindergarten: "🧸 HTTP and HTTPS are like the way your computer talks to websites! HTTP is like talking normally - anyone nearby can hear what you're saying. HTTPS is like whispering in a secret code - even if someone hears you, they can't understand what you're saying! When you see a little lock symbol next to a website address, it means the website is using the secret code to keep your information safe."
+
+answer_3rd_grade: "📚 Think of HTTP and HTTPS like sending letters! HTTP is like sending a postcard - anyone who handles it (like the mailman) can read what you wrote. HTTPS is like putting your letter in a locked box that only you and your friend have the key to. When you visit websites with HTTPS (you'll see 'https://' and a lock icon), your information travels in a secret code that protects your passwords and personal information from bad guys."
+
+answer_7th_grade: "🤔 HTTP (HyperText Transfer Protocol) is the language browsers and web servers use to communicate - it defines how to request web pages and send responses. HTTPS adds a security layer using encryption, which scrambles your data so that if anyone intercepts it while traveling across the internet, they can't read it. You can tell if a site uses HTTPS by looking for the lock icon in your browser and 'https://' in the URL. HTTPS is crucial for protecting passwords, credit card info, and any sensitive data."
+
+answer_high_school: "🎓 HTTP is a stateless, client-server protocol operating over TCP that uses methods (GET, POST, PUT, DELETE) to transfer resources identified by URLs. HTTPS implements transport layer security using TLS/SSL certificates to establish encrypted tunnels between clients and servers. The TLS handshake involves certificate verification, cipher suite negotiation, and key exchange to create symmetric encryption keys. HTTPS prevents man-in-the-middle attacks, eavesdropping, and data tampering. Modern browsers enforce HTTPS through features like HSTS (HTTP Strict Transport Security) and mixed content blocking."
+
+answer_undergraduate: "🧠 HTTP/1.1 implements persistent connections, pipelining, and chunked transfer encoding, while HTTP/2 introduces binary framing, multiplexing, server push, and header compression (HPACK). HTTPS establishes secure channels through TLS 1.3's improved handshake with forward secrecy, using elliptic curve cryptography and authenticated encryption. Certificate transparency, OCSP stapling, and public key pinning enhance security. HTTP/3 uses QUIC over UDP for reduced latency and built-in encryption. Security headers (CSP, HSTS, HPKP) and certificate authority validation ensure end-to-end security in modern web architectures."
+vocab_answer: 
+  - word: "HTTP"
+    definition: "HyperText Transfer Protocol - standard for web communication"
+  - word: "HTTPS"
+    definition: "HTTP Secure - encrypted version of HTTP"
+  - word: "protocol"
+    definition: "Set of rules for communication between computer systems"
+  - word: "SSL/TLS"
+    definition: "Security protocols that encrypt data transmission"
+  - word: "encryption"
+    definition: "Process of scrambling data to protect it from unauthorized access"
+  - word: "data in transit"
+    definition: "Information being transmitted between devices"
+type: "short_answer"
+points: 5
+difficulty: "beginner"
+learning_objectives:
+  - "Understand web communication protocols"
+  - "Distinguish between HTTP and HTTPS"
+  - "Recognize web security indicators"
