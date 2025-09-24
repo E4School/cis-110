@@ -21,6 +21,8 @@ There are zero computers in this chapter, but we'll cover the three ideas that m
 
 Everything cool about computers -- from 3D games, to the internet, to ChatGPT -- has been built on top of these fundamental truths.  So let's dive in.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/n2NxrRyCCj0?si=5r5w2J8K00G3B4B_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Pre-Test
 
 Please click through the following categories and read the exam questions.  I'd recommend making a note of the ones you think will be easy and which ones you think will be hard. 
