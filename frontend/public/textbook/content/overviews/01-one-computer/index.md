@@ -182,7 +182,17 @@ These videos provide deeper insights into the fundamental components and concept
 
 ### Hardware 
 
+{{YouTube:https://www.youtube.com/watch?v=GYlNoAMBY6o}}
+
+{{YouTube:https://www.youtube.com/watch?v=Ui6QyzcD3_E}}
+
+{{YouTube:https://www.youtube.com/watch?v=H4SDPLiUnv4}}
+
 {{YouTube:https://www.youtube.com/watch?v=DBRNE3A5Wvw}}
+
+{{YouTube:https://www.youtube.com/watch?v=sp3mMwo3PO0}}
+
+{{YouTube:https://www.youtube.com/watch?v=bY6NQb10AaI}}
 
 {{YouTube:https://www.youtube.com/watch?v=SbqXqQ-2ixs}}
 

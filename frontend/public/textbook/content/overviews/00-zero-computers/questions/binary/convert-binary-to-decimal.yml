@@ -1,5 +1,5 @@
 id: 3
-question: "Randomly generate a binary number between 1000 and 1111, and convert it to decimal"
+question: "Randomly generate a 4-bit binary number, and convert it to decimal"
 answer: "Example: To convert binary 1010 to decimal, we use place values. From right to left, the positions represent: 1s place, 2s place, 4s place, and 8s place. So: 1×8 + 0×4 + 1×2 + 0×1 = 8 + 0 + 2 + 0 = 10. Therefore, binary 1010 equals decimal 10."
 vocab_answer: 
   - word: "place value"
