@@ -32,10 +32,10 @@ Meta:
 
 ## Chapters
 
-- [**Zero Computers**](/#/textbook/content/overviews/00-zero-computers)
-- [**One Computer**](/#/textbook/content/overviews/01-one-computer)
-- [**A Few Computers**](/#/textbook/content/overviews/02-a-few-computers)
-- [**Lots of Computers**](/#/textbook/content/overviews/03-a-lot-of-computers)
+- [**Zero Computers**](/cis-110/#/textbook/content/overviews/00-zero-computers)
+- [**One Computer**](/cis-110/#/textbook/content/overviews/01-one-computer)
+- [**A Few Computers**](/cis-110/#/textbook/content/overviews/02-a-few-computers)
+- [**Lots of Computers**](/cis-110/#/textbook/content/overviews/03-a-lot-of-computers)
 
 ## Other Helpful Links
 
