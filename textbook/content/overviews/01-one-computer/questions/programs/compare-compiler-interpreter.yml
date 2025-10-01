@@ -1,5 +1,5 @@
 id: 19
-question: "What is the difference between a compiler and an interpreter?"
+question: "Explain the difference between a compiler and an interpreter"
 answer: "A compiler and interpreter are both tools that process programming code, but they work differently. A **compiler** translates the entire program into machine code before execution, creating a separate executable file that can run independently and typically runs faster. An **interpreter** reads and executes the program line-by-line in real-time without creating a separate executable file, making it easier to test and debug but generally slower to run. Compiled languages (like C++) must be compiled before running, while interpreted languages (like Python) can be run directly from source code. Some languages use both approaches - for example, Java compiles to bytecode which is then interpreted by the Java Virtual Machine."
 
 answer_kindergarten: "🧸 A compiler is like having your mom help you pack your lunch the night before school - she puts everything together ahead of time, and in the morning you just grab your lunchbox and go! An interpreter is like making your sandwich fresh each morning - it takes more time, but you can change what you want as you go."

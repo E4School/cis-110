@@ -1,5 +1,5 @@
 id: 4
-question: "How does an operating system integrate hardware and software to execute programs?"
+question: "Explain how an operating system integrates hardware and software to execute programs"
 answer: "The operating system serves as the critical integration layer that abstracts hardware complexity from software applications through system calls, device drivers, and resource management subsystems. When a program executes, the OS loader maps executable files into memory, establishes virtual address spaces with memory protection, and coordinates with the hardware MMU to provide isolated execution environments. The kernel manages hardware resources by interfacing with device controllers through standardized drivers, handles interrupt processing for asynchronous I/O operations, and implements scheduling policies to allocate CPU time fairly among competing processes. Software applications interact with hardware indirectly through the OS API, which translates high-level requests into hardware-specific operations while maintaining security boundaries and resource quotas."
 vocab_answer: 
   - word: "integration layer"

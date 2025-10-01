@@ -1,5 +1,5 @@
 id: 9
-question: "What is the main difference between a CPU and a GPU?"
+question: "Explain how a CPU differs from a GPU"
 answer: "The CPU (Central Processing Unit) is designed for general-purpose computing with a few powerful cores that can handle complex instructions and make decisions quickly. It's optimized for sequential processing and can efficiently switch between different tasks. The GPU (Graphics Processing Unit) has hundreds or thousands of smaller, simpler cores designed for parallel processing. While each GPU core is less powerful than a CPU core, the GPU excels at performing many simple calculations simultaneously, making it ideal for tasks like rendering graphics, machine learning, and scientific computations that can be broken down into many parallel operations."
 
 answer_kindergarten: "🧸 A CPU is like your brain - it's really smart and can think about one hard problem at a time. A GPU is like having lots of friends helping you - it's not as smart as your brain, but when you have many simple things to do (like coloring), all your friends can help at the same time and get it done super fast!"
