@@ -13,6 +13,16 @@ Please click through the following categories and read the exam questions.  I'd 
 
 {{ConceptMap:concept-map.yml}}
 
+## Video Content
+
+This chapter's video content will be slightly different because the material is considerably less technical.  Although this video gives a brief overview of the topics (collaboration, hackers, networks, and AI), it doesn't **directly** answer any of the questions on the final.  
+
+{{YouTube:https://www.youtube.com/watch?v=ZUesXNpTlzg}}
+
+Nevertheless, you can find textual answers below, and there are many bonus video resources at the bottom of the page.  I think most students should, after some light research, be able to answer the questions in this chapter with diagrams of their own.  
+
+> Note: If any such videos/diagrams turn out to be exemplary, I'll embed them here (with the creator's permission).
+
 ## Main Content
 
 The following sections cover each of the topics and provide multiple acceptable ways to answer each final exam question.  At the end of this page, you'll find the Bonus Videos section with links to various videos that cover these same topics (often in much greater depth than is required for this course).
@@ -157,6 +167,8 @@ The scale and automation possible with networked computers means that a single a
 These videos provide additional depth on the complex issues that arise when vast networks of computers connect people around the world.
 
 ### Connected Society
+
+{{YouTube:https://www.youtube.com/watch?v=CYlon2tvywA}}
 
 {{YouTube:https://www.youtube.com/watch?v=TcxZSmzPw8k}}
 

@@ -17,7 +17,7 @@ Please click through the following categories and read the exam questions.  I'd 
 
 ### Overview
 
-An overview of this chapter on inter-computer communication.
+An overview of this chapter on how our computer (more specifically the browser) interacts with other computers.
 
 {{YouTube:https://www.youtube.com/watch?v=5sBjb5WAqag}}
 
