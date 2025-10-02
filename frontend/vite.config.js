@@ -5,4 +5,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig(({ mode }) => ({
   plugins: [react()],
   base: mode === 'production' ? '/cis-110/' : '/',
+  define: {
+    // Optional: Set build timestamp for cache busting
+    'import.meta.env.VITE_BUILD_TIMESTAMP': JSON.stringify(Date.now().toString())
+  }
 }))

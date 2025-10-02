@@ -13,6 +13,40 @@ Please click through the following categories and read the exam questions.  I'd 
 
 {{ConceptMap:concept-map.yml}}
 
+## Video Content
+
+We'll begin with an overview of the four topics in this chapter: hardware, programs, operating systems, and files. 
+
+{{YouTube:https://www.youtube.com/watch?v=4xlfqyBNQxE}}
+
+### Hardware and Programs
+
+The relationship between hardware and software is one of the most subtle and interesting things in computing.  Understanding the anatomy of a simple CPU and how it interacts with a program stored in main memory (RAM) is the subject of the next two videos and numerous questions on the final exam. 
+
+#### Part 1 (Hardware)
+
+Here we'll discuss several pieces of hardware, setting the stage for the two components that enable the computer to run programs: the CPU and RAM.
+
+{{YouTube:https://www.youtube.com/watch?v=a8jlUVv4o4g}}
+
+#### Part 2 (Programs)
+
+Here we zoom in on the interactions between the CPU and RAM by illustrating how a simple assembly language program might execute on a hypothetical CPU.
+
+{{YouTube:https://www.youtube.com/watch?v=294U8gdMJfk}}
+
+### Operating System
+
+Now that we've seen how programs are executed, we can begin to understand the program that manages all the other programs: the operating system.
+
+{{YouTube:https://www.youtube.com/watch?v=Z38xp5Eb3S0}}
+
+### Files
+
+We finish up this chapter by discussing one of the main abstractions that the operating system provides: files.
+
+{{YouTube:https://www.youtube.com/watch?v=UQliHa58SB4}}
+
 ## Main Content
 
 The following three sections cover each of the three topics and provide multiple acceptable ways to answer each final exam question.  At the end of this page, you'll find the Bonus Videos section with links to various videos that cover these same topics (often in much greater depth than is required for this course).
@@ -171,14 +205,6 @@ These videos provide deeper insights into the fundamental components and concept
 {{YouTube:https://www.youtube.com/watch?v=vLwMl9qK4T8}}
 
 {{YouTube:https://www.youtube.com/watch?v=9GDX-IyZ_C8}}
-
-{{YouTube:https://www.youtube.com/watch?v=vBURTt97EkA}}
-
-{{YouTube:https://www.youtube.com/watch?v=VjPgYcQqqN0}}
-
-{{YouTube:https://www.youtube.com/watch?v=YcRd3WMbXnE}}
-
-{{YouTube:https://www.youtube.com/watch?v=F18RiREDkwE}}
 
 ### Hardware 
 

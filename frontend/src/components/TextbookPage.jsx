@@ -7,6 +7,7 @@ import VocabList from './VocabList';
 import ConceptMap from './ConceptMap';
 import YouTube from './YouTube';
 import { getAssetUrl } from '../utils/paths';
+import { getCacheBuster } from '../utils/cacheBuster';
 import './TextbookPage.css';
 
 // Custom link component for internal textbook links
@@ -217,21 +218,24 @@ function TextbookPage() {
       setLoading(true);
       setError(null);
       
+      // Add cache busting parameter to all markdown requests
+      const cacheBuster = getCacheBuster();
+      
       try {
         let response;
         let attemptedUrls = [];
         
         // For 'index' path, try /textbook/index.md directly
         if (textbookPath === 'index') {
-          const url = getAssetUrl(`textbook/index.md`);
+          const url = getAssetUrl(`textbook/index.md`) + cacheBuster;
           attemptedUrls.push(url);
           response = await fetch(url);
         } else {
           // Strategy: Try multiple URL patterns to handle both folder and direct file links
           // Try direct file first (more common), then folder with index.md
           const urlsToTry = [
-            getAssetUrl(`textbook/${textbookPath}.md`),         // For direct file links like /textbook/content/overviews/01-hardware-how-we-got-physics-to-do-math-r
-            getAssetUrl(`textbook/${textbookPath}/index.md`)   // For folder-style links like /textbook/hardware
+            getAssetUrl(`textbook/${textbookPath}.md`) + cacheBuster,         // For direct file links like /textbook/content/overviews/01-hardware-how-we-got-physics-to-do-math-r
+            getAssetUrl(`textbook/${textbookPath}/index.md`) + cacheBuster   // For folder-style links like /textbook/hardware
           ];
           
           // Try each URL until we find one that works

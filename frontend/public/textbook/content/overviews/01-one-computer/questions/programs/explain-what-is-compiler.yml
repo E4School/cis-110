@@ -1,5 +1,5 @@
 id: 18
-question: "What is a compiler and what does it do?"
+question: "Explain the purpose of a compiler and what it does"
 answer: "A compiler is a special program that translates source code written in a high-level programming language into machine code that the CPU can directly execute. The compiler reads the entire program, checks it for syntax errors, and converts it into binary instructions specific to the target processor. This translation happens before the program runs, creating an executable file that can run independently. The compiler optimizes the code for better performance and ensures that the programmer's instructions are correctly converted to the low-level operations the computer understands. Without compilers, programmers would have to write directly in machine code, which is extremely difficult and time-consuming."
 
 answer_kindergarten: "🧸 A compiler is like a super smart translator! You write your ideas in words the computer can almost understand, and the compiler changes them into the secret language (1s and 0s) that the computer really understands. It's like having a friend who speaks both English and computer language help you talk to your computer!"

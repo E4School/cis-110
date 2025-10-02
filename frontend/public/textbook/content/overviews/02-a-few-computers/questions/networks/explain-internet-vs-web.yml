@@ -1,5 +1,5 @@
 id: 3
-question: "What is the internet and how does it differ from the World Wide Web?"
+question: "Explain how the internet differs from the World Wide Web"
 answer: "The internet is a global network of interconnected computers that can communicate with each other using standardized protocols. The World Wide Web (WWW) is a service that runs on the internet, consisting of websites, web pages, and web applications accessed through browsers. The internet is the infrastructure (like roads), while the web is one of many services that use that infrastructure (like cars driving on the roads). Other internet services include email, file transfer, and online gaming."
 
 answer_kindergarten: "🧸 Think of the internet like all the roads in the world connected together - it's the way computers talk to each other everywhere! The World Wide Web (or just 'the web') is like all the stores and fun places you can visit using those roads. The internet is the roads, and the web is like Google, YouTube, and all the websites you visit. You need the roads (internet) to get to the stores (websites)!"
