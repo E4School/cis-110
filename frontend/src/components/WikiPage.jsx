@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import { getAssetUrl } from '../utils/paths';
-import resourceCache from '../services/resourceCache';
+import compiledContentService from '../services/compiledContentService';
 import './WikiPage.css';
 
 // Custom link component for internal wiki links
@@ -58,7 +58,7 @@ function WikiPage() {
         // For 'index' path, try /wiki/index.md directly
         if (wikiPath === 'index') {
           const url = getAssetUrl(`wiki/index.md`);
-          text = await resourceCache.getText(url);
+          text = await compiledContentService.getText(url);
         } else {
           // Strategy: Try multiple URL patterns to handle both folder and direct file links
           const urlsToTry = [
@@ -66,7 +66,7 @@ function WikiPage() {
             getAssetUrl(`wiki/${wikiPath}/index.md`)    // For folder-style links
           ];
           
-          const result = await resourceCache.getTextFromMultipleUrls(urlsToTry);
+          const result = await compiledContentService.getTextFromMultiplePaths(urlsToTry);
           text = result.text;
         }
         setContent(text);

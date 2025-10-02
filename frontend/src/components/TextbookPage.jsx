@@ -7,7 +7,7 @@ import VocabList from './VocabList';
 import ConceptMap from './ConceptMap';
 import YouTube from './YouTube';
 import { getAssetUrl } from '../utils/paths';
-import resourceCache from '../services/resourceCache';
+import compiledContentService from '../services/compiledContentService';
 import './TextbookPage.css';
 
 // Custom link component for internal textbook links
@@ -211,7 +211,6 @@ function TextbookPage() {
 
   // Default to index if no path provided
   const textbookPath = path || 'index';
-  const markdownUrl = getAssetUrl(`textbook/${textbookPath}.md`);
 
   useEffect(() => {
     const fetchMarkdown = async () => {
@@ -221,18 +220,17 @@ function TextbookPage() {
       try {
         let text;
         
-        // For 'index' path, try /textbook/index.md directly
+        // For 'index' path, try index.md directly
         if (textbookPath === 'index') {
-          const url = getAssetUrl(`textbook/index.md`);
-          text = await resourceCache.getText(url);
+          text = await compiledContentService.getText('index.md');
         } else {
-          // Strategy: Try multiple URL patterns to handle both folder and direct file links
-          const urlsToTry = [
-            getAssetUrl(`textbook/${textbookPath}.md`),         // For direct file links
-            getAssetUrl(`textbook/${textbookPath}/index.md`)    // For folder-style links
+          // Strategy: Try multiple path patterns to handle both folder and direct file links
+          const pathsToTry = [
+            `${textbookPath}.md`,         // For direct file links
+            `${textbookPath}/index.md`    // For folder-style links
           ];
           
-          const result = await resourceCache.getTextFromMultipleUrls(urlsToTry);
+          const result = await compiledContentService.getTextFromMultiplePaths(pathsToTry);
           text = result.text;
         }
 
@@ -245,7 +243,7 @@ function TextbookPage() {
     };
 
     fetchMarkdown();
-  }, [textbookPath, markdownUrl]);
+  }, [textbookPath]);
 
   if (loading) {
     return (

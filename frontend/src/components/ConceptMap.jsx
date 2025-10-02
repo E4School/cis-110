@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import * as yaml from 'js-yaml';
 import { getAssetUrl } from '../utils/paths';
-import resourceCache from '../services/resourceCache';
+import compiledContentService from '../services/compiledContentService';
 
 import './ConceptMap.css';
 
@@ -26,7 +26,7 @@ function ConceptMap({ yamlPath, currentPath }) {
         let fullPath;
         if (yamlPath.startsWith('content/')) {
           // Absolute path from textbook root (e.g., from big-picture.md)
-          fullPath = getAssetUrl(`textbook/${yamlPath}`);
+          fullPath = yamlPath;
           console.log('ConceptMap: Using absolute path:', fullPath);
         } else {
           // Relative path (e.g., from sub-pages)
@@ -35,14 +35,13 @@ function ConceptMap({ yamlPath, currentPath }) {
             currentPath.split('/').slice(0, -1).join('/') : 
             currentPath;
           fullPath = directoryPath ? 
-            getAssetUrl(`textbook/${directoryPath}/${yamlPath}`) : 
-            getAssetUrl(`textbook/${yamlPath}`);
+            `${directoryPath}/${yamlPath}` : 
+            yamlPath;
           console.log('ConceptMap: Using relative path. directoryPath:', directoryPath, 'fullPath:', fullPath);
         }
         
         console.log('ConceptMap: Loading from path:', fullPath);
-        const yamlText = await resourceCache.getText(fullPath);
-        const conceptMapData = yaml.load(yamlText);
+        const conceptMapData = await compiledContentService.getYaml(fullPath);
         
         console.log('ConceptMap: Loaded concept map data:', conceptMapData);
         console.log('ConceptMap: Type of conceptMapData:', typeof conceptMapData);
@@ -80,21 +79,20 @@ function ConceptMap({ yamlPath, currentPath }) {
           if (yamlPath.startsWith('content/')) {
             // Absolute path from textbook root - question files are relative to concept map directory
             const conceptMapDir = yamlPath.substring(0, yamlPath.lastIndexOf('/'));
-            questionPath = getAssetUrl(`textbook/${conceptMapDir}/${questionFile}`);
+            questionPath = `${conceptMapDir}/${questionFile}`;
           } else {
             // Relative path - question files are relative to current page directory
             const currentDir = currentPath && currentPath.includes('.') ? 
               currentPath.split('/').slice(0, -1).join('/') : 
               currentPath;
             questionPath = currentDir ? 
-              getAssetUrl(`textbook/${currentDir}/${questionFile}`) : 
-              getAssetUrl(`textbook/${questionFile}`);
+              `${currentDir}/${questionFile}` : 
+              questionFile;
           }
             
           try {
             console.log('ConceptMap: Loading question file from path:', questionPath);
-            const questionYaml = await resourceCache.getText(questionPath);
-            const questionData = yaml.load(questionYaml);
+            const questionData = await compiledContentService.getYaml(questionPath);
             console.log('ConceptMap: Loaded question data for:', questionFile, questionData);
             return [questionFile, questionData];
           } catch (err) {

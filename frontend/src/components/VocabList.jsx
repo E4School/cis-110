@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import * as yaml from 'js-yaml';
-import resourceCache from '../services/resourceCache';
+import compiledContentService from '../services/compiledContentService';
 
 import './VocabList.css';
 
@@ -19,22 +19,20 @@ function VocabList({ yamlPath, currentPath }) {
         // Construct the full path to the YAML file
         const directoryPath = currentPath ? currentPath.split('/').slice(0, -1).join('/') : '';
         const fullPath = directoryPath ? 
-          `/textbook/${directoryPath}/${yamlPath}` : 
-          `/textbook/${yamlPath}`;
+          `${directoryPath}/${yamlPath}` : 
+          yamlPath;
         
-        const yamlText = await resourceCache.getText(fullPath);
-        const indexData = yaml.load(yamlText);
+        const indexData = await compiledContentService.getYaml(fullPath);
         
         // Check if this is the new format with file references
         if (indexData?.questions && indexData.questions[0]?.file) {
           // New format: load individual question files
           const questionPromises = indexData.questions.map(async (questionRef) => {
             const questionPath = directoryPath ? 
-              `/textbook/${directoryPath}/${questionRef.file}` : 
-              `/textbook/${questionRef.file}`;
+              `${directoryPath}/${questionRef.file}` : 
+              questionRef.file;
               
-            const questionYaml = await resourceCache.getText(questionPath);
-            const questionData = yaml.load(questionYaml);
+            const questionData = await compiledContentService.getYaml(questionPath);
             return questionData;
           });
           

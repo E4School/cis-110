@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import * as yaml from 'js-yaml';
 import { getAssetUrl } from '../utils/paths';
-import resourceCache from '../services/resourceCache';
+import compiledContentService from '../services/compiledContentService';
 
 import './ExamQuestions.css';
 
@@ -108,7 +108,7 @@ function ExamQuestions({ yamlPath, currentPath, concept_filter }) {
         let fullPath;
         if (yamlPath.startsWith('content/')) {
           // Absolute path from textbook root (e.g., from big-picture.md)
-          fullPath = getAssetUrl(`textbook/${yamlPath}`);
+          fullPath = yamlPath;
           console.log('ExamQuestions: Using absolute path:', fullPath);
         } else {
           // Relative path (e.g., from sub-pages)
@@ -117,14 +117,13 @@ function ExamQuestions({ yamlPath, currentPath, concept_filter }) {
             currentPath.split('/').slice(0, -1).join('/') : 
             currentPath;
           fullPath = directoryPath ? 
-            getAssetUrl(`textbook/${directoryPath}/${yamlPath}`) : 
-            getAssetUrl(`textbook/${yamlPath}`);
+            `${directoryPath}/${yamlPath}` : 
+            yamlPath;
           console.log('ExamQuestions: Using relative path. directoryPath:', directoryPath, 'fullPath:', fullPath);
         }
         
         console.log('ExamQuestions: Loading concept map from path:', fullPath);
-        const yamlText = await resourceCache.getText(fullPath);
-        const conceptMapData = yaml.load(yamlText);
+        const conceptMapData = await compiledContentService.getYaml(fullPath);
         
         // Extract all question file paths from the concept map, preserving order
         const questionFiles = [];
@@ -178,20 +177,19 @@ function ExamQuestions({ yamlPath, currentPath, concept_filter }) {
           if (yamlPath.startsWith('content/')) {
             // Absolute path from textbook root - question files are relative to concept map directory
             const conceptMapDir = yamlPath.substring(0, yamlPath.lastIndexOf('/'));
-            questionPath = getAssetUrl(`textbook/${conceptMapDir}/${questionFile}`);
+            questionPath = `${conceptMapDir}/${questionFile}`;
           } else {
             // Relative path - question files are relative to current page directory
             const currentDir = currentPath && currentPath.includes('.') ? 
               currentPath.split('/').slice(0, -1).join('/') : 
               currentPath;
             questionPath = currentDir ? 
-              getAssetUrl(`textbook/${currentDir}/${questionFile}`) : 
-              getAssetUrl(`textbook/${questionFile}`);
+              `${currentDir}/${questionFile}` : 
+              questionFile;
           }
           
           console.log('ExamQuestions: Loading question file from path:', questionPath);
-          const questionYaml = await resourceCache.getText(questionPath);
-          const questionData = yaml.load(questionYaml);
+          const questionData = await compiledContentService.getYaml(questionPath);
           return questionData;
         });
         

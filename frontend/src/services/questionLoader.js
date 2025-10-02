@@ -1,6 +1,5 @@
 import * as yaml from 'js-yaml';
-import { getAssetUrl } from '../utils/paths';
-import resourceCache from './resourceCache';
+import compiledContentService from './compiledContentService';
 
 // Define all concept map paths
 const CONCEPT_MAP_PATHS = [
@@ -33,10 +32,8 @@ export const loadAllQuestions = async () => {
     try {
       console.log('Loading concept map:', conceptMapPath);
       
-      // Fetch the concept map file using resource cache
-      const conceptMapUrl = getAssetUrl(`textbook/${conceptMapPath}`);
-      const yamlText = await resourceCache.getText(conceptMapUrl);
-      const conceptMapData = yaml.load(yamlText);
+      // Fetch the concept map file using compiled content service
+      const conceptMapData = await compiledContentService.getYaml(conceptMapPath);
       
       if (!conceptMapData?.concept_map) {
         console.warn(`Invalid concept map format: ${conceptMapPath}`);
@@ -64,9 +61,8 @@ export const loadAllQuestions = async () => {
       
       for (const questionFile of questionFiles) {
         try {
-          const questionPath = getAssetUrl(`textbook/${conceptMapDir}/${questionFile}`);
-          const questionYaml = await resourceCache.getText(questionPath);
-          const questionData = yaml.load(questionYaml);
+          const questionPath = `${conceptMapDir}/${questionFile}`;
+          const questionData = await compiledContentService.getYaml(questionPath);
           
           // Add metadata to match the old questions.json format
           const enrichedQuestion = {
