@@ -13,6 +13,26 @@ Please click through the following categories and read the exam questions.  I'd 
 
 {{ConceptMap:concept-map.yml}}
 
+## Video Content
+
+### Overview
+
+An overview of this chapter on inter-computer communication.
+
+{{YouTube:https://www.youtube.com/watch?v=5sBjb5WAqag}}
+
+### Browsers
+
+We begin with the browser, a program for running programs that are not installed on your computer.
+
+{{YouTube:https://www.youtube.com/watch?v=CPO1r9YtbkQ}}
+
+### Cloud Computing and Databases
+
+In this video, we briefly scratch the surface of how your browser gives you access to resources in the cloud, like webservers and databases. 
+
+{{YouTube:https://www.youtube.com/watch?v=PASnGB15IdI}}
+
 ## Main Content
 
 The following sections cover each of the topics and provide multiple acceptable ways to answer each final exam question.  At the end of this page, you'll find the Bonus Videos section with links to various videos that cover these same topics (often in much greater depth than is required for this course).
