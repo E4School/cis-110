@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import * as yaml from 'js-yaml';
+import resourceCache from '../services/resourceCache';
 
 import './VocabList.css';
 
@@ -21,13 +22,7 @@ function VocabList({ yamlPath, currentPath }) {
           `/textbook/${directoryPath}/${yamlPath}` : 
           `/textbook/${yamlPath}`;
         
-        const response = await fetch(fullPath);
-        
-        if (!response.ok) {
-          throw new Error(`Failed to fetch questions: ${response.status}`);
-        }
-        
-        const yamlText = await response.text();
+        const yamlText = await resourceCache.getText(fullPath);
         const indexData = yaml.load(yamlText);
         
         // Check if this is the new format with file references
@@ -38,12 +33,7 @@ function VocabList({ yamlPath, currentPath }) {
               `/textbook/${directoryPath}/${questionRef.file}` : 
               `/textbook/${questionRef.file}`;
               
-            const questionResponse = await fetch(questionPath);
-            if (!questionResponse.ok) {
-              throw new Error(`Failed to fetch question file: ${questionRef.file}`);
-            }
-            
-            const questionYaml = await questionResponse.text();
+            const questionYaml = await resourceCache.getText(questionPath);
             const questionData = yaml.load(questionYaml);
             return questionData;
           });

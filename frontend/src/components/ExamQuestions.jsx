@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import * as yaml from 'js-yaml';
 import { getAssetUrl } from '../utils/paths';
+import resourceCache from '../services/resourceCache';
 
 import './ExamQuestions.css';
 
@@ -121,14 +122,8 @@ function ExamQuestions({ yamlPath, currentPath, concept_filter }) {
           console.log('ExamQuestions: Using relative path. directoryPath:', directoryPath, 'fullPath:', fullPath);
         }
         
-        const response = await fetch(fullPath);
-        console.log('ExamQuestions: Fetch response status:', response.status, 'for path:', fullPath);
-        
-        if (!response.ok) {
-          throw new Error(`Failed to fetch concept map: ${response.status}`);
-        }
-        
-        const yamlText = await response.text();
+        console.log('ExamQuestions: Loading concept map from path:', fullPath);
+        const yamlText = await resourceCache.getText(fullPath);
         const conceptMapData = yaml.load(yamlText);
         
         // Extract all question file paths from the concept map, preserving order
@@ -195,14 +190,7 @@ function ExamQuestions({ yamlPath, currentPath, concept_filter }) {
           }
           
           console.log('ExamQuestions: Loading question file from path:', questionPath);
-            
-          const questionResponse = await fetch(questionPath);
-          console.log('ExamQuestions: Question file response status:', questionResponse.status, 'for:', questionFile);
-          if (!questionResponse.ok) {
-            throw new Error(`Failed to fetch question file: ${questionFile}`);
-          }
-          
-          const questionYaml = await questionResponse.text();
+          const questionYaml = await resourceCache.getText(questionPath);
           const questionData = yaml.load(questionYaml);
           return questionData;
         });

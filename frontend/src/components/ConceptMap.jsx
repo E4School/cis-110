@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import * as yaml from 'js-yaml';
 import { getAssetUrl } from '../utils/paths';
+import resourceCache from '../services/resourceCache';
 
 import './ConceptMap.css';
 
@@ -39,14 +40,8 @@ function ConceptMap({ yamlPath, currentPath }) {
           console.log('ConceptMap: Using relative path. directoryPath:', directoryPath, 'fullPath:', fullPath);
         }
         
-        const response = await fetch(fullPath);
-        console.log('ConceptMap: Fetch response status:', response.status, 'for path:', fullPath);
-        
-        if (!response.ok) {
-          throw new Error(`Failed to fetch concept map: ${response.status}`);
-        }
-        
-        const yamlText = await response.text();
+        console.log('ConceptMap: Loading from path:', fullPath);
+        const yamlText = await resourceCache.getText(fullPath);
         const conceptMapData = yaml.load(yamlText);
         
         console.log('ConceptMap: Loaded concept map data:', conceptMapData);
@@ -98,13 +93,7 @@ function ConceptMap({ yamlPath, currentPath }) {
             
           try {
             console.log('ConceptMap: Loading question file from path:', questionPath);
-            const questionResponse = await fetch(questionPath);
-            if (!questionResponse.ok) {
-              console.warn(`ConceptMap: Failed to fetch question file: ${questionFile} at ${questionPath}`);
-              return [questionFile, null];
-            }
-            
-            const questionYaml = await questionResponse.text();
+            const questionYaml = await resourceCache.getText(questionPath);
             const questionData = yaml.load(questionYaml);
             console.log('ConceptMap: Loaded question data for:', questionFile, questionData);
             return [questionFile, questionData];

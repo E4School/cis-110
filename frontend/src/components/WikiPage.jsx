@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import { getAssetUrl } from '../utils/paths';
-import { getCacheBuster } from '../utils/cacheBuster';
+import resourceCache from '../services/resourceCache';
 import './WikiPage.css';
 
 // Custom link component for internal wiki links
@@ -52,51 +52,23 @@ function WikiPage() {
       setError(null);
       
       // Add cache busting parameter to all markdown requests
-      const cacheBuster = getCacheBuster();
-      
       try {
-        let response;
-        let attemptedUrls = [];
+        let text;
         
         // For 'index' path, try /wiki/index.md directly
         if (wikiPath === 'index') {
-          const url = getAssetUrl(`wiki/index.md`) + cacheBuster;
-          attemptedUrls.push(url);
-          response = await fetch(url);
+          const url = getAssetUrl(`wiki/index.md`);
+          text = await resourceCache.getText(url);
         } else {
           // Strategy: Try multiple URL patterns to handle both folder and direct file links
-          // Try direct file first (more common), then folder with index.md
           const urlsToTry = [
-            getAssetUrl(`wiki/${wikiPath}.md`) + cacheBuster,         // For direct file links like /wiki/content/overviews/01-hardware-how-we-got-physics-to-do-math-r
-            getAssetUrl(`wiki/${wikiPath}/index.md`) + cacheBuster   // For folder-style links like /wiki/hardware
+            getAssetUrl(`wiki/${wikiPath}.md`),         // For direct file links
+            getAssetUrl(`wiki/${wikiPath}/index.md`)    // For folder-style links
           ];
           
-          // Try each URL until we find one that works
-          for (const url of urlsToTry) {
-            attemptedUrls.push(url);
-            console.log(`Trying to fetch: ${url}`);
-            response = await fetch(url);
-            console.log(`Response for ${url}:`, response.status, response.ok);
-            
-            if (response.ok) {
-              // Check if we got HTML instead of markdown (happens when file doesn't exist)
-              const text = await response.text();
-              if (text.trim().startsWith('<!doctype html>') || text.trim().startsWith('<html')) {
-                console.log(`Got HTML response for ${url}, trying next URL...`);
-                continue; // Try the next URL
-              }
-              console.log(`Successfully found content at: ${url}`);
-              response.text = () => Promise.resolve(text); // Cache the text we already read
-              break;
-            }
-          }
+          const result = await resourceCache.getTextFromMultipleUrls(urlsToTry);
+          text = result.text;
         }
-
-        if (!response || !response.ok) {
-          throw new Error(`Wiki page not found. Tried: ${attemptedUrls.join(', ')}`);
-        }
-
-        const text = await response.text();
         setContent(text);
       } catch (err) {
         setError(err.message);

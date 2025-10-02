@@ -1,5 +1,6 @@
 import * as yaml from 'js-yaml';
 import { getAssetUrl } from '../utils/paths';
+import resourceCache from './resourceCache';
 
 // Define all concept map paths
 const CONCEPT_MAP_PATHS = [
@@ -32,16 +33,9 @@ export const loadAllQuestions = async () => {
     try {
       console.log('Loading concept map:', conceptMapPath);
       
-      // Fetch the concept map file
+      // Fetch the concept map file using resource cache
       const conceptMapUrl = getAssetUrl(`textbook/${conceptMapPath}`);
-      const response = await fetch(conceptMapUrl);
-      
-      if (!response.ok) {
-        console.warn(`Failed to fetch concept map: ${conceptMapPath} (${response.status})`);
-        continue;
-      }
-      
-      const yamlText = await response.text();
+      const yamlText = await resourceCache.getText(conceptMapUrl);
       const conceptMapData = yaml.load(yamlText);
       
       if (!conceptMapData?.concept_map) {
@@ -71,14 +65,7 @@ export const loadAllQuestions = async () => {
       for (const questionFile of questionFiles) {
         try {
           const questionPath = getAssetUrl(`textbook/${conceptMapDir}/${questionFile}`);
-          const questionResponse = await fetch(questionPath);
-          
-          if (!questionResponse.ok) {
-            console.warn(`Failed to fetch question file: ${questionFile} (${questionResponse.status})`);
-            continue;
-          }
-          
-          const questionYaml = await questionResponse.text();
+          const questionYaml = await resourceCache.getText(questionPath);
           const questionData = yaml.load(questionYaml);
           
           // Add metadata to match the old questions.json format

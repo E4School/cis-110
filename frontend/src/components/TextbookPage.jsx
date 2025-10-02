@@ -7,7 +7,7 @@ import VocabList from './VocabList';
 import ConceptMap from './ConceptMap';
 import YouTube from './YouTube';
 import { getAssetUrl } from '../utils/paths';
-import { getCacheBuster } from '../utils/cacheBuster';
+import resourceCache from '../services/resourceCache';
 import './TextbookPage.css';
 
 // Custom link component for internal textbook links
@@ -218,52 +218,24 @@ function TextbookPage() {
       setLoading(true);
       setError(null);
       
-      // Add cache busting parameter to all markdown requests
-      const cacheBuster = getCacheBuster();
-      
       try {
-        let response;
-        let attemptedUrls = [];
+        let text;
         
         // For 'index' path, try /textbook/index.md directly
         if (textbookPath === 'index') {
-          const url = getAssetUrl(`textbook/index.md`) + cacheBuster;
-          attemptedUrls.push(url);
-          response = await fetch(url);
+          const url = getAssetUrl(`textbook/index.md`);
+          text = await resourceCache.getText(url);
         } else {
           // Strategy: Try multiple URL patterns to handle both folder and direct file links
-          // Try direct file first (more common), then folder with index.md
           const urlsToTry = [
-            getAssetUrl(`textbook/${textbookPath}.md`) + cacheBuster,         // For direct file links like /textbook/content/overviews/01-hardware-how-we-got-physics-to-do-math-r
-            getAssetUrl(`textbook/${textbookPath}/index.md`) + cacheBuster   // For folder-style links like /textbook/hardware
+            getAssetUrl(`textbook/${textbookPath}.md`),         // For direct file links
+            getAssetUrl(`textbook/${textbookPath}/index.md`)    // For folder-style links
           ];
           
-          // Try each URL until we find one that works
-          for (const url of urlsToTry) {
-            attemptedUrls.push(url);
-            console.log(`Trying to fetch: ${url}`);
-            response = await fetch(url);
-            console.log(`Response for ${url}:`, response.status, response.ok);
-            
-            if (response.ok) {
-              // Check if we got HTML instead of markdown (happens when file doesn't exist)
-              const text = await response.text();
-              if (text.trim().startsWith('<!doctype html>') || text.trim().startsWith('<html')) {
-                console.log(`Got HTML response for ${url}, trying next URL...`);
-                continue; // Try the next URL
-              }
-              console.log(`Successfully found content at: ${url}`);
-              response.text = () => Promise.resolve(text); // Cache the text we already read
-              break;
-            }
-          }
+          const result = await resourceCache.getTextFromMultipleUrls(urlsToTry);
+          text = result.text;
         }
 
-        if (!response || !response.ok) {
-          throw new Error(`Textbook page not found. Tried: ${attemptedUrls.join(', ')}`);
-        }
-
-        const text = await response.text();
         setContent(text);
       } catch (err) {
         setError(err.message);
