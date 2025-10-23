@@ -1,13 +1,15 @@
 /**
  * Compiled content service - replacement for resourceCache
- * Uses build-time compiled content instead of runtime fetching
+ * Uses build-time compiled content in production, dynamic fetching in development
  */
 
 import { compiledFiles, stats } from '../compiled';
 
 class CompiledContentService {
   constructor() {
+    this.isDevelopment = import.meta.env.DEV;
     console.log('📚 CompiledContentService initialized with:', stats);
+    console.log('🔧 Development mode:', this.isDevelopment);
   }
 
   /**
@@ -17,32 +19,75 @@ class CompiledContentService {
    */
   async getText(path) {
     try {
-      // Remove any cache busters or query parameters
-      const cleanPath = this.cleanPath(path);
-      
-      console.log(`CompiledContentService: Getting text for path: ${cleanPath}`);
-      
-      const fileKey = this.pathToKey(cleanPath);
-      const compiled = compiledFiles[fileKey];
-      
-      if (!compiled) {
-        throw new Error(`File not found in compiled content: ${cleanPath}`);
+      // In development mode, fetch dynamically to enable hot reloading
+      if (this.isDevelopment) {
+        return await this.fetchDynamically(path);
       }
-      
-      const content = compiled.module;
-      
-      // If it's already a string (markdown), return it
-      if (typeof content === 'string') {
-        return content;
-      }
-      
-      // If it's an object (parsed YAML), stringify it
-      return JSON.stringify(content, null, 2);
+
+      // In production, use compiled content
+      return await this.getCompiledText(path);
       
     } catch (error) {
-      console.error(`CompiledContentService: File not found: ${path}`, error);
-      throw new Error(`Compiled file not found: ${path}`);
+      console.error(`CompiledContentService: Error getting text for ${path}:`, error);
+      
+      // Fallback: try the other method if one fails
+      try {
+        if (this.isDevelopment) {
+          console.log('Development fetch failed, trying compiled content...');
+          return await this.getCompiledText(path);
+        } else {
+          console.log('Compiled content failed, trying dynamic fetch...');
+          return await this.fetchDynamically(path);
+        }
+      } catch (fallbackError) {
+        console.error(`CompiledContentService: Both methods failed for ${path}:`, fallbackError);
+        throw new Error(`File not found: ${path}`);
+      }
     }
+  }
+
+  /**
+   * Get compiled text content (production method)
+   */
+  async getCompiledText(path) {
+    const cleanPath = this.cleanPath(path);
+    console.log(`CompiledContentService: Getting compiled text for path: ${cleanPath}`);
+    
+    const fileKey = this.pathToKey(cleanPath);
+    const compiled = compiledFiles[fileKey];
+    
+    if (!compiled) {
+      throw new Error(`File not found in compiled content: ${cleanPath}`);
+    }
+    
+    const content = compiled.module;
+    
+    // If it's already a string (markdown), return it
+    if (typeof content === 'string') {
+      return content;
+    }
+    
+    // If it's an object (parsed YAML), stringify it
+    return JSON.stringify(content, null, 2);
+  }
+
+  /**
+   * Fetch content dynamically from public directory (development method)
+   */
+  async fetchDynamically(path) {
+    const cleanPath = this.cleanPath(path);
+    console.log(`CompiledContentService: Fetching dynamically: ${cleanPath}`);
+    
+    // Construct the URL for the file in the public directory
+    const url = `/textbook/${cleanPath}`;
+    
+    const response = await fetch(url);
+    
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}: Failed to fetch ${url}`);
+    }
+    
+    return await response.text();
   }
 
   /**
@@ -52,8 +97,16 @@ class CompiledContentService {
    */
   async getYaml(path) {
     try {
+      // In development mode, fetch dynamically and parse
+      if (this.isDevelopment) {
+        const text = await this.fetchDynamically(path);
+        const yaml = await import('js-yaml');
+        return yaml.load(text);
+      }
+
+      // In production, use compiled content
       const cleanPath = this.cleanPath(path);
-      console.log(`CompiledContentService: Getting YAML for path: ${cleanPath}`);
+      console.log(`CompiledContentService: Getting compiled YAML for path: ${cleanPath}`);
       
       const fileKey = this.pathToKey(cleanPath);
       const compiled = compiledFiles[fileKey];
@@ -74,8 +127,30 @@ class CompiledContentService {
       return yaml.load(content);
       
     } catch (error) {
-      console.error(`CompiledContentService: YAML file not found: ${path}`, error);
-      throw new Error(`Compiled YAML file not found: ${path}`);
+      console.error(`CompiledContentService: Error getting YAML for ${path}:`, error);
+      
+      // Fallback: try the other method if one fails
+      try {
+        if (this.isDevelopment) {
+          console.log('Development YAML fetch failed, trying compiled content...');
+          const cleanPath = this.cleanPath(path);
+          const fileKey = this.pathToKey(cleanPath);
+          const compiled = compiledFiles[fileKey];
+          
+          if (compiled && typeof compiled.module === 'object') {
+            return compiled.module;
+          }
+        } else {
+          console.log('Compiled YAML failed, trying dynamic fetch...');
+          const text = await this.fetchDynamically(path);
+          const yaml = await import('js-yaml');
+          return yaml.load(text);
+        }
+      } catch (fallbackError) {
+        console.error(`CompiledContentService: Both YAML methods failed for ${path}:`, fallbackError);
+      }
+      
+      throw new Error(`YAML file not found: ${path}`);
     }
   }
 

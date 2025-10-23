@@ -27,16 +27,89 @@
   text-align: center;
 }
 
+/* Timestamp navigation styles */
+.youtube-timestamps {
+  margin-top: 15px;
+  text-align: left;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 15px;
+  border: 1px solid #e9ecef;
+}
+
+.youtube-timestamps h4 {
+  margin: 0 0 10px 0;
+  font-size: 1em;
+  color: #495057;
+  font-weight: 600;
+}
+
+.timestamp-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.timestamp-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  background-color: white;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  font-family: inherit;
+  min-width: 70px;
+}
+
+.timestamp-button:hover {
+  background-color: #e3f2fd;
+  border-color: #2196f3;
+  transform: translateY(-1px);
+}
+
+.timestamp-button:active {
+  transform: translateY(0);
+}
+
+.timestamp-time {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  color: #1976d2;
+  font-size: 0.9em;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   .youtube-container iframe {
     width: 100%;
     height: 250px;
   }
+  
+  .timestamp-button {
+    padding: 10px 14px;
+    min-width: 65px;
+  }
+  
+  .timestamp-time {
+    font-size: 0.85em;
+  }
 }
 
 @media (max-width: 480px) {
   .youtube-container iframe {
     height: 200px;
+  }
+  
+  .timestamp-button {
+    padding: 8px 12px;
+    min-width: 60px;
+  }
+  
+  .timestamp-time {
+    font-size: 0.8em;
   }
 }

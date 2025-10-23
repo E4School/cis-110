@@ -92,21 +92,38 @@ function renderContentWithComponents(content, textbookPath) {
       const props = {};
       if (!propsStr) return props;
       
-      // Enhanced parsing to handle quoted values with spaces
-      const regex = /(\w+):\s*("[^"]*"|'[^']*'|\S+)/g;
+      // Enhanced parsing to handle quoted values, arrays, and other JSON values
+      const regex = /(\w+):\s*(\[[^\]]*\]|"[^"]*"|'[^']*'|\S+)/g;
       let match;
       
       while ((match = regex.exec(propsStr)) !== null) {
         const key = match[1];
         let value = match[2];
         
-        // Remove surrounding quotes if present
-        if ((value.startsWith('"') && value.endsWith('"')) || 
-            (value.startsWith("'") && value.endsWith("'"))) {
-          value = value.slice(1, -1);
+        // Handle arrays (JSON format)
+        if (value.startsWith('[') && value.endsWith(']')) {
+          try {
+            props[key] = JSON.parse(value);
+          } catch (error) {
+            console.error(`Failed to parse array for ${key}:`, value, error);
+            props[key] = value; // fallback to string
+          }
         }
-        
-        props[key] = value;
+        // Handle quoted strings
+        else if ((value.startsWith('"') && value.endsWith('"')) || 
+                 (value.startsWith("'") && value.endsWith("'"))) {
+          props[key] = value.slice(1, -1);
+        }
+        // Handle other values (strings, numbers, booleans)
+        else {
+          // Try to parse as JSON for numbers, booleans, etc.
+          try {
+            props[key] = JSON.parse(value);
+          } catch {
+            // If JSON parsing fails, keep as string
+            props[key] = value;
+          }
+        }
       }
       
       return props;

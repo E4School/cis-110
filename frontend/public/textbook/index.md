@@ -39,5 +39,5 @@ Meta:
 
 ## Other Links
 
-[Full list of Exam Questions](/textbook/big-picture)
-[Midterms](/textbook/midterms)
+- [Full list of Exam Questions](/textbook/big-picture)
+- [Student Contributors](/textbook/students/index)
