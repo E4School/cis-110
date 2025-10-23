@@ -37,6 +37,7 @@ Meta:
 - [**A Few Computers**](/cis-110/#/textbook/content/overviews/02-a-few-computers)
 - [**Lots of Computers**](/cis-110/#/textbook/content/overviews/03-a-lot-of-computers)
 
-## Other Helpful Links
+## Other Links
 
 [Full list of Exam Questions](/textbook/big-picture)
+[Midterms](/textbook/midterms)
