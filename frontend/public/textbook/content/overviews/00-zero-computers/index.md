@@ -15,6 +15,7 @@ Everything cool about computers -- from 3D games, to the internet, to ChatGPT --
 Please click through the following categories and read the exam questions.  I'd recommend making a note of the ones you think will be easy and which ones you think will be hard. 
 
 {{ConceptMap:concept-map.yml}}
+{{ConceptMap:emmas-examples.yml}}
 
 ## Video Content
 
